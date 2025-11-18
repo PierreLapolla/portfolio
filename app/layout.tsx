@@ -1,9 +1,8 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./app.css";
-
 import "@aws-amplify/ui-react/styles.css";
 import React from "react";
+import {AmplifyUIProvider} from "./components/AmplifyUIProvider"
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,7 +18,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+        <AmplifyUIProvider>
+            {children}
+        </AmplifyUIProvider>
+        </body>
         </html>
     );
 }

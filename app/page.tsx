@@ -1,15 +1,32 @@
 "use client";
 
-import "./app.css";
-import "@aws-amplify/ui-react/styles.css";
+import {Button, Card, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
 
-
-export default function App() {
+export default function HomePage() {
     return (
-        <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'system-ui, sans-serif' }}>
-            <div style={{ textAlign: 'center' }}>
-                <h1>This site under construction</h1>
-            </div>
-        </main>
+        <View as="main" height="100vh">
+            <Flex
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                height="100%"
+                padding="2rem"
+                gap="1rem"
+            >
+                <Heading level={1}>This site is under construction</Heading>
+                <Text textAlign="center" maxWidth="480px">
+                    Thanks for stopping by. I&apos;m currently building my portfolio site.
+                    Please check back soon!
+                </Text>
+
+                <Button
+                    variation="primary"
+                    as="a"
+                    href="mailto:pro@pierrelapolla.com"
+                >
+                    E-mail me
+                </Button>
+            </Flex>
+        </View>
     );
 }
