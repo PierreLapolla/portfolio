@@ -5,7 +5,7 @@ import {Navbar} from "./Navbar";
 
 export function Header() {
     return (
-        <View as="header" padding="1.5rem" style={{borderBottom: "1px solid #e0e0e0"}}>
+        <View as="header" padding="1rem">
             <Flex justifyContent="center" alignItems="center">
                 <Navbar/>
             </Flex>

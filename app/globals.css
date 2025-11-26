@@ -1,0 +1,10 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+[data-amplify-theme] {
+    background-color: var(--amplify-colors-background-primary);
+    color: var(--amplify-colors-font-primary);
+}

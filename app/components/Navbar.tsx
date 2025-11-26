@@ -26,16 +26,17 @@ export function Navbar() {
                 const isActive = pathname === tab.href;
 
                 return (
-                    <Link key={tab.href} href={tab.href}>
-                        <Button
-                            isFullWidth={true}
-                            variation={isActive ? "primary" : "link"}
-                            gap="0.5rem"
-                        >
-                            {tab.icon && <Icon as={tab.icon}/>}
-                            {tab.label}
-                        </Button>
-                    </Link>
+                    <Button
+                        key={tab.href}
+                        as={Link}
+                        href={tab.href}
+                        variation={isActive ? "primary" : "link"}
+                        gap="0.5rem"
+                    >
+                        {tab.icon && <Icon as={tab.icon}/>}
+                        {tab.label}
+                    </Button>
+
                 );
             })}
         </Flex>
