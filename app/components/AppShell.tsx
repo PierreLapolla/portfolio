@@ -1,14 +1,7 @@
 "use client";
 
-import {ReactNode} from "react";
-import React from "react";
-import {
-    Flex,
-    ThemeProvider,
-    View,
-    ColorMode,
-    defaultDarkModeOverride,
-} from "@aws-amplify/ui-react";
+import React, {ReactNode} from "react";
+import {ColorMode, defaultDarkModeOverride, Flex, ThemeProvider, View,} from "@aws-amplify/ui-react";
 
 type AppShellProps = {
     header: ReactNode;
@@ -19,6 +12,14 @@ type AppShellProps = {
 const theme = {
     name: "my-theme",
     overrides: [defaultDarkModeOverride],
+    tokens: {
+        fonts: {
+            default: {
+                variable: {value: 'var(--font-jetbrains-mono)'},
+                static: {value: 'var(--font-jetbrains-mono)'},
+            }
+        }
+    }
 };
 
 type ColorModeContextValue = {
@@ -37,7 +38,7 @@ export function useAppColorMode() {
 }
 
 export function AppShell({header, footer, children}: AppShellProps) {
-    const [colorMode, setColorMode] = React.useState<ColorMode>("light");
+    const [colorMode, setColorMode] = React.useState<ColorMode>("dark");
 
     const toggleColorMode = React.useCallback(() => {
         setColorMode((prev) => (prev === "light" ? "dark" : "light"));
