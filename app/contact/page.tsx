@@ -1,6 +1,6 @@
 "use client";
 
-import {Flex, Heading, Text, View} from "@aws-amplify/ui-react";
+import {Button, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
 
 export default function ContactPage() {
     return (
@@ -19,19 +19,22 @@ export default function ContactPage() {
                 </Text>
 
                 <Text>
-                    You can find quick access to my{" "}
-                    <Text as="span" fontWeight="bold">
-                        GitHub
-                    </Text>{" "}
-                    and{" "}
-                    <Text as="span" fontWeight="bold">
-                        LinkedIn
-                    </Text>{" "}
-                    profiles directly in the{" "}
-                    <Text as="span" fontWeight="bold">
-                        header
-                    </Text>{" "}
-                    of this site.
+                    You can find quick access to my GitHub and LinkedIn profiles directly in the top right corner of
+                    this site.
+                </Text>
+
+                <Text>
+                    You can also send me an e-mail at
+                    <Text fontWeight="bold" as="span">
+                        {" "}pro@pierrelapolla.com :
+                    </Text>
+                    <Button
+                        as="a"
+                        href="mailto:pro@pierrelapolla.com"
+                        variation="link"
+                    >
+                        E-mail me
+                    </Button>
                 </Text>
             </Flex>
         </View>
