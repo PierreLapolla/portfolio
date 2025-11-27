@@ -1,7 +1,14 @@
 "use client";
 
 import {ReactNode} from "react";
-import {Flex, ThemeProvider, View, defaultDarkModeOverride} from "@aws-amplify/ui-react";
+import React from "react";
+import {
+    Flex,
+    ThemeProvider,
+    View,
+    ColorMode,
+    defaultDarkModeOverride,
+} from "@aws-amplify/ui-react";
 
 type AppShellProps = {
     header: ReactNode;
@@ -14,16 +21,39 @@ const theme = {
     overrides: [defaultDarkModeOverride],
 };
 
+type ColorModeContextValue = {
+    colorMode: ColorMode;
+    toggleColorMode: () => void;
+};
+
+const ColorModeContext = React.createContext<ColorModeContextValue | null>(null);
+
+export function useAppColorMode() {
+    const ctx = React.useContext(ColorModeContext);
+    if (!ctx) {
+        throw new Error("useAppColorMode must be used within AppShell");
+    }
+    return ctx;
+}
+
 export function AppShell({header, footer, children}: AppShellProps) {
+    const [colorMode, setColorMode] = React.useState<ColorMode>("light");
+
+    const toggleColorMode = React.useCallback(() => {
+        setColorMode((prev) => (prev === "light" ? "dark" : "light"));
+    }, []);
+
     return (
-        <ThemeProvider theme={theme} colorMode="system">
-            <Flex as="div" direction="column" minHeight="100vh">
-                {header}
-                <View as="main" flex="1 0 auto">
-                    {children}
-                </View>
-                {footer}
-            </Flex>
-        </ThemeProvider>
+        <ColorModeContext.Provider value={{colorMode, toggleColorMode}}>
+            <ThemeProvider theme={theme} colorMode={colorMode}>
+                <Flex as="div" direction="column" minHeight="100vh">
+                    {header}
+                    <View as="main" flex="1 0 auto">
+                        {children}
+                    </View>
+                    {footer}
+                </Flex>
+            </ThemeProvider>
+        </ColorModeContext.Provider>
     );
 }

@@ -7,7 +7,7 @@ import {AppShell} from "./components/AppShell";
 import {Header} from "./components/Header";
 import {Footer} from "./components/Footer";
 
-const jetbrains = JetBrains_Mono({
+const font = JetBrains_Mono({
     subsets: ["latin"],
 });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={jetbrains.className}>
+        <body className={font.className}>
         <AppShell header={<Header/>} footer={<Footer/>}>
             {children}
         </AppShell>

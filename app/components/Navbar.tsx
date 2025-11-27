@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {Button, Flex, Icon} from "@aws-amplify/ui-react";
+import {Button, Flex} from "@aws-amplify/ui-react";
 import {Home, MessageCircle} from "lucide-react";
 import React from "react";
 
@@ -33,10 +33,9 @@ export function Navbar() {
                         variation={isActive ? "primary" : "link"}
                         gap="0.5rem"
                     >
-                        {tab.icon && <Icon as={tab.icon}/>}
+                        {tab.icon && <tab.icon size="1em"/>}
                         {tab.label}
                     </Button>
-
                 );
             })}
         </Flex>

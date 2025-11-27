@@ -1,152 +1,188 @@
 "use client";
 
-import {FormEvent, useState} from "react";
-import {useChat} from "@ai-sdk/react";
-import {DefaultChatTransport} from "ai";
-import {Heading, View} from "@aws-amplify/ui-react";
+import { FormEvent, useState } from "react";
+import { useChat } from "@ai-sdk/react";
+import { DefaultChatTransport } from "ai";
+import {
+    Heading,
+    View,
+    Flex,
+    Text,
+    Button,
+    TextField,
+} from "@aws-amplify/ui-react";
 
 export default function ChatPage() {
     const [input, setInput] = useState("");
 
-    const {messages, sendMessage, status, error, clearError} = useChat({
+    const { messages, sendMessage, status, error, clearError } = useChat({
         transport: new DefaultChatTransport({
             api: "/api/chat", // Next.js API route that proxies to FastAPI
         }),
     });
 
-    const handleSubmit = async (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const text = input.trim();
         if (!text) return;
 
-        // If there was a previous error, clear it when user retries
         if (error) {
             clearError();
         }
 
         await sendMessage({
             role: "user",
-            parts: [{type: "text", text}],
+            parts: [{ type: "text", text }],
         });
 
         setInput("");
     };
 
+    const isStreaming = status === "streaming";
+
     return (
-        <View as="main" padding="2rem" maxWidth="800px" margin="0 auto">
-            <Heading level={1} marginBottom="1rem">
-                Chat
-            </Heading>
-
-            {/* Small status label (no error banner anymore) */}
-            <div style={{marginBottom: "0.5rem", fontSize: "0.85rem"}}>
-                {status === "streaming" && "Thinking…"}
-            </div>
-
-            {/* Messages list */}
-            <div
-                style={{
-                    border: "1px solid #e5e7eb",
-                    borderRadius: "0.75rem",
-                    padding: "1rem",
-                    height: "400px",
-                    overflowY: "auto",
-                    marginBottom: "1rem",
-                    background: "#f9fafb",
-                }}
+        <View as="main" padding="2rem">
+            <Flex
+                direction="column"
+                gap="1rem"
+                maxWidth="900px"
+                margin="0 auto"
+                minHeight="70vh"
             >
-                {messages.map((message) => (
-                    <div
-                        key={message.id}
-                        style={{
-                            marginBottom: "0.75rem",
-                            display: "flex",
-                            justifyContent:
-                                message.role === "user" ? "flex-end" : "flex-start",
-                        }}
-                    >
-                        <div
-                            style={{
-                                maxWidth: "75%",
-                                padding: "0.5rem 0.75rem",
-                                borderRadius: "0.75rem",
-                                backgroundColor:
-                                    message.role === "user" ? "#2563eb" : "#e5e7eb",
-                                color: message.role === "user" ? "white" : "#111827",
-                                whiteSpace: "pre-wrap",
-                                wordBreak: "break-word",
-                            }}
-                        >
-                            {message.parts
-                                ?.filter((part) => part.type === "text")
-                                .map((part, idx) => (
-                                    <span key={`${message.id}-${idx}`}>{part.text}</span>
-                                ))}
-                        </div>
-                    </div>
-                ))}
+                {/* Header */}
+                <Flex direction="column" gap="0.25rem">
+                    <Heading level={1} textAlign="center">Chat with me about Pierre</Heading>
+                    <Text fontSize="0.9rem" color="font.tertiary" textAlign="center">
+                        Ask anything about Pierre, his work, or anything else you&apos;re
+                        curious about.
+                    </Text>
+                </Flex>
 
-                {/* If an API error occurs, show it as a bot message */}
-                {error && (
-                    <div
-                        style={{
-                            marginTop: "0.75rem",
-                            display: "flex",
-                            justifyContent: "flex-start",
-                        }}
-                    >
-                        <div
-                            style={{
-                                maxWidth: "75%",
-                                padding: "0.5rem 0.75rem",
-                                borderRadius: "0.75rem",
-                                backgroundColor: "#fee2e2", // light red-ish
-                                color: "#991b1b",
-                                whiteSpace: "pre-wrap",
-                                wordBreak: "break-word",
-                                fontSize: "0.9rem",
-                            }}
-                        >
-                            {/* Keep the message generic to avoid leaking backend details */}
-                            Sorry, I had trouble talking to the server. Please try again.
-                        </div>
-                    </div>
-                )}
-            </div>
-
-            {/* Input */}
-            <form
-                onSubmit={handleSubmit}
-                style={{display: "flex", gap: "0.5rem", alignItems: "center"}}
-            >
-                <input
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Say something…"
-                    style={{
-                        flex: 1,
-                        padding: "0.6rem 0.9rem",
-                        borderRadius: "9999px",
-                        border: "1px solid #d1d5db",
-                        outline: "none",
-                    }}
-                />
-                <button
-                    type="submit"
-                    disabled={status === "streaming"}
-                    style={{
-                        padding: "0.6rem 1.2rem",
-                        borderRadius: "9999px",
-                        border: "none",
-                        cursor: "pointer",
-                        backgroundColor: "#2563eb",
-                        color: "white",
-                        opacity: status === "streaming" ? 0.7 : 1,
-                    }}
+                {/* Chat area */}
+                <View
+                    flex="1"
+                    borderRadius="1rem"
+                    border="1px solid"
+                    borderColor="border.primary"
+                    padding="1rem"
+                    backgroundColor="background.secondary"
+                    minHeight="320px"
+                    maxHeight="60vh"
+                    overflow="auto"
                 >
-                    Send
-                </button>
-            </form>
+                    <Flex direction="column" gap="0.75rem">
+                        {messages.map((message) => {
+                            const isUser = message.role === "user";
+
+                            const content = message.parts
+                                ?.filter((part) => part.type === "text")
+                                .map((part) => part.text)
+                                .join("\n");
+
+                            if (!content) return null;
+
+                            return (
+                                <Flex
+                                    key={message.id}
+                                    justifyContent={isUser ? "flex-end" : "flex-start"}
+                                >
+                                    <Flex
+                                        direction="column"
+                                        maxWidth="80%"
+                                        padding="0.75rem 1rem"
+                                        borderRadius="0.9rem"
+                                        backgroundColor={
+                                            isUser ? "brand.primary.80" : "background.primary"
+                                        }
+                                        boxShadow="small"
+                                        gap="0.25rem"
+                                    >
+                                        <Text
+                                            fontSize="0.75rem"
+                                            color={isUser ? "font.inverse" : "font.secondary"}
+                                        >
+                                            {isUser ? "You" : "AI"}
+                                        </Text>
+                                        <Text
+                                            whiteSpace="pre-wrap"
+                                            color={isUser ? "font.inverse" : "font.primary"}
+                                        >
+                                            {content}
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            );
+                        })}
+
+                        {/* Error shown as an AI message */}
+                        {error && (
+                            <Flex justifyContent="flex-start">
+                                <Flex
+                                    direction="column"
+                                    maxWidth="80%"
+                                    padding="0.75rem 1rem"
+                                    borderRadius="0.9rem"
+                                    backgroundColor="background.primary"
+                                    boxShadow="small"
+                                    border="1px solid"
+                                    borderColor="border.error"
+                                    gap="0.25rem"
+                                >
+                                    <Text fontSize="0.75rem" color="font.error">
+                                        AI
+                                    </Text>
+                                    <Text whiteSpace="pre-wrap">
+                                        I tried to respond, but I couldn&apos;t reach the server.
+                                        This might be a temporary issue. Please try sending your
+                                        message again in a moment.
+                                    </Text>
+                                </Flex>
+                            </Flex>
+                        )}
+
+                        {/* Streaming status */}
+                        {isStreaming && !error && (
+                            <Flex justifyContent="flex-start">
+                                <Flex
+                                    padding="0.5rem 0.75rem"
+                                    borderRadius="9999px"
+                                    backgroundColor="background.primary"
+                                >
+                                    <Text fontSize="0.8rem" color="font.secondary">
+                                        Thinking…
+                                    </Text>
+                                </Flex>
+                            </Flex>
+                        )}
+                    </Flex>
+                </View>
+
+                {/* Input bar */}
+                <Flex
+                    as="form"
+                    onSubmit={handleSubmit}
+                    gap="0.75rem"
+                    alignItems="flex-end"
+                >
+                    <TextField
+                        label="Your message"
+                        labelHidden
+                        flex="1"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder="Send a message..."
+                        isDisabled={isStreaming}
+                    />
+                    <Button
+                        type="submit"
+                        variation="primary"
+                        isDisabled={isStreaming}
+                        isLoading={isStreaming}
+                    >
+                        Send
+                    </Button>
+                </Flex>
+            </Flex>
         </View>
     );
 }
