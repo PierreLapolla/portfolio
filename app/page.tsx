@@ -1,26 +1,21 @@
 "use client";
 
-import {
-    View,
-    Flex,
-    Heading,
-    Text,
-    Button,
-    Badge,
-    Card,
-    Divider,
-} from "@aws-amplify/ui-react";
+import {Badge, Button, Card, Divider, Flex, Heading, Text, View,} from "@aws-amplify/ui-react";
 import Link from "next/link";
 
 export default function HomePage() {
     return (
         <View as="main" padding="2rem">
+
             <Flex
                 direction="column"
                 gap="2.5rem"
                 maxWidth="960px"
                 margin="0 auto"
             >
+                <Heading level={5}>
+                    🚧 This site is currently under construction 🚧
+                </Heading>
                 {/* Hero */}
                 <Flex direction="column" gap="1rem">
                     <Badge size="small" variation="info" alignSelf="flex-start">
@@ -54,7 +49,7 @@ export default function HomePage() {
                     </Flex>
                 </Flex>
 
-                <Divider />
+                <Divider/>
 
                 {/* What I work on */}
                 <Flex direction="column" gap="1.5rem">

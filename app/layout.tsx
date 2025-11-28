@@ -1,11 +1,11 @@
 import type {Metadata} from "next";
 import {JetBrains_Mono} from "next/font/google";
 import "@aws-amplify/ui-react/styles.css";
-import "./globals.css"
+import "@/app/globals.css"
 import React from "react";
-import {AppShell} from "./components/AppShell";
-import {Header} from "./components/Header";
-import {Footer} from "./components/Footer";
+import {AppShell} from "@/app/components/AppShell";
+import {Header} from "@/app/components/Header";
+import {Footer} from "@/app/components/Footer";
 
 const font = JetBrains_Mono({
     subsets: ["latin"],

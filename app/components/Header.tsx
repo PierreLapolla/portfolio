@@ -1,8 +1,8 @@
 "use client";
 
 import {Button, Flex, View} from "@aws-amplify/ui-react";
-import {Navbar} from "./Navbar";
-import {useAppColorMode} from "./AppShell";
+import {Navbar} from "@/app/components/Navbar";
+import {useAppColorMode} from "@/app/components/AppShell";
 import {Github, Linkedin, Moon, Sun} from "lucide-react";
 
 export function Header() {

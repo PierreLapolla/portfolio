@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {Button, Flex} from "@aws-amplify/ui-react";
-import {Home, MessageCircle, LucideMail} from "lucide-react";
+import {Home, LucideMail, MessageCircle} from "lucide-react";
 import React from "react";
 
 interface NavTab {
