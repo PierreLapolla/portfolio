@@ -1,12 +1,18 @@
+import type {UIMessage} from "ai";
 import {Flex, Text} from "@aws-amplify/ui-react";
-import type {ChatMessage} from "@/app/components/ChatUI";
 
 interface ChatBubbleProps {
-    message: ChatMessage;
+    message: UIMessage;
 }
 
 export function ChatBubble({message}: ChatBubbleProps) {
     const isUser = message.role === "user";
+
+    const content =
+        message.parts
+            ?.filter((part) => part.type === "text")
+            .map((part) => part.text as string)
+            .join("\n") ?? "";
 
     return (
         <Flex justifyContent={isUser ? "flex-end" : "flex-start"}>
@@ -23,7 +29,7 @@ export function ChatBubble({message}: ChatBubbleProps) {
                     whiteSpace="pre-wrap"
                     style={{wordBreak: "break-word"}}
                 >
-                    {message.content}
+                    {content}
                 </Text>
             </Flex>
         </Flex>

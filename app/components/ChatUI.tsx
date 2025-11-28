@@ -2,19 +2,13 @@ import {FormEvent, useEffect, useRef} from "react";
 import {Flex, Link, Text, View} from "@aws-amplify/ui-react";
 import {ChatBubble} from "@/app/components/ChatBubble";
 import {ChatInput} from "@/app/components/ChatInput";
+import type {UIMessage} from "ai";
 
-export type ChatRole = "user" | "assistant";
-
-export interface ChatMessage {
-    id: string;
-    role: ChatRole;
-    content: string;
-}
 
 interface ChatUIProps {
-    messages: ChatMessage[];
+    messages: UIMessage[];
     input: string;
-    isStreaming: boolean;
+    isBusy: boolean;
     onInputChange: (value: string) => void;
     onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
@@ -22,7 +16,7 @@ interface ChatUIProps {
 export function ChatUI({
                            messages,
                            input,
-                           isStreaming,
+                           isBusy,
                            onInputChange,
                            onSubmit,
                        }: ChatUIProps) {
@@ -47,14 +41,6 @@ export function ChatUI({
                         {messages.map((message) => (
                             <ChatBubble key={message.id} message={message}/>
                         ))}
-
-                        {isStreaming && (
-                            <Flex justifyContent="flex-start">
-                                <Text fontSize="0.75rem" color="font.secondary">
-                                    AI is typing…
-                                </Text>
-                            </Flex>
-                        )}
                         <div ref={endOfMessagesRef}/>
                     </Flex>
                 </View>
@@ -64,7 +50,7 @@ export function ChatUI({
                     <ChatInput
                         value={input}
                         onChange={onInputChange}
-                        isStreaming={isStreaming}
+                        isBusy={isBusy}
                     />
                 </View>
             </Flex>
@@ -77,7 +63,7 @@ export function ChatUI({
                     gap="0.25rem"
                 >
                     <Text color="font.tertiary">
-                        Chatbot powered by
+                        Chat powered by
                         <Link
                             href="https://mistral.ai"
                             target="_blank"

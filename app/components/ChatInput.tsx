@@ -5,10 +5,10 @@ import {Send} from "lucide-react";
 interface ChatInputProps {
     value: string;
     onChange: (value: string) => void;
-    isStreaming: boolean;
+    isBusy: boolean;
 }
 
-export function ChatInput({value, onChange, isStreaming}: ChatInputProps) {
+export function ChatInput({value, onChange, isBusy}: ChatInputProps) {
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         onChange(event.target.value);
     };
@@ -21,7 +21,7 @@ export function ChatInput({value, onChange, isStreaming}: ChatInputProps) {
                 placeholder="Ask anything"
                 value={value}
                 onChange={handleChange}
-                isDisabled={isStreaming}
+                isDisabled={isBusy}
                 autoComplete="off"
                 flex="1"
                 inputStyles={{
@@ -31,8 +31,8 @@ export function ChatInput({value, onChange, isStreaming}: ChatInputProps) {
             <Button
                 type="submit"
                 variation="primary"
-                isDisabled={isStreaming}
-                isLoading={isStreaming}
+                isDisabled={isBusy}
+                isLoading={isBusy}
                 borderRadius="large"
             >
                 <Send/>

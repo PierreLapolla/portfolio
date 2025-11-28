@@ -2,8 +2,23 @@
 
 import {FormEvent, useState} from "react";
 import {useChat} from "@ai-sdk/react";
-import {DefaultChatTransport, generateId} from "ai";
-import ChatUI, {ChatMessage, ChatRole} from "@/app/components/ChatUI"
+import {DefaultChatTransport, generateId, type UIMessage} from "ai";
+import ChatUI from "@/app/components/ChatUI"
+
+const INITIAL_MESSAGES: UIMessage[] = [
+    {
+        id: generateId(),
+        role: "assistant",
+        parts: [
+            {
+                type: "text",
+                text:
+                    "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
+            },
+        ],
+    },
+];
+
 
 export default function ChatPage() {
     const [input, setInput] = useState("");
@@ -11,6 +26,15 @@ export default function ChatPage() {
     const {messages, sendMessage, status, error, clearError, setMessages} = useChat({
         transport: new DefaultChatTransport({
             api: "/api/chat",
+            prepareSendMessagesRequest({messages, id, body}) {
+                return {
+                    body: {
+                        ...body,
+                        id,
+                        messages,
+                    },
+                };
+            },
         }),
         onError() {
             setMessages((current) => [
@@ -27,13 +51,15 @@ export default function ChatPage() {
                 },
             ]);
         },
+        messages: INITIAL_MESSAGES,
     });
 
-
-    const isStreaming = status === "streaming";
+    const isBusy = status === "submitted" || status === "streaming";
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        if (isBusy) return;
 
         const trimmed = input.trim();
         if (!trimmed) return;
@@ -48,30 +74,11 @@ export default function ChatPage() {
         setInput("");
     };
 
-    const uiMessages: ChatMessage[] = messages
-        .map((message) => {
-            const content = message.parts
-                ?.filter((part) => part.type === "text")
-                .map((part) => part.text as string)
-                .join("\n");
-
-            if (!content) return null;
-
-            const role: ChatRole = message.role === "user" ? "user" : "assistant";
-
-            return {
-                id: message.id,
-                role,
-                content,
-            };
-        })
-        .filter((m): m is ChatMessage => m !== null);
-
     return (
         <ChatUI
-            messages={uiMessages}
+            messages={messages}
             input={input}
-            isStreaming={isStreaming}
+            isBusy={isBusy}
             onInputChange={setInput}
             onSubmit={handleSubmit}
         />
