@@ -18,7 +18,7 @@ export function ChatInput({value, onChange, isBusy}: ChatInputProps) {
             <TextField
                 label="Message"
                 labelHidden
-                placeholder="Ask anything"
+                placeholder="Ask anything about Pierre"
                 value={value}
                 onChange={handleChange}
                 isDisabled={isBusy}

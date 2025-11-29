@@ -14,7 +14,7 @@ export default function HomePage() {
                 margin="0 auto"
             >
                 <Heading level={5}>
-                    🚧 This site is currently under construction 🚧
+                    🚧 This site is currently under construction, bugs may occur. 🚧
                 </Heading>
                 {/* Hero */}
                 <Flex direction="column" gap="1rem">

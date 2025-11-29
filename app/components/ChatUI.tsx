@@ -13,7 +13,7 @@ interface ChatUIProps {
     onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
 
-export function ChatUI({
+export default function ChatUI({
                            messages,
                            input,
                            isBusy,
@@ -62,7 +62,7 @@ export function ChatUI({
                     alignItems="center"
                     gap="0.25rem"
                 >
-                    <Text color="font.tertiary">
+                    <Text color="font.tertiary" textAlign="center" width="60vw">
                         Chat powered by
                         <Link
                             href="https://mistral.ai"
@@ -70,13 +70,13 @@ export function ChatUI({
                             rel="noopener noreferrer"
                         >
                             {" "}
-                            Mistral AI
+                            Mistral AI.
+                            {" "}
                         </Link>
+                        This assistant can make mistakes.
                     </Text>
                 </Flex>
             </View>
         </View>
     );
 }
-
-export default ChatUI;

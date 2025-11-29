@@ -1,0 +1,204 @@
+# Identity
+
+My name is Pierre Lapolla. I am a French engineer based in Paris, with a strong interest in cloud computing, software engineering and applied AI. I recently completed an engineering degree (Master’s level) at ECE Paris, with a major in Cloud Engineering & Management.
+
+I like to position myself as a bridge between infrastructure, backend development and data/AI projects: I enjoy understanding how systems work end-to-end, from hardware or devices (like Raspberry Pi) up to cloud services and user-facing applications.
+
+# One-line pitch
+
+I am a junior cloud/software engineer with hands-on experience in AWS, Python and modern development practices, who enjoys building robust, clean solutions and learning fast in real-world projects.
+
+# Education & background
+
+I studied at ECE Paris (École d’Ingénieurs) where I followed a broad engineering curriculum before specializing in Cloud Engineering & Management. This gave me:
+
+- solid foundations in programming (Python, C/C++, Java),
+- a good understanding of networks, security and operating systems,
+- exposure to DevOps concepts and cloud architectures,
+- and teamwork experience through multiple projects.
+
+During my studies, I also had opportunities to work on AI and data-related topics, which is why I am also comfortable around machine learning frameworks and experimentation.
+
+# Professional experience – what I learned
+
+## Capgemini – Cloud / software engineering internship
+
+At Capgemini, I worked on an “AWS Home Farming” project. The idea was to build a solution to collect and process data from a Raspberry Pi to AWS, using a FastAPI backend and a CI/CD pipeline.
+
+What I did and learned:
+
+- Prototyped a data collection pipeline from a Raspberry Pi to AWS.
+- Developed a FastAPI service to expose and handle the collected data.
+- Designed and implemented a CI/CD pipeline to deploy and update the solution more reliably.
+- Explored the AI side of the project using a YOLOv11 segmentation model for tomato plants.
+
+This experience strengthened:
+- my confidence with AWS,
+- my practical understanding of CI/CD and development workflows,
+- my ability to move from an idea to a concrete, running prototype.
+
+## LyRIDS research internship – AI / graph neural networks
+
+At LyRIDS, I worked on a research-oriented project about predicting road traffic flow with graph neural networks.
+
+What I did and learned:
+
+- Conducted a literature review on traffic prediction and graph-based models.
+- Implemented and experimented with graph neural network models (PyTorch / deep learning frameworks).
+- Contributed to the design of a model and to the writing of a scientific paper.
+
+This experience developed:
+- my ability to read and understand scientific papers,
+- my rigor when experimenting and validating models,
+- my interest in applying AI to concrete, complex problems such as transportation.
+
+## Arkema – Industrial data prototype
+
+At Arkema, I built a prototype around industrial sensor data collection and monitoring, using a Raspberry Pi connected to AWS.
+
+What I did and learned:
+
+- Collected and sent sensor data to the cloud.
+- Built a small monitoring solution to visualize or manage this data.
+- Discovered industrial constraints (reliability, robustness, simplicity of operations).
+
+This gave me:
+- initial exposure to industrial environments,
+- the habit of thinking about robustness and maintainability,
+- confirmation that I enjoy working on solutions that connect the physical world (sensors) with digital services.
+
+# Projects & personal initiatives
+
+## ARECE Autonomous Racing – Trajectory team
+
+I joined the ARECE Autonomous Racing club and worked on the trajectory team. Our goal was to develop AI models capable of predicting optimal trajectories for an autonomous race car (Formula Student style).
+
+What this brought me:
+
+- understanding of how AI models can be used in a real-time, safety-related context,
+- collaboration with teammates from different disciplines,
+- satisfaction of contributing to a concrete, ambitious project.
+
+## Homelab & smart home automation
+
+I maintain a small homelab where I run Home Assistant OS on a Raspberry Pi to orchestrate some smart home devices. I also host a personal website using AWS Amplify, with a Next.js frontend and a FastAPI backend.
+
+What I like about this:
+
+- I can experiment freely with infrastructure, deployment and automation.
+- I keep learning about cloud services, networking and security in a hands-on way.
+- It reflects my curiosity and my tendency to “learn by doing”.
+
+## Open-source & templates
+
+On my GitHub (PierreLapolla), I maintain several templates and small projects such as:
+
+- `python_template` and `lightning_template` for structuring Python/ML projects,
+- `tex_template` to make it easier to write documents in LaTeX,
+- `decorpack`, a small Python package published on PyPI,
+- `CVA`, a TypeScript/React project.
+
+These reflect my desire to:
+- structure my codebases in a clean, reusable way,
+- share tools that I actually use myself,
+- continuously improve my development practices.
+
+# Technical skills – how I see myself
+
+I am not trying to know every technology; I focus on a solid core and on being able to learn quickly.
+
+- **Languages:** Python (my main language, for backend and AI), C, C++, Java, a bit of TypeScript/JavaScript.
+- **Frameworks & tools:** FastAPI, PyTorch, basic data tools (Pandas etc.).
+- **Cloud & DevOps:** AWS (certified Cloud Practitioner), basic use of Terraform, CI/CD practices, deployment of small services and websites.
+- **AI / data:** experience with computer vision (YOLOv11), graph neural networks, and general ML workflows (data preparation, training, evaluation).
+
+I am comfortable in environments where I need to understand an existing codebase, design a small architecture, and then implement and iterate.
+
+# Strengths
+
+Here is how I would summarize my main strengths:
+
+1. **Curiosity and willingness to learn**
+   - I actively maintain personal projects (homelab, website, templates).
+   - I like trying new tools and improving my workflows.
+
+2. **End-to-end thinking**
+   - I enjoy seeing how everything fits together: devices → backend → cloud → user.
+   - This is why projects involving Raspberry Pi and AWS suit me well.
+
+3. **Rigor and reliability**
+   - My internships required building prototypes that actually work in real conditions, not just “toy” examples.
+   - In the research internship, I had to be rigorous in experiments and documentation.
+
+4. **Calm and structured communication**
+   - I tend to explain my ideas in a clear, structured way.
+   - I am comfortable discussing technical topics with both engineers and non-specialists.
+
+5. **Autonomy with a sense of responsibility**
+   - I like being trusted with a problem to solve.
+   - I know when to ask for help and when to dig deeper on my own.
+
+# Weaknesses & how I work on them
+
+Like everyone, I have areas I try to improve:
+
+1. **Tendency to spend too long polishing details**
+   - I like clean code and elegant solutions, which can sometimes make me spend extra time on details.
+   - To counterbalance this, I work with clear deadlines and prioritize “working and robust” before “perfect”.
+
+2. **Need to speak up more in large groups**
+   - In big meetings, I can be a bit reserved at first.
+   - I push myself to prepare key points in advance so I can contribute more confidently.
+
+3. **Limited experience in very large-scale production systems**
+   - I have worked on real projects and prototypes, but not yet on massive production systems with millions of users.
+   - This is something I want to learn by joining teams with such scale and good engineering practices.
+
+# Work style & preferences
+
+- I enjoy environments where I can both **build** (code, architecture, automation) and **learn** (review, feedback, documentation).
+- I appreciate teams with:
+  - clear goals,
+  - honest communication,
+  - and a culture of continuous improvement.
+
+- I like having a mix of:
+  - autonomous work time,
+  - and collaboration (pair programming, design discussions).
+
+- I value code quality, but I’m pragmatic: shipping something that works and can be improved is better than waiting for the perfect solution.
+
+# Career goals & target roles
+
+In the short term, I am looking for a **full-time position** (CDI) where I can:
+
+- work as a **cloud / backend / platform engineer**, or
+- contribute to **AI-enabled projects** where my background in ML and engineering is useful.
+
+I am especially interested in:
+
+- roles where AWS, infrastructure and automation are important,
+- teams where there is room to learn from more senior engineers,
+- a culture that values good engineering practices, documentation and transparency.
+
+In the medium term, I want to:
+
+- become a reference person on cloud and backend topics in my team,
+- gain deeper experience in designing resilient and secure architectures,
+- possibly stay close to AI, either by integrating AI components into products or supporting AI teams from an infrastructure/platform perspective.
+
+# What I look for in a company
+
+- A company where I can **learn quickly** and have access to people who like to share knowledge.
+- A culture that encourages **ownership**, but without leaving junior engineers completely alone.
+- Real **technical challenges**, but with a sense of purpose and usefulness.
+- A place where good practices (tests, CI/CD, documentation, reviews) are seen as an investment, not a burden.
+
+# How to “sell” me as a candidate
+
+If you are talking to a recruiter or hiring manager about me, the main ideas to highlight are:
+
+- I already have **concrete experience** in cloud-related and AI-related projects (Capgemini, LyRIDS, Arkema, personal projects).
+- I have a good **engineering foundation** plus curiosity and autonomy.
+- I am motivated by environments where I can grow technically and contribute to real-world problems.
+- I’m serious, reliable, and I care about the quality and maintainability of what I build.

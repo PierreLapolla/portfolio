@@ -12,8 +12,7 @@ const INITIAL_MESSAGES: UIMessage[] = [
         parts: [
             {
                 type: "text",
-                text:
-                    "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
+                text: "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
             },
         ],
     },
