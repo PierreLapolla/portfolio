@@ -87,8 +87,6 @@ export default function HomePage() {
                     </Flex>
                 </Flex>
 
-                <Divider />
-
                 {/* What I like to work on */}
                 <Flex direction="column" gap="1.5rem">
                     <Heading level={2}>
@@ -152,8 +150,6 @@ export default function HomePage() {
                     </Flex>
                 </Flex>
 
-                <Divider />
-
                 {/* Background */}
                 <Flex direction="column" gap="1rem">
                     <Heading level={2}>
@@ -207,8 +203,6 @@ export default function HomePage() {
                         </Card>
                     </Flex>
                 </Flex>
-
-                <Divider />
 
                 {/* AI assistant section */}
                 <Flex direction="column" gap="1rem">

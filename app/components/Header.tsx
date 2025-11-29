@@ -10,7 +10,7 @@ export function Header() {
     const isDark = colorMode === "dark";
 
     return (
-        <View as="header" padding="1rem">
+        <View as="header" padding="1rem" backgroundColor="background.primary" style={{position: "sticky", top: 0}}>
             <Flex as="div" alignItems="center" width="100%">
                 {/* LEFT */}
                 <Flex
