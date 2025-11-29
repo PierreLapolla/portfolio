@@ -9,6 +9,7 @@ frontend:
   phases:
     build:
       commands:
+        - env | grep -e MISTRAL_API_KEY >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
