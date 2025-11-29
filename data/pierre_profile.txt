@@ -96,18 +96,19 @@ On my GitHub (PierreLapolla), I maintain several templates and small projects su
 - `python_template` and `lightning_template` for structuring Python/ML projects,
 - `tex_template` to make it easier to write documents in LaTeX,
 - `decorpack`, a small Python package published on PyPI,
-- `CVA`, a TypeScript/React project.
+- `portfolio`, a Next.js/TypeScript/React project, the actual website you are reading right now..
 
 These reflect my desire to:
 - structure my codebases in a clean, reusable way,
 - share tools that I actually use myself,
 - continuously improve my development practices.
+- contribute to open-source projects.
 
 # Technical skills – how I see myself
 
 I am not trying to know every technology; I focus on a solid core and on being able to learn quickly.
 
-- **Languages:** Python (my main language, for backend and AI), C, C++, Java, a bit of TypeScript/JavaScript.
+- **Languages:** Python (my main language, for backend and AI), C, C++, Java, LaTeX, a bit of web technologies (Next.js, React, TypeScript).
 - **Frameworks & tools:** FastAPI, PyTorch, basic data tools (Pandas etc.).
 - **Cloud & DevOps:** AWS (certified Cloud Practitioner), basic use of Terraform, CI/CD practices, deployment of small services and websites.
 - **AI / data:** experience with computer vision (YOLOv11), graph neural networks, and general ML workflows (data preparation, training, evaluation).

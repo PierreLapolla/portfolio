@@ -6,8 +6,8 @@ export default function ContactPage() {
     return (
         <View
             as="main"
-            padding={{base: "2rem", large: "3rem"}}
-            maxWidth="800px"
+            padding="2rem"
+            maxWidth="960px"
             margin="0 auto"
         >
             <Flex direction="column" gap="1.5rem">

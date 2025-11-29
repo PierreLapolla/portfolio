@@ -15,7 +15,7 @@ interface NavTab {
 const navTabs: NavTab[] = [
     {label: "Home", href: "/", icon: Home},
     {label: "Chat", href: "/chat", icon: MessageCircle},
-    {label: "Contact", href: "/contact", icon: LucideMail}
+    // {label: "Contact", href: "/contact", icon: LucideMail}
 ];
 
 export function Navbar() {
