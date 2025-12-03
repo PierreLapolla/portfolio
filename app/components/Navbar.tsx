@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {Button, Flex} from "@aws-amplify/ui-react";
-import {Home, LucideMail, MessageCircle} from "lucide-react";
+import {Home, LucideMail, MessageCircle, Folder} from "lucide-react";
 import React from "react";
 
 interface NavTab {
@@ -15,7 +15,8 @@ interface NavTab {
 const navTabs: NavTab[] = [
     {label: "Home", href: "/", icon: Home},
     {label: "Chat", href: "/chat", icon: MessageCircle},
-    // {label: "Contact", href: "/contact", icon: LucideMail}
+    {label: "Projects", href: "/projects", icon: Folder},
+    {label: "Contact", href: "/contact", icon: LucideMail}
 ];
 
 export function Navbar() {

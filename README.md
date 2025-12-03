@@ -6,7 +6,9 @@ Mistral AI.
 ## Features
 
 * **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral AI's free tier limits)
-* **AI chat interface:** A custom chatbot that answers questions based on Pierre's profile.
+* **AI chat interface:** 
+  * A custom chatbot that answers questions based on Pierre's profile.
+  * Streaming responses (not working on live site because of Amplify)
 * **Tech stack:**
     * **Framework:** Next.js 14 (App router)
     * **Language:** TypeScript
@@ -17,6 +19,8 @@ Mistral AI.
 
 * **Future features:**
     * Add a "Contact" page
+    * Add a "Projects" page
+    * Add more information about Pierre, music, games, parc attractions, etc.
     * Implement a custom backend for the chatbot using FastAPI
 
 ## Prerequisites

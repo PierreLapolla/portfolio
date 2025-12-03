@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <View
             as="main"
-            padding="2rem"
+            padding="1rem"
             maxWidth="960px"
             margin="0 auto"
         >

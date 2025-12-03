@@ -1,30 +1,25 @@
 "use client";
 
-import {
-    Alert,
-    Badge,
-    Button,
-    Card,
-    Divider,
-    Flex,
-    Heading,
-    Link,
-    Text,
-    View,
-} from "@aws-amplify/ui-react";
+import {Alert, Badge, Button, Card, Flex, Heading, Text, View,} from "@aws-amplify/ui-react";
 
 export default function HomePage() {
     return (
-        <View as="main" padding="2rem">
+        <View
+            as="main"
+            padding="1rem"
+            maxWidth="960px"
+            margin="0 auto"
+        >
             <Flex
                 direction="column"
                 gap="2.5rem"
-                maxWidth="960px"
-                margin="0 auto"
             >
                 {/* Status banner */}
                 <Alert variation="info" isDismissible={true}>
                     🚧 This site is under construction, bugs may occur and features may change. 🚧
+                </Alert>
+                <Alert variation="info" isDismissible={true}>
+                    The current UI is not made for phones, please use a desktop for best experience.
                 </Alert>
 
                 {/* Hero */}
