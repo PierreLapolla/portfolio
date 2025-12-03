@@ -85,6 +85,20 @@ const projects: Project[] = [
         tech: ["LaTeX"],
         url: "https://github.com/PierreLapolla/tex_template",
     },
+    {
+        slug: "TODO",
+        category: "school",
+        title: "TODO",
+        description: "TODO",
+        tech: ["TODO"],
+    },
+    {
+        slug: "TODO",
+        category: "school",
+        title: "TODO",
+        description: "TODO",
+        tech: ["TODO"],
+    },
 ];
 
 
