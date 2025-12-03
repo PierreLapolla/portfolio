@@ -1,8 +1,9 @@
 import {Badge, Button, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
-import {Github, ExternalLink} from "lucide-react";
+import {ExternalLink, Github} from "lucide-react";
 
 export interface Project {
     slug: string;
+    category: string;
     title: string;
     description: string;
     tech: string[];
@@ -10,14 +11,15 @@ export interface Project {
 }
 
 export default function ProjectCard({project}: { project: Project }) {
-    const {title, description, tech, url} = project;
+    const {title, category, description, tech, url} = project;
 
     let isGithub = false;
     if (url) {
         try {
             const hostname = new URL(url).hostname;
             isGithub = hostname === "github.com" || hostname.endsWith(".github.com");
-        } catch {}
+        } catch {
+        }
     }
 
     const Icon = isGithub ? Github : ExternalLink;
@@ -30,7 +32,11 @@ export default function ProjectCard({project}: { project: Project }) {
             padding="1rem"
             boxShadow="large"
         >
-            <Flex justifyContent="space-between" alignItems="flex-start" gap="1rem">
+            <Flex
+                direction="column"
+                gap="1rem"
+                height="100%"
+            >
                 <Flex direction="column" gap="1rem">
                     <Flex alignItems="center" gap="0.5rem">
                         <Heading level={3}>{title}</Heading>
@@ -40,31 +46,28 @@ export default function ProjectCard({project}: { project: Project }) {
 
                     <Flex as="ul" gap="0.5rem" wrap="wrap">
                         {tech.map((t) => (
-                            <Badge
-                                as="li"
-                                key={t}
-                                variation="info"
-                                size="small"
-                            >
+                            <Badge as="li" key={t} variation="info" size="small">
                                 {t}
                             </Badge>
                         ))}
                     </Flex>
-
-                    {url && (
-                        <Button
-                            as="a"
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variation="link"
-                            gap="0.5rem"
-                        >
-                            <Icon size="1em" />
-                            View
-                        </Button>
-                    )}
                 </Flex>
+
+                {/* Button pinned to bottom */}
+                {url && (
+                    <Button
+                        as="a"
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variation="link"
+                        gap="0.5rem"
+                        marginTop="auto"
+                    >
+                        <Icon size="1em"/>
+                        View
+                    </Button>
+                )}
             </Flex>
         </View>
     );
