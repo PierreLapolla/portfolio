@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
 import { Home, MessageCircle, Folder, LucideMail } from "lucide-react";
-import { Gaps, rv, IconSize } from "@/app/styles/styles";
+import { Gaps, R2, S, IconSize } from "@/app/styles/styles";
 
 const navTabs = [
     { label: "Home", href: "/", icon: Home },
@@ -22,7 +22,7 @@ export function Navbar() {
             alignItems="center"
             justifyContent="center"
             gap={Gaps.normal}
-            wrap={rv({ base: "wrap", medium: "nowrap" })}
+            wrap={R2("wrap", "nowrap")}
         >
             {navTabs.map((tab) => {
                 const isActive = pathname === tab.href;
@@ -34,14 +34,14 @@ export function Navbar() {
                         as={Link}
                         href={tab.href}
                         variation={isActive ? "primary" : "link"}
-                        paddingInline={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}
-                        paddingBlock={rv({ base: "var(--amplify-space-xs)", medium: "var(--amplify-space-sm)" })}
+                        paddingInline={R2(S.sm, S.md)}
+                        paddingBlock={R2(S.xs, S.sm)}
                     >
-                        {Icon && <Icon size={IconSize.sm} />}
+                        {Icon && <Icon size={IconSize.md} />}
                         <Text
                             as="span"
-                            marginLeft="var(--amplify-space-xs)"
-                            fontSize={{ base: "0.75rem", medium: "0.9rem" }}
+                            marginLeft={S.xs}
+                            fontSize={R2(S.md, S.lg)}
                             display={{ base: "none", small: "inline" }}
                         >
                             {tab.label}

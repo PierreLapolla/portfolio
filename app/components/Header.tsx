@@ -5,7 +5,7 @@ import { Button, Flex, View } from "@aws-amplify/ui-react";
 import { Navbar } from "@/app/components/Navbar";
 import { useAppColorMode } from "@/app/components/AppShell";
 import { Github, Linkedin, Moon, Sun } from "lucide-react";
-import { Gaps, HeaderPadding, headerRow, rv, IconSize, HeaderZ } from "@/app/styles/styles";
+import { Gaps, HeaderPadding, headerRow, R2, IconSize, HeaderZ } from "@/app/styles/styles";
 import { Container } from "@/app/components/Container";
 
 export function Header() {
@@ -24,7 +24,7 @@ export function Header() {
                 {/* LEFT */}
                 <Flex
                     flex="1"
-                    justifyContent={rv({ base: "center", medium: "flex-start" })}
+                    justifyContent={R2("center", "flex-start")}
                     alignItems="center"
                 >
                     {/*  */}
@@ -38,9 +38,9 @@ export function Header() {
                 {/* RIGHT: social links + theme toggle */}
                 <Flex
                     flex="1"
-                    justifyContent={rv({ base: "center", medium: "flex-end" })}
+                    justifyContent={R2("center", "flex-end")}
                     alignItems="center"
-                    gap={Gaps.normal}
+                    gap={Gaps.tight}
                 >
                     <Button
                         as="a"
@@ -50,7 +50,7 @@ export function Header() {
                         variation="link"
                         aria-label="Open GitHub profile"
                     >
-                        <Github size={IconSize.sm} />
+                        <Github size={IconSize.md} />
                     </Button>
 
                     <Button
@@ -61,7 +61,7 @@ export function Header() {
                         variation="link"
                         aria-label="Open LinkedIn profile"
                     >
-                        <Linkedin size={IconSize.sm} />
+                        <Linkedin size={IconSize.md} />
                     </Button>
 
                     <Button
@@ -69,7 +69,7 @@ export function Header() {
                         variation="link"
                         aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
                     >
-                        {isDark ? <Sun size={IconSize.sm} /> : <Moon size={IconSize.sm} />}
+                        {isDark ? <Sun size={IconSize.md} /> : <Moon size={IconSize.md} />}
                     </Button>
                 </Flex>
             </Flex>

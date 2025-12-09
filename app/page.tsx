@@ -1,7 +1,7 @@
 "use client";
 
 import { Alert, Badge, Button, Card, Flex, Heading, Text } from "@aws-amplify/ui-react";
-import { rv } from "@/app/styles/styles";
+import { R2, S } from "@/app/styles/styles";
 import { Container } from "@/app/components/Container";
 
 export default function HomePage() {
@@ -9,7 +9,7 @@ export default function HomePage() {
         <Container as="main">
             <Flex
                 direction="column"
-                gap={rv({ base: "var(--amplify-space-xl)", medium: "var(--amplify-space-xxl)" })}
+                gap={R2(S.xl, S.xxl)}
             >
                 {/* Status banner */}
                 <Alert variation="info" isDismissible={true}>
@@ -20,7 +20,7 @@ export default function HomePage() {
                 </Alert>
 
                 {/* Hero */}
-                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                <Flex direction="column" gap={R2(S.md, S.lg)}>
                     <Badge size="small" variation="info" alignSelf="flex-start">
                         Paris · Cloud & Software Engineering
                     </Badge>
@@ -34,7 +34,7 @@ export default function HomePage() {
                         applications, and learning fast by working on real projects.
                     </Text>
 
-                    <Flex gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })} wrap="wrap">
+                    <Flex gap={R2(S.sm, S.md)} wrap="wrap">
                         <Button
                             as="a"
                             href="/chat"
@@ -74,12 +74,12 @@ export default function HomePage() {
                 </Flex>
 
                 {/* What I like to work on */}
-                <Flex direction="column" gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })}>
+                <Flex direction="column" gap={R2(S.lg, S.xl)}>
                     <Heading level={2}>
                         What I like to work on
                     </Heading>
 
-                    <Flex gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })} wrap="wrap">
+                    <Flex gap={R2(S.lg, S.xl)} wrap="wrap">
                         <Card
                             maxWidth="320px"
                             flex="1 1 260px"
@@ -134,12 +134,12 @@ export default function HomePage() {
                 </Flex>
 
                 {/* Background */}
-                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                <Flex direction="column" gap={R2(S.md, S.lg)}>
                     <Heading level={2}>
                         Background
                     </Heading>
 
-                    <Flex direction="column" gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}>
+                    <Flex direction="column" gap={R2(S.sm, S.md)}>
                         <Card>
                             <Heading level={3} fontSize="1.1rem">
                                 Capgemini · Cloud & Backend Internship
@@ -188,7 +188,7 @@ export default function HomePage() {
                 </Flex>
 
                 {/* AI assistant section */}
-                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                <Flex direction="column" gap={R2(S.md, S.lg)}>
                     <Heading level={2}>
                         Talk to my AI assistant
                     </Heading>
@@ -199,7 +199,7 @@ export default function HomePage() {
                         what I enjoy working on, and how I approach problems.
                     </Text>
 
-                    <Flex gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })} wrap="wrap">
+                    <Flex gap={R2(S.sm, S.md)} wrap="wrap">
                         <Button
                             as="a"
                             href="/chat"

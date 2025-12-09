@@ -1,13 +1,13 @@
 "use client";
 
 import { Button, Flex, Heading, Text } from "@aws-amplify/ui-react";
-import { rv } from "@/app/styles/styles";
+import { R2, S } from "@/app/styles/styles";
 import { Container } from "@/app/components/Container";
 
 export default function ContactPage() {
     return (
         <Container as="main">
-            <Flex direction="column" gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })}>
+            <Flex direction="column" gap={R2(S.lg, S.xl)}>
                 <Heading level={1}>Contact</Heading>
 
                 <Text>

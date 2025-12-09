@@ -3,7 +3,7 @@ import { Flex, Link, Text, View } from "@aws-amplify/ui-react";
 import { ChatBubble } from "@/app/components/ChatBubble";
 import { ChatInput } from "@/app/components/ChatInput";
 import type { UIMessage } from "ai";
-import { rv } from "@/app/styles/styles";
+import { R2, S } from "@/app/styles/styles";
 import { Container } from "@/app/components/Container";
 
 
@@ -32,12 +32,12 @@ export default function ChatUI({
         <Container as="main" height="80vh">
             <Flex
                 direction="column"
-                gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
+                gap={R2(S.md, S.lg)}
                 height="100%"
             >
                 {/* Messages area */}
-                <View as="section" flex="1" overflow="auto" padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
-                    <Flex direction="column" gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}>
+                <View as="section" flex="1" overflow="auto" padding={R2(S.md, S.lg)}>
+                    <Flex direction="column" gap={R2(S.sm, S.md)}>
                         {messages.map((message) => (
                             <ChatBubble key={message.id} message={message}/>
                         ))}
@@ -55,12 +55,12 @@ export default function ChatUI({
                 </View>
             </Flex>
 
-            <View as="footer" padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+            <View as="footer" padding={R2(S.md, S.lg)}>
                 <Flex
                     direction="column"
                     justifyContent="center"
                     alignItems="center"
-                    gap={rv({ base: "var(--amplify-space-xs)", medium: "var(--amplify-space-sm)" })}
+                    gap={R2(S.xs, S.sm)}
                 >
                     <Text color="font.tertiary" textAlign="center" width={{ base: "90vw", medium: "60vw" }}>
                         Chat powered by

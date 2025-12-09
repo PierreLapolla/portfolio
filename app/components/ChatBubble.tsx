@@ -1,6 +1,6 @@
 import type {UIMessage} from "ai";
 import {Flex, Text} from "@aws-amplify/ui-react";
-import { rv } from "@/app/styles/styles";
+import { R2, S } from "@/app/styles/styles";
 
 interface ChatBubbleProps {
     message: UIMessage;
@@ -50,10 +50,10 @@ export function ChatBubble({message}: ChatBubbleProps) {
             <Flex
                 direction="column"
                 maxWidth="80%"
-                padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
+                padding={R2(S.md, S.lg)}
                 borderRadius="large"
                 backgroundColor={isUser ? "background.tertiary" : "background.secondary"}
-                gap={rv({ base: "var(--amplify-space-xs)", medium: "var(--amplify-space-sm)" })}
+                gap={R2(S.xs, S.sm)}
             >
                 <Text
                     as="span"

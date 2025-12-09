@@ -1,6 +1,6 @@
 import { Badge, Button, Flex, Heading, Text, View } from "@aws-amplify/ui-react";
 import { ExternalLink, Github } from "lucide-react";
-import { Gaps, rv } from "@/app/styles/styles";
+import { Gaps, R2, S } from "@/app/styles/styles";
 
 export interface Project {
     slug: string;
@@ -30,15 +30,15 @@ export default function ProjectCard({project}: { project: Project }) {
             as="article"
             backgroundColor="background.secondary"
             borderRadius="large"
-            padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
+            padding={R2(S.md, S.lg)}
             boxShadow="large"
         >
             <Flex
                 direction="column"
-                gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
+                gap={R2(S.md, S.lg)}
                 height="100%"
             >
-                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                <Flex direction="column" gap={R2(S.md, S.lg)}>
                     <Flex alignItems="center" gap={Gaps.normal}>
                         <Heading level={3}>{title}</Heading>
                     </Flex>

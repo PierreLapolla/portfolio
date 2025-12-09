@@ -2,7 +2,7 @@
 
 import { Grid, Heading, View } from "@aws-amplify/ui-react";
 import ProjectCard, { Project } from "@/app/components/ProjectCard";
-import { rv } from "@/app/styles/styles";
+import { R2, S } from "@/app/styles/styles";
 import { Container } from "@/app/components/Container";
 
 
@@ -136,13 +136,13 @@ export default function ProjectsPage() {
                         as="section"
                         key={category}
                     >
-                        <Heading level={2} textAlign="center" margin={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xxl)" })}>
+                        <Heading level={2} textAlign="center" margin={R2(S.lg, S.xxl)}>
                             {label}
                         </Heading>
 
                         <Grid
                             templateColumns={{ base: "1fr", medium: "1fr 1fr" }}
-                            gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xxl)" })}
+                            gap={R2(S.lg, S.xxl)}
                         >
                             {categoryProjects.map((project) => (
                                 <ProjectCard
