@@ -1,5 +1,6 @@
 import {ChangeEvent} from "react";
 import {Button, Flex, TextField} from "@aws-amplify/ui-react";
+import { rv } from "@/app/styles/styles";
 import {Send} from "lucide-react";
 
 interface ChatInputProps {
@@ -14,7 +15,7 @@ export function ChatInput({value, onChange, isBusy}: ChatInputProps) {
     };
 
     return (
-        <Flex direction="row" gap="0.5rem">
+        <Flex direction="row" gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}>
             <TextField
                 label="Message"
                 labelHidden

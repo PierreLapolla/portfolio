@@ -1,7 +1,9 @@
 "use client";
 
-import {Grid, Heading, View} from "@aws-amplify/ui-react";
-import ProjectCard, {Project} from "@/app/components/ProjectCard";
+import { Grid, Heading, View } from "@aws-amplify/ui-react";
+import ProjectCard, { Project } from "@/app/components/ProjectCard";
+import { rv } from "@/app/styles/styles";
+import { Container } from "@/app/components/Container";
 
 
 const projects: Project[] = [
@@ -120,12 +122,7 @@ export default function ProjectsPage() {
     ) as ProjectCategory[];
 
     return (
-        <View
-            as="main"
-            padding="1rem"
-            maxWidth="960px"
-            margin="0 auto"
-        >
+        <Container as="main">
             {categories.map((category) => {
                 const categoryProjects = projects.filter(
                     (p) => p.category === category
@@ -139,13 +136,13 @@ export default function ProjectsPage() {
                         as="section"
                         key={category}
                     >
-                        <Heading level={2} textAlign="center" margin="2rem">
+                        <Heading level={2} textAlign="center" margin={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xxl)" })}>
                             {label}
                         </Heading>
 
                         <Grid
                             templateColumns={{ base: "1fr", medium: "1fr 1fr" }}
-                            gap="2rem"
+                            gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xxl)" })}
                         >
                             {categoryProjects.map((project) => (
                                 <ProjectCard
@@ -157,6 +154,6 @@ export default function ProjectsPage() {
                     </View>
                 );
             })}
-        </View>
+        </Container>
     );
 }

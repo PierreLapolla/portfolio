@@ -1,5 +1,6 @@
-import {Badge, Button, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
-import {ExternalLink, Github} from "lucide-react";
+import { Badge, Button, Flex, Heading, Text, View } from "@aws-amplify/ui-react";
+import { ExternalLink, Github } from "lucide-react";
+import { Gaps, rv } from "@/app/styles/styles";
 
 export interface Project {
     slug: string;
@@ -29,22 +30,22 @@ export default function ProjectCard({project}: { project: Project }) {
             as="article"
             backgroundColor="background.secondary"
             borderRadius="large"
-            padding="1rem"
+            padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
             boxShadow="large"
         >
             <Flex
                 direction="column"
-                gap="1rem"
+                gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
                 height="100%"
             >
-                <Flex direction="column" gap="1rem">
-                    <Flex alignItems="center" gap="0.5rem">
+                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                    <Flex alignItems="center" gap={Gaps.normal}>
                         <Heading level={3}>{title}</Heading>
                     </Flex>
 
                     <Text>{description}</Text>
 
-                    <Flex as="ul" gap="0.5rem" wrap="wrap">
+                    <Flex as="ul" gap={Gaps.normal} wrap="wrap">
                         {tech.map((t) => (
                             <Badge as="li" key={t} variation="info" size="small">
                                 {t}
@@ -61,10 +62,10 @@ export default function ProjectCard({project}: { project: Project }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         variation="link"
-                        gap="0.5rem"
+                        gap={Gaps.normal}
                         marginTop="auto"
                     >
-                        <Icon size="1em"/>
+                        <Icon size="1em" />
                         View
                     </Button>
                 )}

@@ -1,18 +1,15 @@
 "use client";
 
-import {Alert, Badge, Button, Card, Flex, Heading, Text, View,} from "@aws-amplify/ui-react";
+import { Alert, Badge, Button, Card, Flex, Heading, Text } from "@aws-amplify/ui-react";
+import { rv } from "@/app/styles/styles";
+import { Container } from "@/app/components/Container";
 
 export default function HomePage() {
     return (
-        <View
-            as="main"
-            padding="1rem"
-            maxWidth="960px"
-            margin="0 auto"
-        >
+        <Container as="main">
             <Flex
                 direction="column"
-                gap="2.5rem"
+                gap={rv({ base: "var(--amplify-space-xl)", medium: "var(--amplify-space-xxl)" })}
             >
                 {/* Status banner */}
                 <Alert variation="info" isDismissible={true}>
@@ -23,10 +20,7 @@ export default function HomePage() {
                 </Alert>
 
                 {/* Hero */}
-                <Flex
-                    direction="column"
-                    gap="1rem"
-                >
+                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
                     <Badge size="small" variation="info" alignSelf="flex-start">
                         Paris · Cloud & Software Engineering
                     </Badge>
@@ -40,10 +34,7 @@ export default function HomePage() {
                         applications, and learning fast by working on real projects.
                     </Text>
 
-                    <Flex
-                        gap="1rem"
-                        wrap="wrap"
-                    >
+                    <Flex gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })} wrap="wrap">
                         <Button
                             as="a"
                             href="/chat"
@@ -83,15 +74,12 @@ export default function HomePage() {
                 </Flex>
 
                 {/* What I like to work on */}
-                <Flex direction="column" gap="1.5rem">
+                <Flex direction="column" gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })}>
                     <Heading level={2}>
                         What I like to work on
                     </Heading>
 
-                    <Flex
-                        gap="1.5rem"
-                        wrap="wrap"
-                    >
+                    <Flex gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })} wrap="wrap">
                         <Card
                             maxWidth="320px"
                             flex="1 1 260px"
@@ -99,10 +87,10 @@ export default function HomePage() {
                             <Badge size="small" variation="info">
                                 Cloud & Backend
                             </Badge>
-                            <Heading level={3} marginTop="0.5rem">
+                            <Heading level={3} marginTop="var(--amplify-space-sm)">
                                 Cloud & Backend Engineering
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Designing and implementing backend services that are scalable,
                                 maintainable, and ready for the cloud. I like working with AWS,
                                 FastAPI, and CI/CD pipelines to turn ideas into reliable services.
@@ -116,10 +104,10 @@ export default function HomePage() {
                             <Badge size="small" variation="info">
                                 AI & Data
                             </Badge>
-                            <Heading level={3} marginTop="0.5rem">
+                            <Heading level={3} marginTop="var(--amplify-space-sm)">
                                 Applied AI & Data
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Applying machine learning to concrete problems: from traffic prediction
                                 with graph neural networks to computer vision with YOLO-based models.
                                 I enjoy connecting ML prototypes with real-world constraints.
@@ -133,10 +121,10 @@ export default function HomePage() {
                             <Badge size="small" variation="info">
                                 Craft & Learning
                             </Badge>
-                            <Heading level={3} marginTop="0.5rem">
+                            <Heading level={3} marginTop="var(--amplify-space-sm)">
                                 Software Craft & Learning
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Writing clean, structured code and improving developer experience with
                                 templates, automation, and good practices. I like sharing what I build,
                                 from LaTeX and Python templates to small open-source utilities.
@@ -146,17 +134,17 @@ export default function HomePage() {
                 </Flex>
 
                 {/* Background */}
-                <Flex direction="column" gap="1rem">
+                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
                     <Heading level={2}>
                         Background
                     </Heading>
 
-                    <Flex direction="column" gap="0.5rem">
+                    <Flex direction="column" gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}>
                         <Card>
                             <Heading level={3} fontSize="1.1rem">
                                 Capgemini · Cloud & Backend Internship
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Worked on an AWS-based “Home Farming” project, building a prototype to
                                 collect data from a Raspberry Pi into the cloud using FastAPI, and
                                 setting up a CI/CD pipeline. Also explored computer vision with a
@@ -168,7 +156,7 @@ export default function HomePage() {
                             <Heading level={3} fontSize="1.1rem">
                                 LyRIDS · Research in AI
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Contributed to a research project on road traffic flow prediction using
                                 graph neural networks. Involved literature review, model design, and
                                 participation in scientific writing.
@@ -179,7 +167,7 @@ export default function HomePage() {
                             <Heading level={3} fontSize="1.1rem">
                                 Arkema · Industrial Data Prototype
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Built a prototype around industrial sensor data collection, management
                                 and monitoring using a Raspberry Pi connected to AWS, with attention to
                                 reliability and simplicity in an industrial context.
@@ -190,7 +178,7 @@ export default function HomePage() {
                             <Heading level={3} fontSize="1.1rem">
                                 ECE Paris · Cloud Engineering &amp; Management
                             </Heading>
-                            <Text as="p" marginTop="0.5rem">
+                            <Text as="p" marginTop="var(--amplify-space-sm)">
                                 Master&apos;s-level engineering degree with a major in Cloud Engineering
                                 &amp; Management. Foundations in computer science, networks, security,
                                 DevOps, and AI, plus project-based teamwork.
@@ -200,7 +188,7 @@ export default function HomePage() {
                 </Flex>
 
                 {/* AI assistant section */}
-                <Flex direction="column" gap="1rem">
+                <Flex direction="column" gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
                     <Heading level={2}>
                         Talk to my AI assistant
                     </Heading>
@@ -211,7 +199,7 @@ export default function HomePage() {
                         what I enjoy working on, and how I approach problems.
                     </Text>
 
-                    <Flex gap="1rem" wrap="wrap">
+                    <Flex gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })} wrap="wrap">
                         <Button
                             as="a"
                             href="/chat"
@@ -222,6 +210,6 @@ export default function HomePage() {
                     </Flex>
                 </Flex>
             </Flex>
-        </View>
+        </Container>
     );
 }

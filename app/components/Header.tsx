@@ -1,59 +1,67 @@
+
 "use client";
 
-import {Button, Flex, View} from "@aws-amplify/ui-react";
-import {Navbar} from "@/app/components/Navbar";
-import {useAppColorMode} from "@/app/components/AppShell";
-import {Github, Linkedin, Moon, Sun} from "lucide-react";
+import { Button, Flex, View } from "@aws-amplify/ui-react";
+import { Navbar } from "@/app/components/Navbar";
+import { useAppColorMode } from "@/app/components/AppShell";
+import { Github, Linkedin, Moon, Sun } from "lucide-react";
+import { Gaps, HeaderPadding, headerRow, rv, IconSize, HeaderZ } from "@/app/styles/styles";
+import { Container } from "@/app/components/Container";
 
 export function Header() {
-    const {colorMode, toggleColorMode} = useAppColorMode();
+    const { colorMode, toggleColorMode } = useAppColorMode();
     const isDark = colorMode === "dark";
 
     return (
-        <View as="header" padding="1rem" backgroundColor="background.primary" style={{position: "sticky", top: 0}}>
-            <Flex as="div" alignItems="center" width="100%">
+        <View
+            as="header"
+            padding={HeaderPadding}
+            backgroundColor="background.primary"
+            style={{ position: "sticky", top: 0, zIndex: HeaderZ }}
+        >
+            <Container as="div" noPaddingX noPaddingY>
+            <Flex as="div" {...headerRow}>
                 {/* LEFT */}
                 <Flex
                     flex="1"
-                    justifyContent="flex-start"
+                    justifyContent={rv({ base: "center", medium: "flex-start" })}
                     alignItems="center"
                 >
+                    {/*  */}
                 </Flex>
 
-                {/* CENTER */}
-                <Flex
-                    flex="1"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Navbar/>
+                {/* CENTER: navigation */}
+                <Flex flex="1" justifyContent="center" alignItems="center">
+                    <Navbar />
                 </Flex>
 
-                {/* RIGHT */}
+                {/* RIGHT: social links + theme toggle */}
                 <Flex
                     flex="1"
-                    justifyContent="flex-end"
+                    justifyContent={rv({ base: "center", medium: "flex-end" })}
                     alignItems="center"
-                    gap="0rem"
+                    gap={Gaps.normal}
                 >
                     <Button
                         as="a"
+                        href="https://github.com/PierreLapolla"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://github.com/PierreLapolla"
                         variation="link"
+                        aria-label="Open GitHub profile"
                     >
-                        <Github/>
+                        <Github size={IconSize.sm} />
                     </Button>
 
                     <Button
                         as="a"
+                        href="https://fr.linkedin.com/in/pierrelapolla"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://fr.linkedin.com/in/pierrelapolla"
                         variation="link"
+                        aria-label="Open LinkedIn profile"
                     >
-                        <Linkedin/>
+                        <Linkedin size={IconSize.sm} />
                     </Button>
 
                     <Button
@@ -61,10 +69,11 @@ export function Header() {
                         variation="link"
                         aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
                     >
-                        {isDark ? <Sun/> : <Moon/>}
+                        {isDark ? <Sun size={IconSize.sm} /> : <Moon size={IconSize.sm} />}
                     </Button>
                 </Flex>
             </Flex>
+            </Container>
         </View>
     );
 }

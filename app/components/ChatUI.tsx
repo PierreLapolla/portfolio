@@ -1,8 +1,10 @@
-import {FormEvent, useEffect, useRef} from "react";
-import {Flex, Link, Text, View} from "@aws-amplify/ui-react";
-import {ChatBubble} from "@/app/components/ChatBubble";
-import {ChatInput} from "@/app/components/ChatInput";
-import type {UIMessage} from "ai";
+import { FormEvent, useEffect, useRef } from "react";
+import { Flex, Link, Text, View } from "@aws-amplify/ui-react";
+import { ChatBubble } from "@/app/components/ChatBubble";
+import { ChatInput } from "@/app/components/ChatInput";
+import type { UIMessage } from "ai";
+import { rv } from "@/app/styles/styles";
+import { Container } from "@/app/components/Container";
 
 
 interface ChatUIProps {
@@ -27,17 +29,15 @@ export default function ChatUI({
     }, [messages.length]);
 
     return (
-        <View as="main" padding="1rem" height="80vh">
+        <Container as="main" height="80vh">
             <Flex
                 direction="column"
-                gap="1rem"
+                gap={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}
                 height="100%"
-                maxWidth="60rem"
-                margin="0 auto"
             >
                 {/* Messages area */}
-                <View as="section" flex="1" overflow="auto" padding="1rem">
-                    <Flex direction="column" gap="0.75rem">
+                <View as="section" flex="1" overflow="auto" padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
+                    <Flex direction="column" gap={rv({ base: "var(--amplify-space-sm)", medium: "var(--amplify-space-md)" })}>
                         {messages.map((message) => (
                             <ChatBubble key={message.id} message={message}/>
                         ))}
@@ -55,14 +55,14 @@ export default function ChatUI({
                 </View>
             </Flex>
 
-            <View as="footer" padding="1rem">
+            <View as="footer" padding={rv({ base: "var(--amplify-space-md)", medium: "var(--amplify-space-lg)" })}>
                 <Flex
                     direction="column"
                     justifyContent="center"
                     alignItems="center"
-                    gap="0.25rem"
+                    gap={rv({ base: "var(--amplify-space-xs)", medium: "var(--amplify-space-sm)" })}
                 >
-                    <Text color="font.tertiary" textAlign="center" width="60vw">
+                    <Text color="font.tertiary" textAlign="center" width={{ base: "90vw", medium: "60vw" }}>
                         Chat powered by
                         <Link
                             href="https://mistral.ai"
@@ -77,6 +77,6 @@ export default function ChatUI({
                     </Text>
                 </Flex>
             </View>
-        </View>
+        </Container>
     );
 }

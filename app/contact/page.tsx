@@ -1,16 +1,13 @@
 "use client";
 
-import {Button, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
+import { Button, Flex, Heading, Text } from "@aws-amplify/ui-react";
+import { rv } from "@/app/styles/styles";
+import { Container } from "@/app/components/Container";
 
 export default function ContactPage() {
     return (
-        <View
-            as="main"
-            padding="1rem"
-            maxWidth="960px"
-            margin="0 auto"
-        >
-            <Flex direction="column" gap="1.5rem">
+        <Container as="main">
+            <Flex direction="column" gap={rv({ base: "var(--amplify-space-lg)", medium: "var(--amplify-space-xl)" })}>
                 <Heading level={1}>Contact</Heading>
 
                 <Text>
@@ -25,9 +22,7 @@ export default function ContactPage() {
 
                 <Text>
                     You can also send me an e-mail at
-                    <Text fontWeight="bold" as="span">
-                        {" "}pro@pierrelapolla.com :
-                    </Text>
+                    <Text fontWeight="bold" as="span"> {" "}pro@pierrelapolla.com :</Text>
                     <Button
                         as="a"
                         href="mailto:pro@pierrelapolla.com"
@@ -37,6 +32,6 @@ export default function ContactPage() {
                     </Button>
                 </Text>
             </Flex>
-        </View>
+        </Container>
     );
 }
