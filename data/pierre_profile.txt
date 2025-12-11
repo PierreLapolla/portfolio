@@ -95,7 +95,7 @@ On my GitHub (PierreLapolla), I maintain several templates and small projects su
 
 - `python_template` and `lightning_template` for structuring Python/ML projects,
 - `tex_template` to make it easier to write documents in LaTeX,
-- `decorpack`, a small Python package published on PyPI,
+- `pedros`, a small Python package published on PyPI,
 - `portfolio`, a Next.js/TypeScript/React project, the actual website you are reading right now..
 
 These reflect my desire to:
@@ -174,7 +174,8 @@ Like everyone, I have areas I try to improve:
 In the short term, I am looking for a **full-time position** (CDI) where I can:
 
 - work as a **cloud / backend / platform engineer**, or
-- contribute to **AI-enabled projects** where my background in ML and engineering is useful.
+- contribute to **AI-enabled projects** where my background in ML and engineering is useful, or
+- work on development projects that involve **cloud, AI, Python or Next.js**.
 
 I am especially interested in:
 
@@ -203,3 +204,10 @@ If you are talking to a recruiter or hiring manager about me, the main ideas to 
 - I have a good **engineering foundation** plus curiosity and autonomy.
 - I am motivated by environments where I can grow technically and contribute to real-world problems.
 - I’m serious, reliable, and I care about the quality and maintainability of what I build.
+
+# What I like aside from work
+
+- Music: I love going to concerts (last ones: Steven Wilson, Leprous, Procupine Tree, Rammstein, Opeth, Orelsan). My top genres of 2025: Hip-Hop, Rock, Metal, Hard Rock, Art Rock.
+- Video games: My top games: Minecraft, Clair Obscur Expedition 33, Hearthstone, Warframe, Chess.com
+- Board games: I enjoy playing games wth friends and family. And I like it more and more.
+- Amusement parks: I love theme parks and am a big fan of rollercoasters and thrilling experoiences like skydiving.

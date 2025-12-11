@@ -5,23 +5,29 @@ Mistral AI.
 
 ## Features
 
-* **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral AI's free tier limits)
+* **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral's free tier limits)
 * **AI chat interface:** 
   * A custom chatbot that answers questions based on Pierre's profile.
-  * Streaming responses (not working on live site because of Amplify)
-* **Tech stack:**
-    * **Framework:** Next.js 14 (App router)
-    * **Language:** TypeScript
-    * **AI provider:** Mistral AI via Vercel AI SDK
-    * **Hosting/backend:** AWS Amplify
-    * **Styling:** AWS Amplify UI Components
-* **Responsive design:** UI made of custom components (AppShell, ChatUI)
-
+  * Streaming responses (not working on a live site because of Amplify)
+* **Pages**:
+    * Home
+    * Chat
+    * Projects
+    * Contact
+* **Styling:**
+    * Custom UI Components from AWS Amplify UI Components
+    * Light/dark mode toggle
 * **Future features:**
-    * Add a "Contact" page
-    * Add a "Projects" page
-    * Add more information about Pierre, music, games, parc attractions, etc.
+    * Add more information about Pierre
     * Implement a custom backend for the chatbot using FastAPI
+
+## Tech stack
+
+* **Framework:** Next.js 14 (App router)
+* **Language:** TypeScript
+* **AI provider:** Mistral AI via Vercel AI SDK
+* **Hosting/backend:** AWS Amplify
+* **Styling:** AWS Amplify UI Components
 
 ## Prerequisites
 
