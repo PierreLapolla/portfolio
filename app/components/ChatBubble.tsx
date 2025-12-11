@@ -1,6 +1,6 @@
 import type {UIMessage} from "ai";
 import {Flex, Text} from "@aws-amplify/ui-react";
-import { R2, S } from "@/app/styles/styles";
+import {R2, S} from "@/app/styles/styles";
 
 interface ChatBubbleProps {
     message: UIMessage;

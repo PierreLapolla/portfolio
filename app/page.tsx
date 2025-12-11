@@ -1,8 +1,8 @@
 "use client";
 
-import { Alert, Badge, Button, Card, Flex, Heading, Text } from "@aws-amplify/ui-react";
-import { R2, S } from "@/app/styles/styles";
-import { Container } from "@/app/components/Container";
+import {Alert, Badge, Button, Card, Flex, Heading, Text} from "@aws-amplify/ui-react";
+import {R2, S} from "@/app/styles/styles";
+import {Container} from "@/app/components/Container";
 
 export default function HomePage() {
     return (

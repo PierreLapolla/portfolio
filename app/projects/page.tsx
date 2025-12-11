@@ -1,9 +1,9 @@
 "use client";
 
-import { Grid, Heading, View } from "@aws-amplify/ui-react";
-import ProjectCard, { Project } from "@/app/components/ProjectCard";
-import { R2, S } from "@/app/styles/styles";
-import { Container } from "@/app/components/Container";
+import {Grid, Heading, View} from "@aws-amplify/ui-react";
+import ProjectCard, {Project} from "@/app/components/ProjectCard";
+import {R2, S} from "@/app/styles/styles";
+import {Container} from "@/app/components/Container";
 
 
 const projects: Project[] = [
@@ -111,9 +111,9 @@ interface CategoryConfig {
 }
 
 const CATEGORY_CONFIG: Record<ProjectCategory, CategoryConfig> = {
-    internship: { label: "Internships" },
-    personal: { label: "Personal projects" },
-    school: { label: "School projects" },
+    internship: {label: "Internships"},
+    personal: {label: "Personal projects"},
+    school: {label: "School projects"},
 };
 
 export default function ProjectsPage() {
@@ -141,7 +141,7 @@ export default function ProjectsPage() {
                         </Heading>
 
                         <Grid
-                            templateColumns={{ base: "1fr", medium: "1fr 1fr" }}
+                            templateColumns={{base: "1fr", medium: "1fr 1fr"}}
                             gap={R2(S.lg, S.xxl)}
                         >
                             {categoryProjects.map((project) => (

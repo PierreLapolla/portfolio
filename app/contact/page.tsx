@@ -1,8 +1,8 @@
 "use client";
 
-import { Button, Flex, Heading, Text } from "@aws-amplify/ui-react";
-import { R2, S } from "@/app/styles/styles";
-import { Container } from "@/app/components/Container";
+import {Button, Flex, Heading, Text} from "@aws-amplify/ui-react";
+import {R2, S} from "@/app/styles/styles";
+import {Container} from "@/app/components/Container";
 
 export default function ContactPage() {
     return (

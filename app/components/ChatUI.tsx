@@ -1,10 +1,10 @@
-import { FormEvent, useEffect, useRef } from "react";
-import { Flex, Link, Text, View } from "@aws-amplify/ui-react";
-import { ChatBubble } from "@/app/components/ChatBubble";
-import { ChatInput } from "@/app/components/ChatInput";
-import type { UIMessage } from "ai";
-import { R2, S } from "@/app/styles/styles";
-import { Container } from "@/app/components/Container";
+import {FormEvent, useEffect, useRef} from "react";
+import {Flex, Link, Text, View} from "@aws-amplify/ui-react";
+import {ChatBubble} from "@/app/components/ChatBubble";
+import {ChatInput} from "@/app/components/ChatInput";
+import type {UIMessage} from "ai";
+import {R2, S} from "@/app/styles/styles";
+import {Container} from "@/app/components/Container";
 
 
 interface ChatUIProps {
@@ -16,12 +16,12 @@ interface ChatUIProps {
 }
 
 export default function ChatUI({
-                           messages,
-                           input,
-                           isBusy,
-                           onInputChange,
-                           onSubmit,
-                       }: ChatUIProps) {
+                                   messages,
+                                   input,
+                                   isBusy,
+                                   onInputChange,
+                                   onSubmit,
+                               }: ChatUIProps) {
     const endOfMessagesRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -62,7 +62,7 @@ export default function ChatUI({
                     alignItems="center"
                     gap={R2(S.xs, S.sm)}
                 >
-                    <Text color="font.tertiary" textAlign="center" width={{ base: "90vw", medium: "60vw" }}>
+                    <Text color="font.tertiary" textAlign="center" width={{base: "90vw", medium: "60vw"}}>
                         Chat powered by
                         <Link
                             href="https://mistral.ai"

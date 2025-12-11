@@ -1,6 +1,6 @@
-import { Badge, Button, Flex, Heading, Text, View } from "@aws-amplify/ui-react";
-import { ExternalLink, Github } from "lucide-react";
-import { Gaps, R2, S } from "@/app/styles/styles";
+import {Badge, Button, Flex, Heading, Text, View} from "@aws-amplify/ui-react";
+import {ExternalLink, Github} from "lucide-react";
+import {Gaps, R2, S} from "@/app/styles/styles";
 
 export interface Project {
     slug: string;
@@ -12,7 +12,7 @@ export interface Project {
 }
 
 export default function ProjectCard({project}: { project: Project }) {
-    const {title, category, description, tech, url} = project;
+    const {title, description, tech, url} = project;
 
     let isGithub = false;
     if (url) {
@@ -65,7 +65,7 @@ export default function ProjectCard({project}: { project: Project }) {
                         gap={Gaps.normal}
                         marginTop="auto"
                     >
-                        <Icon size="1em" />
+                        <Icon size="1em"/>
                         View
                     </Button>
                 )}

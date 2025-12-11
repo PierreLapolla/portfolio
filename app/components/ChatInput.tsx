@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 import {Button, Flex, TextField} from "@aws-amplify/ui-react";
-import { R2, S } from "@/app/styles/styles";
+import {R2, S} from "@/app/styles/styles";
 import {Send} from "lucide-react";
 
 interface ChatInputProps {
