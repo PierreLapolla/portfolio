@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pierre Lapolla - AI Portfolio
 
-## Getting Started
+A modern portfolio website built with Next.js and TypeScript, featuring an interactive "AI Twin" chatbot powered by
+Mistral AI.
 
-First, run the development server:
+## Features
 
+* **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral's free tier limits)
+* **AI chat interface:**
+    * A custom chatbot that answers questions based on Pierre's profile.
+    * Streaming responses (not working on a live site because of Amplify)
+* **Pages**:
+    * Home
+    * Chat
+    * Projects
+    * Contact
+* **Styling:**
+    * Custom UI Components from AWS Amplify UI Components
+    * Light/dark mode toggle
+* **Future features:**
+    * Add more information about Pierre
+    * Implement a custom backend for the chatbot using FastAPI
+
+## Tech stack
+
+* **Framework:** Next.js 14 (App router)
+* **Language:** TypeScript
+* **AI provider:** Mistral AI via Vercel AI SDK
+* **Hosting/backend:** AWS Amplify
+* **Styling:** AWS Amplify UI Components
+
+## Prerequisites
+
+Ensure you have the following installed on your local machine:
+
+* [**Node.js**](https://nodejs.org/en/download)
+* [**npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+## Installation & setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/PierreLapolla/portfolio
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Environment variables:**
+   Create a `.env.local` file in the root directory based on `.env.template`.
+   ```bash
+   cp .env.template .env.local
+   ```
+
+   Open `.env.local` and add your specific API keys (e.g., Mistral AI API Key):
+   ```env
+   MISTRAL_API_KEY=your_api_key_here
+   ```
+
+4. **Data configuration:**
+   The AI is driven by text files located in the `data/` folder:
+    * `data/pierre_profile.txt`: Contains the knowledge base/bio for the AI.
+    * `data/system_prompt.txt`: Contains the instructions for the AI's behavior.
+
+## Running the project
+
+**Development server:**
+To start the application in development mode with hot-reloading:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+OR
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Production build:**
+To start the application:
+```bash
+    npm run build && npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
