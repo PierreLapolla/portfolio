@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="chore: remove package-lock.json for project cleanup and dependency reset">
-      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/backgrounds/hexagon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/ripple.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/buttons/ripple.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/theme-toggle-button.tsx" afterDir="false" />
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: refactor UI components and remove unused primitives for a cleaner structure">
+      <change afterPath="$PROJECT_DIR$/components/page-container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/section-stack.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/experience-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/skills-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-assistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/site-footer.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,11 +110,14 @@
     <option name="spentUsd" value="0.0461053" />
   </component>
   <component name="RecapUselessUpdatesCounter">
-    <option name="suspendCountdown" value="6" />
+    <option name="suspendCountdown" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/sections" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -133,7 +139,7 @@
       <workItem from="1769166418722" duration="8796000" />
       <workItem from="1769263793087" duration="4171000" />
       <workItem from="1769287162334" duration="431000" />
-      <workItem from="1769287615427" duration="3233000" />
+      <workItem from="1769287615427" duration="4620000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -191,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769288664634</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: refactor UI components and remove unused primitives for a cleaner structure">
+      <option name="closed" value="true" />
+      <created>1769290943667</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1769290943667</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +219,7 @@
     <MESSAGE value="feat: remove custom theme mode toggle to use animate ui's one" />
     <MESSAGE value="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell" />
     <MESSAGE value="chore: remove package-lock.json for project cleanup and dependency reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove package-lock.json for project cleanup and dependency reset" />
+    <MESSAGE value="feat: refactor UI components and remove unused primitives for a cleaner structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: refactor UI components and remove unused primitives for a cleaner structure" />
   </component>
 </project>

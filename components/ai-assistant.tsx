@@ -1,3 +1,5 @@
+// ai-assistant.tsx
+
 "use client";
 
 import React, {useCallback, useRef, useState} from "react";
@@ -34,7 +36,7 @@ type AiAssistantProps = {
 export default function AiAssistant({
                                         api = "/api/chat",
                                         welcomeText = "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
-                                        className = "max-w-4xl mx-auto p-6 relative size-full h-screen",
+                                        className = "max-w-4xl mx-auto p-6 relative size-full h-[50vh]",
                                     }: AiAssistantProps) {
     const [input, setInput] = useState("");
     const lastUserTextRef = useRef<string | null>(null);

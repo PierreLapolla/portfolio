@@ -1,3 +1,5 @@
+// app-shell.tsx
+
 import * as React from "react"
 import {ThemeProvider} from "@/components/theme-provider"
 import {SiteHeader} from "@/components/site-header"
