@@ -1,7 +1,7 @@
 // components/sections/experience-section.tsx
 import * as React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Section } from "@/components/section";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Section} from "@/components/section";
 
 type Item = {
     title: string;
@@ -29,7 +29,7 @@ const EDUCATION: Item[] = [
     },
 ];
 
-function TimelineCard({ item }: { item: Item }) {
+function TimelineCard({item}: { item: Item }) {
     return (
         <Card>
             <CardHeader className="pb-3">
@@ -58,14 +58,14 @@ export function ExperienceSection() {
                 <div className="space-y-4">
                     <h3 className="text-sm font-medium text-muted-foreground">Experience</h3>
                     {EXPERIENCE.map((it) => (
-                        <TimelineCard key={it.title} item={it} />
+                        <TimelineCard key={it.title} item={it}/>
                     ))}
                 </div>
 
                 <div className="space-y-4">
                     <h3 className="text-sm font-medium text-muted-foreground">Education</h3>
                     {EDUCATION.map((it) => (
-                        <TimelineCard key={it.title} item={it} />
+                        <TimelineCard key={it.title} item={it}/>
                     ))}
                 </div>
             </div>

@@ -6,20 +6,16 @@ import React, {useCallback, useRef, useState} from "react";
 import {useChat} from "@ai-sdk/react";
 import {DefaultChatTransport, generateId} from "ai";
 
-import {
-    Conversation,
-    ConversationContent,
-    ConversationScrollButton,
-} from "@/components/ai-elements/conversation";
+import {Conversation, ConversationContent, ConversationScrollButton,} from "@/components/ai-elements/conversation";
 import {Message, MessageContent, MessageResponse} from "@/components/ai-elements/message";
 import {
     PromptInput,
     PromptInputBody,
     PromptInputFooter,
+    type PromptInputMessage,
     PromptInputSubmit,
     PromptInputTextarea,
     PromptInputTools,
-    type PromptInputMessage,
 } from "@/components/ai-elements/prompt-input";
 import {Loader} from "@/components/ai-elements/loader";
 
@@ -47,8 +43,23 @@ export default function AiAssistant({
         parts: [{type: "text", text: welcomeText}],
     }));
 
-    const {messages, sendMessage, status, error, clearError} = useChat({
+    const {messages, sendMessage, setMessages, status, error, clearError} = useChat({
         transport: new DefaultChatTransport({api}),
+        onError() {
+            setMessages((current) => [
+                ...current,
+                {
+                    id: generateId(),
+                    role: "assistant",
+                    parts: [
+                        {
+                            type: "text",
+                            text: "Sorry, something went wrong. Please try again in a moment.",
+                        },
+                    ],
+                },
+            ]);
+        },
         messages: [welcomeMessage],
     });
 

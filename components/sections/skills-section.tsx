@@ -1,14 +1,14 @@
 // components/sections/skills-section.tsx
 import * as React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Section } from "@/components/section";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Section} from "@/components/section";
 
 const SKILL_GROUPS: { title: string; items: string[] }[] = [
-    { title: "Languages", items: ["TypeScript", "Python", "SQL"] },
-    { title: "Frameworks", items: ["Next.js", "React"] },
-    { title: "Data / AI", items: ["Pandas", "Sklearn", "Vector search", "Evaluation"] },
-    { title: "Tools", items: ["Git", "Docker", "Kibana"] },
+    {title: "Languages", items: ["TypeScript", "Python", "SQL"]},
+    {title: "Frameworks", items: ["Next.js", "React"]},
+    {title: "Data / AI", items: ["Pandas", "Sklearn", "Vector search", "Evaluation"]},
+    {title: "Tools", items: ["Git", "Docker", "Kibana"]},
 ];
 
 export function SkillsSection() {

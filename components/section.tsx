@@ -1,7 +1,7 @@
 // components/section.tsx
 import * as React from "react";
-import { cn } from "@/lib/utils";
-import { PageContainer } from "@/components/page-container";
+import {cn} from "@/lib/utils";
+import {PageContainer} from "@/components/page-container";
 
 type SectionProps = {
     id?: string;

@@ -1,10 +1,10 @@
 // components/sections/projects-section.tsx
 import * as React from "react";
 import Link from "next/link";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Section } from "@/components/section";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Section} from "@/components/section";
 
 type Project = {
     title: string;
@@ -15,18 +15,18 @@ type Project = {
 
 const PROJECTS: Project[] = [
     {
-        title: "Project title",
+        title: "Project title A",
         description: "One-liner describing impact and what you built.",
         tags: ["Next.js", "TypeScript", "AI"],
         href: "#",
     },
     {
-        title: "Project title",
+        title: "Project title B",
         description: "One-liner describing impact and what you built.",
         tags: ["Python", "Data", "ML"],
     },
     {
-        title: "Project title",
+        title: "Project title C",
         description: "One-liner describing impact and what you built.",
         tags: ["Kibana", "Elastic", "Dashboards"],
     },
@@ -57,7 +57,7 @@ export function ProjectsSection() {
                         </CardContent>
                         <CardFooter className="mt-auto">
                             {p.href ? (
-                                <Button variant="outline" size="sm" asChild>
+                                <Button variant="outline" size="sm">
                                     <Link href={p.href}>View</Link>
                                 </Button>
                             ) : (

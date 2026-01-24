@@ -1,5 +1,5 @@
-import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import { mistral } from "@ai-sdk/mistral";
+import {convertToModelMessages, streamText, type UIMessage} from "ai";
+import {mistral} from "@ai-sdk/mistral";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -21,7 +21,7 @@ const finalSystemPrompt = systemPromptTemplate.replace(
 );
 
 export async function POST(req: Request) {
-    const { messages }: { messages: UIMessage[] } = await req.json();
+    const {messages}: { messages: UIMessage[] } = await req.json();
 
     const modelMessages = await convertToModelMessages(messages);
 

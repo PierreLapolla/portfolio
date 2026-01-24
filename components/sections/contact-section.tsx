@@ -1,9 +1,9 @@
 // components/sections/contact-section.tsx
 import * as React from "react";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Section } from "@/components/section";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Section} from "@/components/section";
 
 export function ContactSection() {
     return (
@@ -21,12 +21,13 @@ export function ContactSection() {
                     </div>
 
                     <div className="flex flex-wrap gap-3">
-                        <Button asChild>
-                            <Link href="https://fr.linkedin.com/in/pierrelapolla" target="_blank" rel="noopener noreferrer">
+                        <Button>
+                            <Link href="https://fr.linkedin.com/in/pierrelapolla" target="_blank"
+                                  rel="noopener noreferrer">
                                 LinkedIn
                             </Link>
                         </Button>
-                        <Button variant="outline" asChild>
+                        <Button variant="outline">
                             <Link href="https://github.com/PierreLapolla" target="_blank" rel="noopener noreferrer">
                                 GitHub
                             </Link>

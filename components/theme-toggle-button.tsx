@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
+import {Moon, Sun} from "lucide-react"
+import {useTheme} from "next-themes"
+import {Button} from "@/components/ui/button"
 
-export function ModeToggle() {
-    const { theme, resolvedTheme, setTheme } = useTheme()
+export function ThemeToggleButton() {
+    const {theme, resolvedTheme, setTheme} = useTheme()
 
     const toggleTheme = () => {
         const current = theme === "system" ? resolvedTheme : theme
@@ -16,14 +16,8 @@ export function ModeToggle() {
     const iconBase = "h-[1em] w-[1em] transition-all"
 
     return (
-        <Button
-            size="icon"
-            type="button"
-            aria-label="Toggle theme"
-            onClick={toggleTheme}
-            className="relative"
-        >
-            <Sun className={`${iconBase} dark:scale-0 dark:opacity-0`} />
+        <Button size="icon" onClick={toggleTheme}>
+            <Sun className={`${iconBase} dark:scale-0 dark:opacity-0`}/>
             <Moon className={`${iconBase} absolute scale-0 opacity-0 dark:scale-100 dark:opacity-100`}/>
         </Button>
     )

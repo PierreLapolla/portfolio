@@ -1,10 +1,10 @@
 // components/sections/hero-section.tsx
 import * as React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Section } from "@/components/section";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Section} from "@/components/section";
 
 export function HeroSection() {
     return (
@@ -28,13 +28,13 @@ export function HeroSection() {
                         </div>
 
                         <div className="flex flex-wrap gap-3 pt-2">
-                            <Button asChild>
+                            <Button>
                                 <Link href="#chat">Ask the assistant</Link>
                             </Button>
-                            <Button variant="outline" asChild>
+                            <Button variant="outline">
                                 <Link href="#projects">View projects</Link>
                             </Button>
-                            <Button variant="ghost" asChild>
+                            <Button variant="ghost">
                                 <Link href="#contact">Contact</Link>
                             </Button>
                         </div>

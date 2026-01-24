@@ -1,14 +1,14 @@
 // layout.tsx
 
-import type { Metadata } from "next"
-import { Geist, Geist_Mono, Noto_Sans } from "next/font/google"
+import type {Metadata} from "next"
+import {Geist, Geist_Mono, Noto_Sans} from "next/font/google"
 import "./globals.css"
 import React from "react"
 
-import { cn } from "@/lib/utils"
-import { AppShell } from "@/components/app-shell"
+import {cn} from "@/lib/utils"
+import {AppShell} from "@/components/app-shell"
 
-const notoSans = Noto_Sans({ variable: "--font-sans", subsets: ["latin"] })
+const notoSans = Noto_Sans({variable: "--font-sans", subsets: ["latin"]})
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
