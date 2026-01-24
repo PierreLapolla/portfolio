@@ -1,20 +1,19 @@
 import * as React from "react"
-import { ThemeProvider } from "@/components/theme-provider"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import {ThemeProvider} from "@/components/theme-provider"
+import {SiteHeader} from "@/components/site-header"
+import {SiteFooter} from "@/components/site-footer"
 
-export function AppShell({ children }: { children: React.ReactNode }) {
+export function AppShell({children}: { children: React.ReactNode }) {
     return (
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
-            enableSystem
             // disableTransitionOnChange
         >
             <div className="min-h-screen flex flex-col">
-                <SiteHeader />
+                <SiteHeader/>
                 <main className="flex-1">{children}</main>
-                <SiteFooter />
+                <SiteFooter/>
             </div>
         </ThemeProvider>
     )

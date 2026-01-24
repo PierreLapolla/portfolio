@@ -13,7 +13,7 @@ export function SiteHeader() {
                     Header placeholder
                 </nav>
 
-                <ThemeTogglerButton variant="outline"/>
+                <ThemeTogglerButton modes={["light", "dark"]} />
             </div>
         </header>
     )
