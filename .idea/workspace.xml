@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: added basic app shell">
-      <change afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/theme-toggler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/animate/slot.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/buttons/button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/effects/particles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/effects/theme-toggler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mode-toggle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -154,6 +161,7 @@
       <workItem from="1769018512450" duration="5183000" />
       <workItem from="1769029500082" duration="6556000" />
       <workItem from="1769166418722" duration="8796000" />
+      <workItem from="1769263793087" duration="2818000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />

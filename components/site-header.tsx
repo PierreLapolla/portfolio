@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {ModeToggle} from "@/components/mode-toggle"
+import {ThemeTogglerButton} from "@/components/animate-ui/components/buttons/theme-toggler";
 
 export function SiteHeader() {
     return (
@@ -13,7 +13,7 @@ export function SiteHeader() {
                     Header placeholder
                 </nav>
 
-                <ModeToggle />
+                <ThemeTogglerButton variant="outline"/>
             </div>
         </header>
     )

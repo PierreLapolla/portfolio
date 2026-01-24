@@ -9,7 +9,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange
+            // disableTransitionOnChange
         >
             <div className="min-h-screen flex flex-col">
                 <SiteHeader />
