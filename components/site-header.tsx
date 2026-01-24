@@ -1,5 +1,8 @@
 import Link from "next/link"
-import {ThemeTogglerButton} from "@/components/animate-ui/components/buttons/theme-toggler";
+import {ModeToggle} from "@/components/theme-toggle-button";
+import {Button} from "@/components/ui/button";
+import {ButtonGroup} from "@/components/ui/button-group";
+import {Github, Linkedin} from "lucide-react";
 
 export function SiteHeader() {
     return (
@@ -13,7 +16,27 @@ export function SiteHeader() {
                     Header placeholder
                 </nav>
 
-                <ThemeTogglerButton modes={["light", "dark"]} />
+                <ButtonGroup>
+                <Button>
+                    <Link
+                        href="https://github.com/PierreLapolla"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Github/>
+                    </Link>
+                </Button>
+                <Button>
+                    <Link
+                        href="https://fr.linkedin.com/in/pierrelapolla"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Linkedin/>
+                    </Link>
+                </Button>
+                <ModeToggle/>
+                </ButtonGroup>
             </div>
         </header>
     )

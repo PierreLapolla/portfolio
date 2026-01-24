@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import React, { useState, useCallback, useRef } from "react";
-import { useChat } from "@ai-sdk/react";
-import { DefaultChatTransport, generateId } from "ai";
+import React, {useCallback, useRef, useState} from "react";
+import {useChat} from "@ai-sdk/react";
+import {DefaultChatTransport, generateId} from "ai";
 
 import {
     Conversation,
     ConversationContent,
     ConversationScrollButton,
 } from "@/components/ai-elements/conversation";
-import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
+import {Message, MessageContent, MessageResponse} from "@/components/ai-elements/message";
 import {
     PromptInput,
     PromptInputBody,
@@ -19,32 +19,34 @@ import {
     PromptInputTools,
     type PromptInputMessage,
 } from "@/components/ai-elements/prompt-input";
-import { Loader } from "@/components/ai-elements/loader";
+import {Loader} from "@/components/ai-elements/loader";
 
 type ChatRole = "assistant" | "user";
 type TextPart = { type: "text"; text: string };
 type ChatMessage = { id: string; role: ChatRole; parts: TextPart[] };
 
-export default function ChatPage() {
-    const [input, setInput] = useState("");
+type AiAssistantProps = {
+    api?: string;
+    welcomeText?: string;
+    className?: string;
+};
 
+export default function AiAssistant({
+                                        api = "/api/chat",
+                                        welcomeText = "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
+                                        className = "max-w-4xl mx-auto p-6 relative size-full h-screen",
+                                    }: AiAssistantProps) {
+    const [input, setInput] = useState("");
     const lastUserTextRef = useRef<string | null>(null);
 
     const [welcomeMessage] = useState<ChatMessage>(() => ({
         id: generateId(),
         role: "assistant",
-        parts: [
-            {
-                type: "text",
-                text: "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
-            },
-        ],
+        parts: [{type: "text", text: welcomeText}],
     }));
 
-    const { messages, sendMessage, status, error, clearError } = useChat({
-        transport: new DefaultChatTransport({
-            api: "/api/chat",
-        }),
+    const {messages, sendMessage, status, error, clearError} = useChat({
+        transport: new DefaultChatTransport({api}),
         messages: [welcomeMessage],
     });
 
@@ -56,12 +58,11 @@ export default function ChatPage() {
             if (!trimmed || isBusy) return;
 
             if (error) clearError();
-
             lastUserTextRef.current = trimmed;
 
             await sendMessage({
                 role: "user",
-                parts: [{ type: "text", text: trimmed }],
+                parts: [{type: "text", text: trimmed}],
             });
 
             setInput("");
@@ -82,7 +83,7 @@ export default function ChatPage() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 relative size-full h-screen">
+        <div className={className}>
             <div className="flex flex-col h-full">
                 <Conversation>
                     <ConversationContent>
@@ -104,9 +105,9 @@ export default function ChatPage() {
                                 </MessageContent>
                             </Message>
                         ))}
-                        {status === "submitted" && <Loader />}
+                        {status === "submitted" && <Loader/>}
                     </ConversationContent>
-                    <ConversationScrollButton />
+                    <ConversationScrollButton/>
                 </Conversation>
 
                 <PromptInput onSubmit={handleSubmit} className="mt-4">
@@ -119,10 +120,8 @@ export default function ChatPage() {
                     </PromptInputBody>
 
                     <PromptInputFooter>
-                        <PromptInputTools>
-                            {/* space for future tools and moves the submit to the right */}
-                        </PromptInputTools>
-                        <PromptInputSubmit disabled={!input.trim() || isBusy} status={status} />
+                        <PromptInputTools>{/* space for future tools */}</PromptInputTools>
+                        <PromptInputSubmit disabled={!input.trim() || isBusy} status={status}/>
                     </PromptInputFooter>
                 </PromptInput>
             </div>

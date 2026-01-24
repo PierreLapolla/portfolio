@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell">
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="chore: remove package-lock.json for project cleanup and dependency reset">
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/backgrounds/hexagon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/components/buttons/ripple.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/animate-ui/primitives/buttons/ripple.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/theme-toggle-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/site-footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="shadcn" />
+        <entry key="$PROJECT_DIR$" value="switch-bun" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +82,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "switch-bun",
+    "git-widget-placeholder": "shadcn",
     "javascript.preferred.runtime.type.id": "node",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -124,7 +133,7 @@
       <workItem from="1769166418722" duration="8796000" />
       <workItem from="1769263793087" duration="4171000" />
       <workItem from="1769287162334" duration="431000" />
-      <workItem from="1769287615427" duration="828000" />
+      <workItem from="1769287615427" duration="3233000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -174,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769287763556</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="chore: remove package-lock.json for project cleanup and dependency reset">
+      <option name="closed" value="true" />
+      <created>1769288664634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1769288664634</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +204,7 @@
     <MESSAGE value="feat: added basic app shell" />
     <MESSAGE value="feat: remove custom theme mode toggle to use animate ui's one" />
     <MESSAGE value="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell" />
+    <MESSAGE value="chore: remove package-lock.json for project cleanup and dependency reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove package-lock.json for project cleanup and dependency reset" />
   </component>
 </project>
