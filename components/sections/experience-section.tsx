@@ -11,8 +11,8 @@ type Item = {
 
 const EXPERIENCE: Item[] = [
     {
-        title: "Role / Internship",
-        subtitle: "Company • Dates",
+        title: "Internship",
+        subtitle: "Capgemini • 6 months",
         bullets: [
             "What you did (impact-first).",
             "What you built / improved.",

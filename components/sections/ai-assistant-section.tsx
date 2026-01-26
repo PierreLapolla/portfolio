@@ -8,7 +8,7 @@ export function AiAssistantSection() {
         <Section
             id="chat"
             title="Assistant"
-            description="Ask anything about Pierre: background, projects, preferences."
+            description="Ask anything you want to know about Pierre."
         >
             <AiAssistant
                 api="/api/chat"
