@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {Section} from "@/components/section";
 import {CopyToClipboardButton} from "@/components/copy-button";
+import {Github, Linkedin} from "lucide-react";
 
 export function ContactSection() {
     return (
@@ -22,12 +23,12 @@ export function ContactSection() {
                         </p>
                     </div>
 
-                        <ButtonGroup>
-                            <Button asChild variant="outline">
-                                <a href="mailto:pro@pierrelapolla.com">pro@pierrelapolla.com</a>
-                            </Button>
-                            <CopyToClipboardButton value={"pro@pierrelapolla.com"}/>
-                        </ButtonGroup>
+                    <ButtonGroup>
+                        <Button asChild variant="outline">
+                            <a href="mailto:pro@pierrelapolla.com">pro@pierrelapolla.com</a>
+                        </Button>
+                        <CopyToClipboardButton value={"pro@pierrelapolla.com"}/>
+                    </ButtonGroup>
                     <ButtonGroup>
                         <Button asChild>
                             <Link
@@ -35,7 +36,7 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                LinkedIn
+                                <Linkedin className="h-4 w-4"/>LinkedIn
                             </Link>
                         </Button>
                         <Button asChild>
@@ -44,10 +45,10 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                GitHub
+                                <Github className="h-4 w-4"/> GitHub
                             </Link>
                         </Button>
-                        </ButtonGroup>
+                    </ButtonGroup>
                 </CardContent>
             </Card>
         </Section>

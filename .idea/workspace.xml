@@ -4,12 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: remove unused ui components for a cleaner and more maintainable codebase">
-      <change afterPath="$PROJECT_DIR$/components/copy-button.tsx" afterDir="false" />
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: update descriptions, add email copy button, and enhance contact section layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-assistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/conversation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/conversation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/copy-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/copy-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/language-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/language-toggle-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/section-stack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/section-stack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/experience-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/experience-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/projects-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/skills-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/skills-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-toggle-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/command.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/command.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/hover-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/hover-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/input-group.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/input-group.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/separator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/tooltip.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +40,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="74" />
+    <option name="cachedIndexableFilesCount" value="61" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -135,7 +158,8 @@
       <workItem from="1769287615427" duration="6956000" />
       <workItem from="1769340277761" duration="2542000" />
       <workItem from="1769362078191" duration="483000" />
-      <workItem from="1769425159748" duration="9576000" />
+      <workItem from="1769425159748" duration="9895000" />
+      <workItem from="1769458518330" duration="1012000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -233,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769437298370</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: update descriptions, add email copy button, and enhance contact section layout">
+      <option name="closed" value="true" />
+      <created>1769438727070</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1769438727070</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +284,7 @@
     <MESSAGE value="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting" />
     <MESSAGE value="feat: remove unused ai-elements components for cleaner code and optimized project structure" />
     <MESSAGE value="feat: remove unused ui components for a cleaner and more maintainable codebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: remove unused ui components for a cleaner and more maintainable codebase" />
+    <MESSAGE value="feat: update descriptions, add email copy button, and enhance contact section layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update descriptions, add email copy button, and enhance contact section layout" />
   </component>
 </project>

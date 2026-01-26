@@ -1,14 +1,38 @@
 "use client"
 
 import * as React from "react"
-import { Check, Copy } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import {Check, Copy} from "lucide-react"
+import {Button} from "@/components/ui/button"
 
 type CopyToClipboardButtonProps = {
     value: string
     label?: string
     className?: string
     disabled?: boolean
+}
+
+async function copyText(text: string) {
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text)
+        return
+    }
+
+    const textarea = document.createElement("textarea")
+    textarea.value = text
+    textarea.setAttribute("readonly", "true")
+    textarea.style.position = "fixed"
+    textarea.style.top = "0"
+    textarea.style.left = "0"
+    textarea.style.opacity = "0"
+
+    document.body.appendChild(textarea)
+    textarea.focus()
+    textarea.select()
+
+    const ok = document.execCommand("copy")
+    document.body.removeChild(textarea)
+
+    if (!ok) throw new Error("Copy failed")
 }
 
 export function CopyToClipboardButton({
@@ -21,11 +45,11 @@ export function CopyToClipboardButton({
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(value)
+            await copyText(value)
             setCopied(true)
             window.setTimeout(() => setCopied(false), 1200)
         } catch (error) {
-            console.error("Failed to copy: ", error)
+            console.error("Failed to copy:", error)
         }
     }
 
@@ -40,7 +64,7 @@ export function CopyToClipboardButton({
             disabled={disabled}
             className={className}
         >
-            <Copy className={`${iconBase} ${copied ? "scale-0 opacity-0" : ""}`} />
+            <Copy className={`${iconBase} ${copied ? "scale-0 opacity-0" : ""}`}/>
             <Check
                 className={`${iconBase} absolute scale-0 opacity-0 ${
                     copied ? "scale-100 opacity-100" : ""

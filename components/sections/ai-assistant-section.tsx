@@ -12,8 +12,7 @@ export function AiAssistantSection() {
         >
             <AiAssistant
                 api="/api/chat"
-                welcomeText="Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences."
-                className="mx-auto w-full max-w-4xl p-0 relative size-full h-[55vh]"
+                className="mx-auto w-full max-w-4xl p-0 relative h-[55vh]"
             />
         </Section>
     );

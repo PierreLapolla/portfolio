@@ -19,10 +19,6 @@ import {
 } from "@/components/ai-elements/prompt-input";
 import {Loader} from "@/components/ai-elements/loader";
 
-type ChatRole = "assistant" | "user";
-type TextPart = { type: "text"; text: string };
-type ChatMessage = { id: string; role: ChatRole; parts: TextPart[] };
-
 type AiAssistantProps = {
     api?: string;
     welcomeText?: string;
@@ -31,17 +27,10 @@ type AiAssistantProps = {
 
 export default function AiAssistant({
                                         api = "/api/chat",
-                                        welcomeText = "Hi, I'm Pierre's personal assistant. Ask me anything about Pierre, his background, projects, or preferences.",
-                                        className = "max-w-4xl mx-auto p-6 relative size-full h-[50vh]",
+                                        className = "max-w-4xl mx-auto p-6 relative size-full max-h-[50vh]",
                                     }: AiAssistantProps) {
     const [input, setInput] = useState("");
     const lastUserTextRef = useRef<string | null>(null);
-
-    const [welcomeMessage] = useState<ChatMessage>(() => ({
-        id: generateId(),
-        role: "assistant",
-        parts: [{type: "text", text: welcomeText}],
-    }));
 
     const {messages, sendMessage, setMessages, status, error, clearError} = useChat({
         transport: new DefaultChatTransport({api}),
@@ -60,7 +49,6 @@ export default function AiAssistant({
                 },
             ]);
         },
-        messages: [welcomeMessage],
     });
 
     const isBusy = status === "submitted" || status === "streaming";
