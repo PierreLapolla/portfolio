@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {Section} from "@/components/section";
 import {CopyToClipboardButton} from "@/components/copy-button";
-import {Github, Linkedin} from "lucide-react";
+import {SiGithub, SiLinkedin} from "react-icons/si";
 
 export function ContactSection() {
     return (
@@ -36,7 +36,7 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Linkedin className="h-4 w-4"/>LinkedIn
+                                <SiLinkedin className="h-4 w-4"/>LinkedIn
                             </Link>
                         </Button>
                         <Button asChild>
@@ -45,7 +45,7 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Github className="h-4 w-4"/> GitHub
+                                <SiGithub className="h-4 w-4"/> GitHub
                             </Link>
                         </Button>
                     </ButtonGroup>

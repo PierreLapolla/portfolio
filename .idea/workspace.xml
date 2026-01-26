@@ -4,35 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: update descriptions, add email copy button, and enhance contact section layout">
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements">
+      <change afterPath="$PROJECT_DIR$/components/sections/certifications.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/AWSCertifiedCloudPractitionerBadge.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-assistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-elements/conversation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/conversation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-elements/message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/copy-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/copy-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/language-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/language-toggle-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/page-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/section-stack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/section-stack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/experience-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/experience-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/projects-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/skills-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/skills-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/theme-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-toggle-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/command.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/command.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/hover-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/hover-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/input-group.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/input-group.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/separator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/tooltip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,35 +74,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;shadcn&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "shadcn",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/pedro/WebstormProjects/portfolio/components/sections",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/pedro/WebstormProjects/portfolio/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecapSpentCounter">
     <option name="endsOfQuotaMs" value="1770823818053" />
     <option name="spentUsd" value="0.06678855" />
@@ -128,6 +112,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/sections" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
@@ -159,7 +144,7 @@
       <workItem from="1769340277761" duration="2542000" />
       <workItem from="1769362078191" duration="483000" />
       <workItem from="1769425159748" duration="9895000" />
-      <workItem from="1769458518330" duration="1012000" />
+      <workItem from="1769458518330" duration="5117000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -265,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769438727070</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements">
+      <option name="closed" value="true" />
+      <created>1769459544760</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1769459544760</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +278,7 @@
     <MESSAGE value="feat: remove unused ai-elements components for cleaner code and optimized project structure" />
     <MESSAGE value="feat: remove unused ui components for a cleaner and more maintainable codebase" />
     <MESSAGE value="feat: update descriptions, add email copy button, and enhance contact section layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update descriptions, add email copy button, and enhance contact section layout" />
+    <MESSAGE value="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements" />
   </component>
 </project>

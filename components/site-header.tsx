@@ -4,7 +4,7 @@ import {ThemeToggleButton} from "@/components/theme-toggle-button";
 import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {PageContainer} from "@/components/page-container";
-import {Github, Linkedin} from "lucide-react";
+import {SiGithub, SiLinkedin, SiCredly} from "react-icons/si";
 
 const NAV = [
     {href: "#projects", label: "Projects"},
@@ -47,7 +47,7 @@ export function SiteHeader() {
                             rel="noopener noreferrer"
                             aria-label="GitHub"
                         >
-                            <Github className="h-4 w-4"/>
+                            <SiGithub className="h-4 w-4"/>
                         </Link>
                     </Button>
 
@@ -62,7 +62,7 @@ export function SiteHeader() {
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
                         >
-                            <Linkedin className="h-4 w-4"/>
+                            <SiLinkedin className="h-4 w-4"/>
                         </Link>
                     </Button>
 

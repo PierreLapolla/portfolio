@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import {Moon, Sun} from "lucide-react"
+import {LuSun, LuMoon} from "react-icons/lu";
 import {useTheme} from "next-themes"
 import {Button} from "@/components/ui/button"
 
@@ -20,8 +20,8 @@ export function ThemeToggleButton() {
             size="icon"
             onClick={toggleTheme}
         >
-            <Sun className={`${iconBase} dark:scale-0 dark:opacity-0`}/>
-            <Moon className={`${iconBase} absolute scale-0 opacity-0 dark:scale-100 dark:opacity-100`}/>
+            <LuSun className={`${iconBase} dark:scale-0 dark:opacity-0`}/>
+            <LuMoon className={`${iconBase} absolute scale-0 opacity-0 dark:scale-100 dark:opacity-100`}/>
         </Button>
     )
 }
