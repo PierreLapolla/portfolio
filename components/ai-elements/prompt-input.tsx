@@ -166,7 +166,7 @@ export function PromptInputProvider({
 
     // Keep a ref to attachments for cleanup on unmount (avoids stale closure)
     const attachmentsRef = useRef(attachmentFiles);
-    attachmentsRef.current = attachmentFiles;
+    // attachmentsRef.current = attachmentFiles;
 
     // Cleanup blob URLs on unmount to prevent memory leaks
     useEffect(
@@ -1016,6 +1016,7 @@ export const PromptInputSubmit = ({
             onStop();
             return;
         }
+        // @ts-ignore
         onClick?.(e);
     };
 
@@ -1088,15 +1089,6 @@ export const PromptInputSelectValue = ({
 );
 
 export type PromptInputHoverCardProps = ComponentProps<typeof HoverCard>;
-
-export const PromptInputHoverCard = ({
-                                         openDelay = 0,
-                                         closeDelay = 0,
-                                         ...props
-                                     }: PromptInputHoverCardProps) => (
-    <HoverCard closeDelay={closeDelay} openDelay={openDelay} {...props} />
-);
-
 export type PromptInputHoverCardTriggerProps = ComponentProps<
     typeof HoverCardTrigger
 >;

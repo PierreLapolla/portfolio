@@ -13,9 +13,9 @@ export function HeroSection() {
                 <CardContent className="p-6 sm:p-8">
                     <div className="flex flex-col gap-4">
                         <div className="flex flex-wrap gap-2">
-                            <Badge variant="secondary">Data / AI</Badge>
-                            <Badge variant="secondary">Engineering</Badge>
+                            <Badge variant="secondary">Engineer</Badge>
                             <Badge variant="secondary">Consulting-ready</Badge>
+                            <Badge variant="secondary">Cloud / Data / AI</Badge>
                         </div>
 
                         <div className="space-y-2">
@@ -23,7 +23,7 @@ export function HeroSection() {
                                 Pierre Lapolla
                             </h1>
                             <p className="text-sm sm:text-base text-muted-foreground">
-                                Portfolio + chatbot assistant. Skim the sections or ask the assistant for a summary.
+                                Welcome to my personal portfolio. Skim the sections or ask the assistant about me.
                             </p>
                         </div>
 

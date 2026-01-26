@@ -4,14 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: add portfolio sections with reusable components and layout enhancements">
-      <change afterPath="$PROJECT_DIR$/components/language-toggle-button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" afterDir="false" />
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-assistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/agent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/artifact.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/attachments.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/audio-player.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/canvas.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/chain-of-thought.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/checkpoint.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/code-block.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/commit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/confirmation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/connection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/context.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/controls.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/edge.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/environment-variables.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/file-tree.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/image.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/inline-citation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/mic-selector.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/model-selector.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/node.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/open-in-chat.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/package-info.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/panel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/persona.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/plan.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/queue.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/reasoning.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/sandbox.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/schema-display.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/shimmer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/snippet.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/sources.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/speech-input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/stack-trace.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/suggestion.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/task.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/terminal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/test-results.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/tool.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/toolbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/transcription.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/voice-selector.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-elements/web-preview.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/projects-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-toggle-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +64,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="115" />
+    <option name="cachedIndexableFilesCount" value="74" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -69,41 +114,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "shadcn",
-    "javascript.preferred.runtime.type.id": "node",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/pedro/WebstormProjects/portfolio/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/pedro/WebstormProjects/portfolio/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shadcn&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecapSpentCounter">
     <option name="endsOfQuotaMs" value="1770823818053" />
-    <option name="spentUsd" value="0.0461053" />
+    <option name="spentUsd" value="0.06678855" />
   </component>
   <component name="RecapUselessUpdatesCounter">
-    <option name="suspendCountdown" value="5" />
+    <option name="suspendCountdown" value="0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -133,7 +178,10 @@
       <workItem from="1769166418722" duration="8796000" />
       <workItem from="1769263793087" duration="4171000" />
       <workItem from="1769287162334" duration="431000" />
-      <workItem from="1769287615427" duration="5647000" />
+      <workItem from="1769287615427" duration="6956000" />
+      <workItem from="1769340277761" duration="2542000" />
+      <workItem from="1769362078191" duration="483000" />
+      <workItem from="1769425159748" duration="5353000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -207,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769292254237</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting">
+      <option name="closed" value="true" />
+      <created>1769293604897</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769293604897</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +279,7 @@
     <MESSAGE value="chore: remove package-lock.json for project cleanup and dependency reset" />
     <MESSAGE value="feat: refactor UI components and remove unused primitives for a cleaner structure" />
     <MESSAGE value="feat: add portfolio sections with reusable components and layout enhancements" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add portfolio sections with reusable components and layout enhancements" />
+    <MESSAGE value="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting" />
   </component>
 </project>

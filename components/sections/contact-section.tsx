@@ -33,6 +33,8 @@ export function ContactSection() {
                             </Link>
                         </Button>
                     </div>
+
+                    {/*TODO: add email copy button*/}
                 </CardContent>
             </Card>
         </Section>
