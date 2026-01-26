@@ -21,13 +21,13 @@ export function ContactSection() {
                     </div>
 
                     <div className="flex flex-wrap gap-3">
-                        <Button>
+                        <Button asChild>
                             <Link href="https://fr.linkedin.com/in/pierrelapolla" target="_blank"
                                   rel="noopener noreferrer">
                                 LinkedIn
                             </Link>
                         </Button>
-                        <Button variant="outline">
+                        <Button asChild variant="outline">
                             <Link href="https://github.com/PierreLapolla" target="_blank" rel="noopener noreferrer">
                                 GitHub
                             </Link>

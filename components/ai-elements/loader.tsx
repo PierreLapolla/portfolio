@@ -1,9 +1,9 @@
 import {cn} from "@/lib/utils";
 import type {HTMLAttributes} from "react";
 
-interface LoaderIconProps {
+type LoaderIconProps = {
     size?: number;
-}
+};
 
 const LoaderIcon = ({size = 16}: LoaderIconProps) => (
     <svg

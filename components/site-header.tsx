@@ -16,7 +16,8 @@ const NAV = [
 
 export function SiteHeader() {
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <header
+            className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/60">
             <PageContainer className="py-3 flex items-center justify-between gap-4">
                 <Link href="/" className="font-semibold">
                     Pierre Lapolla
@@ -35,29 +36,37 @@ export function SiteHeader() {
                 </nav>
 
                 <ButtonGroup className="flex items-center">
-                    <Button size="icon">
+                    <Button
+                        asChild
+                        variant="default"
+                        size="icon"
+                    >
                         <Link
                             href="https://github.com/PierreLapolla"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
                         >
-                            <Github className="h-4 w-4" />
+                            <Github className="h-4 w-4"/>
                         </Link>
                     </Button>
 
-                    <Button size="icon">
+                    <Button
+                        asChild
+                        variant="default"
+                        size="icon"
+                    >
                         <Link
                             href="https://fr.linkedin.com/in/pierrelapolla"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
                         >
-                            <Linkedin className="h-4 w-4" />
+                            <Linkedin className="h-4 w-4"/>
                         </Link>
                     </Button>
 
-                    <ThemeToggleButton />
+                    <ThemeToggleButton/>
                 </ButtonGroup>
             </PageContainer>
         </header>

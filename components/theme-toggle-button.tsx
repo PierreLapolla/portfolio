@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 import {Moon, Sun} from "lucide-react"
 import {useTheme} from "next-themes"
@@ -16,7 +15,11 @@ export function ThemeToggleButton() {
     const iconBase = "h-[1em] w-[1em] transition-all"
 
     return (
-        <Button size="icon" onClick={toggleTheme}>
+        <Button
+            variant="default"
+            size="icon"
+            onClick={toggleTheme}
+        >
             <Sun className={`${iconBase} dark:scale-0 dark:opacity-0`}/>
             <Moon className={`${iconBase} absolute scale-0 opacity-0 dark:scale-100 dark:opacity-100`}/>
         </Button>

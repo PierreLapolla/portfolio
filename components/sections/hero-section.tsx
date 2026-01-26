@@ -28,13 +28,13 @@ export function HeroSection() {
                         </div>
 
                         <div className="flex flex-wrap gap-3 pt-2">
-                            <Button>
+                            <Button asChild>
                                 <Link href="#chat">Ask the assistant</Link>
                             </Button>
-                            <Button variant="outline">
+                            <Button asChild variant="outline">
                                 <Link href="#projects">View projects</Link>
                             </Button>
-                            <Button variant="ghost">
+                            <Button asChild variant="ghost">
                                 <Link href="#contact">Contact</Link>
                             </Button>
                         </div>
