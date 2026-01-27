@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "education": "Formation",
+    "skills": "Compétences",
+    "certifications": "Certifications",
+    "chat": "Chat",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badgeRole": "Ingénieur",
+    "badgeFocus": "Cloud / Données / IA",
+    "title": "Pierre Lapolla",
+    "description": "Bienvenue sur mon portfolio personnel. Parcourez les sections ou interrogez l'assistant à mon sujet.",
+    "ctaAssistant": "Demander à l'assistant",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter"
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Quelques projets sélectionnés, visitez mon GitHub pour en voir plus.",
+    "items": [
+      {
+        "title": "Site portfolio personnel",
+        "description": "Le site que j'ai construit pour moi, moi-même et moi (et peut-être des recruteurs).",
+        "tags": ["Next.js", "TypeScript", "DevOps"],
+        "href": "https://github.com/PierreLapolla/portfolio"
+      },
+      {
+        "title": "Pedros",
+        "description": "Un petit package utilitaire pour Python, surtout pour mes projets personnels.",
+        "tags": ["Python", "DevOps"],
+        "href": "https://github.com/PierreLapolla/pedros"
+      },
+      {
+        "title": "ARECE",
+        "description": "La première équipe française de Formula Student dans la catégorie autonome. J'étais membre de l'équipe trajectoire où nous avons développé un réseau de neurones capable de prédire la trajectoire optimale de la voiture.",
+        "tags": ["Python", "Data", "AI"],
+        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Formation & Expérience",
+    "description": "L'essentiel. Utilisez l'assistant pour le reste.",
+    "experienceHeading": "Expérience",
+    "educationHeading": "Formation",
+    "experienceItems": [
+      {
+        "title": "Stage",
+        "subtitle": "Capgemini - 6 mois",
+        "bullets": [
+          "Ce que vous avez fait (impact d'abord).",
+          "Ce que vous avez construit / amélioré.",
+          "Technologies utilisées."
+        ]
+      }
+    ],
+    "educationItems": [
+      {
+        "title": "Diplôme / École",
+        "subtitle": "Domaine - Dates",
+        "bullets": [
+          "Focus principal : Data / IA.",
+          "Cours ou réalisations notables."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "description": "",
+    "groups": {
+      "languages": "Langages",
+      "frameworks": "Frameworks / Bibliothèques",
+      "tools": "Outils",
+      "soft": "Soft skills"
+    },
+    "items": {
+      "french": "Français",
+      "english": "Anglais",
+      "teamwork": "Travail d'équipe"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "blurb": "Voir et vérifier toutes mes certifications et badges sur Credly.",
+    "button": "Voir"
+  },
+  "assistant": {
+    "title": "Assistant",
+    "description": "",
+    "placeholder": "Tapez un message...",
+    "error": "Désolé, une erreur s'est produite. Veuillez réessayer dans un instant."
+  },
+  "contact": {
+    "title": "Contact",
+    "blurb": "Préférez LinkedIn ou envoyez-moi un e-mail à :",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "copy": {
+    "label": "Copier",
+    "copied": "Copié",
+    "copyToClipboard": "Copier dans le presse-papiers"
+  },
+  "languageToggle": {
+    "label": "Changer de langue"
+  }
+}

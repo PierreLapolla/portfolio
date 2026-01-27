@@ -4,9 +4,9 @@ import type {Metadata} from "next"
 import {Geist, Geist_Mono, Noto_Sans} from "next/font/google"
 import "./globals.css"
 import React from "react"
+import {getLocale} from "next-intl/server"
 
 import {cn} from "@/lib/utils"
-import {AppShell} from "@/components/app-shell"
 
 const notoSans = Noto_Sans({variable: "--font-sans", subsets: ["latin"]})
 
@@ -25,13 +25,15 @@ export const metadata: Metadata = {
     description: "My personal portfolio website.",
 }
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+export default async function RootLayout({
+                                            children,
+                                        }: Readonly<{
     children: React.ReactNode
 }>) {
+    const locale = (await getLocale()) ?? "en"
+
     return (
-        <html lang="en" className={notoSans.variable} suppressHydrationWarning>
+        <html lang={locale} className={notoSans.variable} suppressHydrationWarning>
         <body
             className={cn(
                 geistSans.variable,
@@ -39,7 +41,7 @@ export default function RootLayout({
                 "min-h-screen bg-background font-sans text-foreground antialiased"
             )}
         >
-        <AppShell>{children}</AppShell>
+        {children}
         </body>
         </html>
     )

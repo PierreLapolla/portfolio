@@ -4,15 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: replace icons with react-icons for consistency, introduce certifications section, and enhance skills section with icons">
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i18n/navigation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i18n/request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i18n/routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messages/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messages/fr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ai-assistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-assistant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/copy-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/copy-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/language-toggle-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/language-toggle-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/certifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/certifications.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/experience-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/experience-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/projects-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/skills-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/skills-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +162,7 @@
       <workItem from="1769458518330" duration="6296000" />
       <workItem from="1769510143083" duration="4276000" />
       <workItem from="1769544203152" duration="1014000" />
+      <workItem from="1769545536282" duration="3197000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -265,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769463774617</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link">
+      <option name="closed" value="true" />
+      <created>1769545554526</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1769545554526</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +314,7 @@
     <MESSAGE value="feat: update descriptions, add email copy button, and enhance contact section layout" />
     <MESSAGE value="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements" />
     <MESSAGE value="feat: replace icons with react-icons for consistency, introduce certifications section, and enhance skills section with icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: replace icons with react-icons for consistency, introduce certifications section, and enhance skills section with icons" />
+    <MESSAGE value="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link" />
   </component>
 </project>

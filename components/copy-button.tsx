@@ -3,6 +3,7 @@
 import * as React from "react"
 import {LuCheck, LuCopy} from "react-icons/lu"
 import {Button} from "@/components/ui/button"
+import {useTranslations} from "next-intl"
 
 type CopyToClipboardButtonProps = {
     value: string
@@ -37,10 +38,11 @@ async function copyText(text: string) {
 
 export function CopyToClipboardButton({
                                           value,
-                                          label = "Copy",
+                                          label,
                                           className,
                                           disabled,
                                       }: CopyToClipboardButtonProps) {
+    const t = useTranslations("copy")
     const [copied, setCopied] = React.useState(false)
 
     const handleCopy = async () => {
@@ -60,7 +62,7 @@ export function CopyToClipboardButton({
             variant="outline"
             size="icon"
             onClick={handleCopy}
-            aria-label={copied ? "Copied" : "Copy to clipboard"}
+            aria-label={copied ? t("copied") : t("copyToClipboard")}
             disabled={disabled}
             className={className}
         >
@@ -70,7 +72,7 @@ export function CopyToClipboardButton({
                     copied ? "scale-100 opacity-100" : ""
                 }`}
             />
-            <span className="sr-only">{label}</span>
+            <span className="sr-only">{label ?? t("label")}</span>
         </Button>
     )
 }

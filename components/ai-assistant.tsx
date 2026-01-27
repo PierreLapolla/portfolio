@@ -5,8 +5,14 @@
 import React, {useCallback, useRef, useState} from "react";
 import {useChat} from "@ai-sdk/react";
 import {DefaultChatTransport, generateId} from "ai";
+import {useTranslations} from "next-intl";
 
-import {Conversation, ConversationContent, ConversationScrollButton,} from "@/components/ai-elements/conversation";
+import {
+    Conversation,
+    ConversationContent,
+    ConversationEmptyState,
+    ConversationScrollButton,
+} from "@/components/ai-elements/conversation";
 import {Message, MessageContent, MessageResponse} from "@/components/ai-elements/message";
 import {
     PromptInput,
@@ -18,6 +24,7 @@ import {
     PromptInputTools,
 } from "@/components/ai-elements/prompt-input";
 import {Loader} from "@/components/ai-elements/loader";
+import {MessageSquare} from "lucide-react";
 
 type AiAssistantProps = {
     api?: string;
@@ -29,6 +36,7 @@ export default function AiAssistant({
                                         api = "/api/chat",
                                         className = "max-w-4xl mx-auto p-6 relative size-full max-h-[50vh]",
                                     }: AiAssistantProps) {
+    const t = useTranslations("assistant");
     const [input, setInput] = useState("");
     const lastUserTextRef = useRef<string | null>(null);
 
@@ -43,7 +51,7 @@ export default function AiAssistant({
                     parts: [
                         {
                             type: "text",
-                            text: "Sorry, something went wrong. Please try again in a moment.",
+                            text: t("error"),
                         },
                     ],
                 },
@@ -88,24 +96,31 @@ export default function AiAssistant({
             <div className="flex flex-col h-full">
                 <Conversation>
                     <ConversationContent>
-                        {messages.map((message) => (
+                        {messages.length === 0 ? (
+                            <ConversationEmptyState
+                                icon={<MessageSquare className="size-12" />}
+                                title="Start a conversation"
+                                description="Type a message below to begin chatting"
+                            />
+                        ) : (
+                            messages.map((message) => (
                             <Message from={message.role} key={message.id}>
                                 <MessageContent>
                                     {message.parts.map((part, i) => {
-                                        switch (part.type) {
-                                            case "text":
-                                                return (
-                                                    <MessageResponse key={`${message.id}-${i}`}>
-                                                        {part.text}
-                                                    </MessageResponse>
-                                                );
-                                            default:
-                                                return null;
-                                        }
-                                    })}
+                                            switch (part.type) {
+                                                case "text":
+                                                    return (
+                                                        <MessageResponse key={`${message.id}-${i}`}>
+                                                            {part.text}
+                                                        </MessageResponse>
+                                                    );
+                                                default:
+                                                    return null;
+                                            }
+                                        })}
                                 </MessageContent>
                             </Message>
-                        ))}
+                        )))}
                         {status === "submitted" && <Loader/>}
                     </ConversationContent>
                     <ConversationScrollButton/>
@@ -116,7 +131,7 @@ export default function AiAssistant({
                         <PromptInputTextarea
                             value={input}
                             onChange={handleInputChange}
-                            placeholder="Type a message…"
+                            placeholder={t("placeholder")}
                         />
                     </PromptInputBody>
 

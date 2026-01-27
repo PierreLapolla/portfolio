@@ -7,19 +7,22 @@ import {ButtonGroup} from "@/components/ui/button-group";
 import {Section} from "@/components/section";
 import {CopyToClipboardButton} from "@/components/copy-button";
 import {SiGithub, SiLinkedin} from "react-icons/si";
+import {useTranslations} from "next-intl";
 
 export function ContactSection() {
+    const t = useTranslations("contact");
+
     return (
         <Section
             id="contact"
-            title="Contact"
+            title={t("title")}
             description=""
         >
             <Card>
                 <CardContent className="p-6 sm:p-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                     <div className="space-y-1">
                         <p className="text-sm text-muted-foreground">
-                            Prefer LinkedIn or e-mail me at:
+                            {t("blurb")}
                         </p>
                     </div>
 
@@ -36,7 +39,7 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SiLinkedin className="h-4 w-4"/>LinkedIn
+                                <SiLinkedin className="h-4 w-4"/> {t("linkedin")}
                             </Link>
                         </Button>
                         <Button asChild>
@@ -45,7 +48,7 @@ export function ContactSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SiGithub className="h-4 w-4"/> GitHub
+                                <SiGithub className="h-4 w-4"/> {t("github")}
                             </Link>
                         </Button>
                     </ButtonGroup>

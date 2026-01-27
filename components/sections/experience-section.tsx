@@ -2,32 +2,13 @@
 import * as React from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Section} from "@/components/section";
+import {useTranslations} from "next-intl";
 
 type Item = {
     title: string;
     subtitle: string;
     bullets: string[];
 };
-
-const EXPERIENCE: Item[] = [
-    {
-        title: "Internship",
-        subtitle: "Capgemini • 6 months",
-        bullets: [
-            "What you did (impact-first).",
-            "What you built / improved.",
-            "Tech used.",
-        ],
-    },
-];
-
-const EDUCATION: Item[] = [
-    {
-        title: "Degree / School",
-        subtitle: "Field • Dates",
-        bullets: ["Key focus: Data / AI.", "Notable coursework or achievements."],
-    },
-];
 
 function TimelineCard({item}: { item: Item }) {
     return (
@@ -48,23 +29,27 @@ function TimelineCard({item}: { item: Item }) {
 }
 
 export function ExperienceSection() {
+    const t = useTranslations("experience");
+    const experienceItems = t.raw("experienceItems") as Item[];
+    const educationItems = t.raw("educationItems") as Item[];
+
     return (
         <Section
             id="education"
-            title="Education & Experience"
-            description="The highlights. Use the assistant for the full story."
+            title={t("title")}
+            description={t("description")}
         >
             <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-4">
-                    <h3 className="text-sm font-medium text-muted-foreground">Experience</h3>
-                    {EXPERIENCE.map((it) => (
+                    <h3 className="text-sm font-medium text-muted-foreground">{t("experienceHeading")}</h3>
+                    {experienceItems.map((it) => (
                         <TimelineCard key={it.title} item={it}/>
                     ))}
                 </div>
 
                 <div className="space-y-4">
-                    <h3 className="text-sm font-medium text-muted-foreground">Education</h3>
-                    {EDUCATION.map((it) => (
+                    <h3 className="text-sm font-medium text-muted-foreground">{t("educationHeading")}</h3>
+                    {educationItems.map((it) => (
                         <TimelineCard key={it.title} item={it}/>
                     ))}
                 </div>

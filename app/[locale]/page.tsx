@@ -1,4 +1,3 @@
-// app/page.tsx
 import {SectionStack} from "@/components/section-stack";
 
 import {HeroSection} from "@/components/sections/hero-section";

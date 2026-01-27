@@ -2,13 +2,16 @@
 import * as React from "react";
 import {Section} from "@/components/section";
 import AiAssistant from "@/components/ai-assistant";
+import {useTranslations} from "next-intl";
 
 export function AiAssistantSection() {
+    const t = useTranslations("assistant");
+
     return (
         <Section
             id="chat"
-            title="Assistant"
-            description="Ask anything you want to know about Pierre."
+            title={t("title")}
+            description={t("description")}
         >
             <AiAssistant
                 api="/api/chat"

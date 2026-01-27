@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "chat": "Chat",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badgeRole": "Engineer",
+    "badgeFocus": "Cloud / Data / AI",
+    "title": "Pierre Lapolla",
+    "description": "Welcome to my personal portfolio. Skim the sections or ask the assistant about me.",
+    "ctaAssistant": "Ask the assistant",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact me"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A few selected projects, visit my GitHub for more.",
+    "items": [
+      {
+        "title": "Personal portfolio website",
+        "description": "The website I built for me, myself and I (and maybe recruiters).",
+        "tags": ["Next.js", "TypeScript", "DevOps"],
+        "href": "https://github.com/PierreLapolla/portfolio"
+      },
+      {
+        "title": "Pedros",
+        "description": "A small utility package for Python, mostly for my personal projects.",
+        "tags": ["Python", "DevOps"],
+        "href": "https://github.com/PierreLapolla/pedros"
+      },
+      {
+        "title": "ARECE",
+        "description": "The first french formula student student team in the autonomous class. I was a member of the trajectory team where we developed a neural network that can predict the optimal trajectory for the car.",
+        "tags": ["Python", "Data", "AI"],
+        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Education & Experience",
+    "description": "The highlights. Use the assistant for the full story.",
+    "experienceHeading": "Experience",
+    "educationHeading": "Education",
+    "experienceItems": [
+      {
+        "title": "Internship",
+        "subtitle": "Capgemini - 6 months",
+        "bullets": [
+          "What you did (impact-first).",
+          "What you built / improved.",
+          "Tech used."
+        ]
+      }
+    ],
+    "educationItems": [
+      {
+        "title": "Degree / School",
+        "subtitle": "Field - Dates",
+        "bullets": [
+          "Key focus: Data / AI.",
+          "Notable coursework or achievements."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "",
+    "groups": {
+      "languages": "Languages",
+      "frameworks": "Frameworks / Libraries",
+      "tools": "Tools",
+      "soft": "Soft skills"
+    },
+    "items": {
+      "french": "French",
+      "english": "English",
+      "teamwork": "Team work"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "blurb": "View and verify all my certifications and badges on Credly.",
+    "button": "View"
+  },
+  "assistant": {
+    "title": "Assistant",
+    "description": "",
+    "placeholder": "Type a message...",
+    "error": "Sorry, something went wrong. Please try again in a moment."
+  },
+  "contact": {
+    "title": "Contact",
+    "blurb": "Prefer LinkedIn or e-mail me at:",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "copy": {
+    "label": "Copy",
+    "copied": "Copied",
+    "copyToClipboard": "Copy to clipboard"
+  },
+  "languageToggle": {
+    "label": "Switch language"
+  }
+}

@@ -7,6 +7,7 @@ import {Button} from "@/components/ui/button";
 import {LuExternalLink} from "react-icons/lu";
 import {SiGithub} from "react-icons/si";
 import {Section} from "@/components/section";
+import {useTranslations} from "next-intl";
 
 type Project = {
     title: string;
@@ -15,36 +16,18 @@ type Project = {
     href?: string;
 };
 
-const PROJECTS: Project[] = [
-    {
-        title: "Personal portfolio website",
-        description: "The website I built for me, myself and I (and maybe recruiters).",
-        tags: ["Next.js", "TypeScript", "DevOps"],
-        href: "https://github.com/PierreLapolla/portfolio"
-    },
-    {
-        title: "Pedros",
-        description: "A small utility package for Python, mostly for my personal projects.",
-        tags: ["Python", "DevOps"],
-        href: "https://github.com/PierreLapolla/pedros"
-    },
-    {
-        title: "ARECE",
-        description: "The first french formula student student team in the autonomous class. I was a member of the trajectory team where we developed a neural network that can predict the optimal trajectory for the car.",
-        tags: ["Python", "Data", "AI"],
-        href: "https://fr.linkedin.com/company/autonomous-racing-ece"
-    },
-];
-
 export function ProjectsSection() {
+    const t = useTranslations("projects");
+    const projects = t.raw("items") as Project[];
+
     return (
         <Section
             id="projects"
-            title="Projects"
-            description="A few selected projects, visit my GitHub for more."
+            title={t("title")}
+            description={t("description")}
         >
             <div className="grid gap-4 sm:grid-cols-2">
-                {PROJECTS.map((p) => (
+                {projects.map((p) => (
                     <Card key={p.title} className="flex flex-col">
                         <CardHeader className="flex flex-row items-start justify-between">
                             <CardTitle className="text-base">{p.title}</CardTitle>

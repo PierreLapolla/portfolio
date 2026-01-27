@@ -1,5 +1,7 @@
 // components/site-header.tsx
 import Link from "next/link";
+import {useTranslations} from "next-intl";
+import {Link as IntlLink} from "@/i18n/navigation";
 import {ThemeToggleButton} from "@/components/theme-toggle-button";
 import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
@@ -8,22 +10,24 @@ import {SiGithub, SiLinkedin} from "react-icons/si";
 import {LanguageToggleButton} from "@/components/language-toggle-button";
 
 const NAV = [
-    {href: "#projects", label: "Projects"},
-    {href: "#education", label: "Education"},
-    {href: "#skills", label: "Skills"},
-    {href: "#certifications", label: "Certifications"},
-    {href: "#chat", label: "Chat"},
-    {href: "#contact", label: "Contact"},
+    {href: "#projects", labelKey: "projects"},
+    {href: "#education", labelKey: "education"},
+    {href: "#skills", labelKey: "skills"},
+    {href: "#certifications", labelKey: "certifications"},
+    {href: "#chat", labelKey: "chat"},
+    {href: "#contact", labelKey: "contact"},
 ];
 
 export function SiteHeader() {
+    const t = useTranslations("nav");
+
     return (
         <header
             className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/60">
             <PageContainer className="py-3 flex items-center justify-between gap-4">
-                <Link href="/" className="font-semibold">
+                <IntlLink href="/" className="font-semibold">
                     Pierre Lapolla
-                </Link>
+                </IntlLink>
 
                 <nav className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
                     {NAV.map((item) => (
@@ -32,7 +36,7 @@ export function SiteHeader() {
                             href={item.href}
                             className="hover:text-foreground transition-colors"
                         >
-                            {item.label}
+                            {t(item.labelKey)}
                         </Link>
                     ))}
                 </nav>
@@ -70,7 +74,7 @@ export function SiteHeader() {
                         </Button>
                     </ButtonGroup>
                     <ButtonGroup>
-                        {/*<LanguageToggleButton/>*/}
+                        <LanguageToggleButton/>
                         <ThemeToggleButton/>
                     </ButtonGroup>
                 </ButtonGroup>

@@ -19,6 +19,7 @@ import {LuUsers} from "react-icons/lu";
 import type {Props as CountryFlagProps} from "country-flag-icons/react/3x2";
 import {FR, GB} from "country-flag-icons/react/3x2"
 import type {IconType} from "react-icons";
+import {useTranslations} from "next-intl";
 
 type SkillIcon = React.ComponentType<CountryFlagProps> | IconType;
 
@@ -28,16 +29,21 @@ type Skill = {
     isBrand?: boolean;
 };
 
-const SKILL_GROUPS: { title: string; items: Skill[] }[] = [
+type SkillGroupTemplate = {
+    titleKey: string;
+    items: Array<Skill & {nameKey?: string}>;
+};
+
+const SKILL_GROUPS: SkillGroupTemplate[] = [
     {
-        title: "Languages",
+        titleKey: "groups.languages",
         items: [
             {name: "Python", Icon: SiPython},
             {name: "TypeScript", Icon: SiTypescript},
         ],
     },
     {
-        title: "Frameworks / Libraries",
+        titleKey: "groups.frameworks",
         items: [
             {name: "FastAPI", Icon: SiFastapi},
             {name: "Next.js", Icon: SiNextdotjs},
@@ -46,7 +52,7 @@ const SKILL_GROUPS: { title: string; items: Skill[] }[] = [
         ],
     },
     {
-        title: "Tools",
+        titleKey: "groups.tools",
         items: [
             {name: "Amazon Web Services", Icon: SiAmazonwebservices},
             {name: "Git", Icon: SiGit},
@@ -54,11 +60,11 @@ const SKILL_GROUPS: { title: string; items: Skill[] }[] = [
         ],
     },
     {
-        title: "Softskills",
+        titleKey: "groups.soft",
         items: [
-            {name: "French", Icon: FR},
-            {name: "English", Icon: GB},
-            {name: "Team work", Icon: LuUsers},
+            {name: "French", nameKey: "items.french", Icon: FR},
+            {name: "English", nameKey: "items.english", Icon: GB},
+            {name: "Team work", nameKey: "items.teamwork", Icon: LuUsers},
         ],
     },
 ];
@@ -90,11 +96,26 @@ function SkillTile({skill}: { skill: Skill }) {
 
 
 export function SkillsSection() {
+    const t = useTranslations("skills");
+    const groups = SKILL_GROUPS.map((group) => ({
+        title: t(group.titleKey),
+        items: group.items.map((item) => {
+            const {nameKey, ...rest} = item;
+            return {
+                ...rest,
+                name: nameKey ? t(nameKey) : item.name,
+            };
+        }),
+    }));
+
     return (
-        <Section id="skills" title="Skills" description="Grouped for fast scanning.">
+        <Section id="skills" title={t("title")} description={t("description")}>
             <div className="grid gap-4 sm:grid-cols-2">
-                {SKILL_GROUPS.map((g) => (
-                    <Card key={g.title}>
+                {groups.map((g) => (
+                    <Card
+                        key={g.title}
+                        className="bg-background border"
+                    >
                         <CardHeader className="pb-3">
                             <CardTitle className="text-base">{g.title}</CardTitle>
                         </CardHeader>
