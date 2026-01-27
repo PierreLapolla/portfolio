@@ -4,12 +4,14 @@ import {ThemeToggleButton} from "@/components/theme-toggle-button";
 import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {PageContainer} from "@/components/page-container";
-import {SiGithub, SiLinkedin, SiCredly} from "react-icons/si";
+import {SiGithub, SiLinkedin} from "react-icons/si";
+import {LanguageToggleButton} from "@/components/language-toggle-button";
 
 const NAV = [
     {href: "#projects", label: "Projects"},
     {href: "#education", label: "Education"},
     {href: "#skills", label: "Skills"},
+    {href: "#certifications", label: "Certifications"},
     {href: "#chat", label: "Chat"},
     {href: "#contact", label: "Contact"},
 ];
@@ -35,38 +37,42 @@ export function SiteHeader() {
                     ))}
                 </nav>
 
-                <ButtonGroup className="flex items-center">
-                    <Button
-                        asChild
-                        variant="default"
-                        size="icon"
-                    >
-                        <Link
-                            href="https://github.com/PierreLapolla"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
+                <ButtonGroup>
+                    <ButtonGroup>
+                        <Button
+                            asChild
+                            variant="outline"
+                            size="icon"
                         >
-                            <SiGithub className="h-4 w-4"/>
-                        </Link>
-                    </Button>
+                            <Link
+                                href="https://github.com/PierreLapolla"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+                                <SiGithub className="h-4 w-4"/>
+                            </Link>
+                        </Button>
 
-                    <Button
-                        asChild
-                        variant="default"
-                        size="icon"
-                    >
-                        <Link
-                            href="https://fr.linkedin.com/in/pierrelapolla"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
+                        <Button
+                            asChild
+                            variant="outline"
+                            size="icon"
                         >
-                            <SiLinkedin className="h-4 w-4"/>
-                        </Link>
-                    </Button>
-
-                    <ThemeToggleButton/>
+                            <Link
+                                href="https://fr.linkedin.com/in/pierrelapolla"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <SiLinkedin className="h-4 w-4"/>
+                            </Link>
+                        </Button>
+                    </ButtonGroup>
+                    <ButtonGroup>
+                        {/*<LanguageToggleButton/>*/}
+                        <ThemeToggleButton/>
+                    </ButtonGroup>
                 </ButtonGroup>
             </PageContainer>
         </header>

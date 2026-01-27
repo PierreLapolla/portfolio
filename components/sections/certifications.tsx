@@ -4,9 +4,6 @@ import {Section} from "@/components/section";
 import {Button} from "@/components/ui/button";
 import {LuExternalLink} from "react-icons/lu";
 import {Card, CardContent} from "@/components/ui/card";
-import {SiCredly} from "react-icons/si";
-
-const CREDLY_URL = "https://www.credly.com/users/pierre-lapolla";
 
 export function CertificationsSection() {
     return (
@@ -16,7 +13,7 @@ export function CertificationsSection() {
             description=""
         >
             <Card>
-                <CardContent className="p-6 sm:p-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <CardContent className="p-6 sm:p-8 flex flex-col gap-4 sm:flex-row sm:items-center justify-between">
                     <div className="space-y-1">
                         <p className="text-sm text-muted-foreground">
                             View and verify all my certifications and badges on Credly.
@@ -28,7 +25,7 @@ export function CertificationsSection() {
                             variant="outline"
                         >
                             <Link
-                                href={CREDLY_URL}
+                                href="https://www.credly.com/users/pierre-lapolla"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="block rounded-xl border bg-muted/30 p-5 transition hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-ring"

@@ -4,7 +4,8 @@ import Link from "next/link";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-import {ExternalLink, Github} from "lucide-react";
+import {LuExternalLink} from "react-icons/lu";
+import {SiGithub} from "react-icons/si";
 import {Section} from "@/components/section";
 
 type Project = {
@@ -60,9 +61,9 @@ export function ProjectsSection() {
                                         className="gap-2"
                                     >
                                         {p.href.includes("github.com") ? (
-                                            <Github className="h-4 w-4"/>
+                                            <SiGithub className="h-4 w-4"/>
                                         ) : (
-                                            <ExternalLink className="h-4 w-4"/>
+                                            <LuExternalLink className="h-4 w-4"/>
                                         )}
                                     </Link>
                                 </Button>

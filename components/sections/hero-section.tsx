@@ -14,7 +14,6 @@ export function HeroSection() {
                     <div className="flex flex-col gap-4">
                         <div className="flex flex-wrap gap-2">
                             <Badge variant="secondary">Engineer</Badge>
-                            <Badge variant="secondary">Consulting-ready</Badge>
                             <Badge variant="secondary">Cloud / Data / AI</Badge>
                         </div>
 
