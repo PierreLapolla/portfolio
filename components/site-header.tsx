@@ -13,7 +13,6 @@ const NAV = [
     {href: "#projects", labelKey: "projects"},
     {href: "#education", labelKey: "education"},
     {href: "#skills", labelKey: "skills"},
-    {href: "#certifications", labelKey: "certifications"},
     {href: "#chat", labelKey: "chat"},
     {href: "#contact", labelKey: "contact"},
 ];

@@ -34,9 +34,6 @@ export function HeroSection() {
                                 <Link href="#chat">{t("ctaAssistant")}</Link>
                             </Button>
                             <Button asChild variant="outline">
-                                <Link href="#projects">{t("ctaProjects")}</Link>
-                            </Button>
-                            <Button asChild variant="ghost">
                                 <Link href="#contact">{t("ctaContact")}</Link>
                             </Button>
                         </div>

@@ -13,11 +13,16 @@ export function LanguageToggleButton() {
     const router = useRouter()
     const [isPending, startTransition] = React.useTransition()
 
+    React.useEffect(() => {
+        const nextLocale = locale === "en" ? "fr" : "en"
+        router.prefetch(pathname, {locale: nextLocale})
+    }, [locale, pathname, router])
+
     const toggleLanguage = () => {
         const nextLocale = locale === "en" ? "fr" : "en"
         startTransition(() => {
             const hash = typeof window !== "undefined" ? window.location.hash : ""
-            router.replace(`${pathname}${hash}`, {locale: nextLocale})
+            router.replace(`${pathname}${hash}`, {locale: nextLocale, scroll: false})
         })
     }
 

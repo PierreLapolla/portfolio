@@ -2,10 +2,12 @@
 
 "use client";
 
-import React, {useCallback, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import {useChat} from "@ai-sdk/react";
 import {DefaultChatTransport, generateId} from "ai";
 import {useTranslations} from "next-intl";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
 
 import {
     Conversation,
@@ -23,14 +25,22 @@ import {
     PromptInputTextarea,
     PromptInputTools,
 } from "@/components/ai-elements/prompt-input";
+import { Suggestion, Suggestions } from '@/components/ai-elements/suggestion';
 import {Loader} from "@/components/ai-elements/loader";
-import {MessageSquare} from "lucide-react";
+import {LuMessageSquare, LuSquarePen} from "react-icons/lu";
 
 type AiAssistantProps = {
     api?: string;
     welcomeText?: string;
     className?: string;
 };
+
+const suggestions = [
+    'What can he do for work?',
+    'What are his hobbies?',
+];
+
+const STORAGE_KEY = "ai-assistant-messages";
 
 export default function AiAssistant({
                                         api = "/api/chat",
@@ -59,7 +69,33 @@ export default function AiAssistant({
         },
     });
 
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const stored = window.localStorage.getItem(STORAGE_KEY);
+        if (!stored) return;
+        try {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+                setMessages(parsed);
+            }
+        } catch {
+            // Ignore invalid persisted data.
+        }
+    }, [setMessages]);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        if (messages.length === 0) {
+            window.localStorage.removeItem(STORAGE_KEY);
+            return;
+        }
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+    }, [messages]);
+
     const isBusy = status === "submitted" || status === "streaming";
+    const hasMessages = messages.length > 0 || isBusy;
+    const containerClassName = cn(className, hasMessages ? "h-[55vh]" : "h-auto");
+    const showSuggestions = messages.length === 0 && !isBusy;
 
     const submitText = useCallback(
         async (text: string) => {
@@ -86,19 +122,29 @@ export default function AiAssistant({
         [submitText]
     );
 
+
     const handleInputChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
         if (error) clearError();
         setInput(e.target.value);
     };
 
+    const handleNewChat = useCallback(() => {
+        setMessages([]);
+        setInput("");
+        if (error) clearError();
+        if (typeof window !== "undefined") {
+            window.localStorage.removeItem(STORAGE_KEY);
+        }
+    }, [clearError, error, setMessages]);
+
     return (
-        <div className={className}>
-            <div className="flex flex-col h-full">
-                <Conversation>
+        <div className={containerClassName}>
+            <div className="flex flex-col h-full min-h-0">
+                <Conversation className="min-h-0 overflow-y-auto">
                     <ConversationContent>
                         {messages.length === 0 ? (
                             <ConversationEmptyState
-                                icon={<MessageSquare className="size-12" />}
+                                icon={<LuMessageSquare className="size-12" />}
                                 title="Start a conversation"
                                 description="Type a message below to begin chatting"
                             />
@@ -126,7 +172,21 @@ export default function AiAssistant({
                     <ConversationScrollButton/>
                 </Conversation>
 
-                <PromptInput onSubmit={handleSubmit} className="mt-4">
+                {showSuggestions && (
+                    <div className="mt-4 flex justify-center">
+                        <Suggestions className="w-full justify-center">
+                            {suggestions.map((suggestion) => (
+                                <Suggestion
+                                    key={suggestion}
+                                    suggestion={suggestion}
+                                    onClick={submitText}
+                                />
+                            ))}
+                        </Suggestions>
+                    </div>
+                )}
+
+                <PromptInput onSubmit={handleSubmit} className="mt-4 p-2">
                     <PromptInputBody>
                         <PromptInputTextarea
                             value={input}
@@ -136,7 +196,17 @@ export default function AiAssistant({
                     </PromptInputBody>
 
                     <PromptInputFooter>
-                        <PromptInputTools>{/* space for future tools */}</PromptInputTools>
+                        <PromptInputTools>
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={handleNewChat}
+                                disabled={messages.length === 0 && !isBusy}
+                            >
+                                <LuSquarePen className="size-4"/>
+                                New chat
+                            </Button>
+                        </PromptInputTools>
                         <PromptInputSubmit disabled={!input.trim() || isBusy} status={status}/>
                     </PromptInputFooter>
                 </PromptInput>

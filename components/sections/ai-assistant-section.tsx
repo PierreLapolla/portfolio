@@ -15,7 +15,7 @@ export function AiAssistantSection() {
         >
             <AiAssistant
                 api="/api/chat"
-                className="mx-auto w-full max-w-4xl p-0 relative h-[55vh]"
+                className="mx-auto w-full max-w-4xl p-0 relative max-h-[55vh] h-auto overflow-hidden"
             />
         </Section>
     );

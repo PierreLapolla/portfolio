@@ -36,8 +36,8 @@ export function ExperienceSection() {
     return (
         <Section
             id="education"
-            title={t("title")}
-            description={t("description")}
+            title={"TODO " + t("title")}
+            description={""}
         >
             <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-4">
