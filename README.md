@@ -6,9 +6,9 @@ Mistral AI.
 ## Features
 
 * **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral's free tier limits)
-* **AI chat interface:** 
-  * A custom chatbot that answers questions based on Pierre's profile.
-  * Streaming responses (not working on a live site because of Amplify)
+* **AI chat interface:**
+    * A custom chatbot that answers questions based on Pierre's profile.
+    * Streaming responses (not working on a live site because of Amplify)
 * **Pages**:
     * Home
     * Chat

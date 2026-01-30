@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "education": "Éducation",
+    "skills": "Compétences",
+    "certifications": "Certifications",
+    "chat": "Discussion",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badgeRole": "Ingénieur",
+    "badgeFocus": "Cloud / Data / IA",
+    "title": "Pierre Lapolla",
+    "description": "Bienvenue sur mon portfolio personnel.",
+    "ctaAssistant": "Demander à l'assistant",
+    "ctaProjects": "Voir mes projets",
+    "ctaContact": "Me contacter"
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Quelques projets sélectionnés, visitez mon GitHub pour en voir plus.",
+    "items": [
+      {
+        "title": "ARECE",
+        "description": "La première équipe française Formula Student dans la catégorie autonome. J'ai fait partie de l'équipe trajectoire où nous avons développé un réseau de neurones capable de prédire la trajectoire optimale du véhicule.",
+        "tags": ["Python", "Données", "IA"],
+        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
+      },
+      {
+        "title": "Site portfolio personnel",
+        "description": "Le site que j'ai construit.",
+        "tags": ["Next.js", "TypeScript", "DevOps"],
+        "href": "https://github.com/PierreLapolla/portfolio"
+      },
+      {
+        "title": "Pedros",
+        "description": "Un petit paquet utilitaire pour Python, principalement pour mes projets personnels.",
+        "tags": ["Python", "DevOps"],
+        "href": "https://github.com/PierreLapolla/pedros"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Expérience & Formation",
+    "description": "",
+    "experienceHeading": "Expérience",
+    "educationHeading": "Formation",
+    "experienceItems": [
+      {
+        "title": "Stagiaire Cloud & Backend Engineering",
+        "location": "Capgemini, Paris",
+        "href": "https://www.capgemini.com"
+      },
+      {
+        "title": "Contributeur Recherche IA",
+        "location": "Projet de recherche LyRIDS",
+        "href": "https://www.ece.fr/lecole-2/le-centre-de-recherche/"
+      },
+      {
+        "title": "Développeur Prototype Données Industrielles",
+        "location": "Projet industriel Arkema",
+        "href": "https://www.arkema.com"
+      }
+    ],
+    "educationItems": [
+      {
+        "title": "Master en Cloud Engineering & Management",
+        "location": "ECE Paris – École d'ingénieurs, Paris, France",
+        "href": "https://www.ece.fr"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "description": "",
+    "groups": {
+      "languages": "Langues",
+      "frameworks": "Frameworks & Bibliothèques",
+      "tools": "Outils & Plateformes",
+      "soft": "Compétences humaines"
+    },
+    "items": {
+      "french": "Français",
+      "english": "Anglais",
+      "python": "Python",
+      "typescript": "TypeScript",
+      "c_cpp": "C/C++",
+      "java": "Java",
+      "fastapi": "FastAPI",
+      "nextjs": "Next.js",
+      "react": "React",
+      "pytorch": "PyTorch",
+      "aws": "AWS",
+      "docker": "Docker",
+      "terraform": "Terraform",
+      "git": "Git",
+      "devops": "DevOps",
+      "graphneural": "Graph Neural Networks",
+      "computervision": "Computer Vision",
+      "dataengineering": "Data Engineering",
+      "cloudarchitecture": "Cloud Architecture",
+      "problemsolving": "Résolution de problèmes",
+      "teamwork": "Travail en équipe",
+      "communication": "Communication",
+      "leadership": "Leadership",
+      "polars": "Polars",
+      "french_level": "Natif",
+      "english_level": "C1 (TOEIC)",
+      "soft_combined": "Compétences interpersonnelles"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "description": "Certifications reconnues par l'industrie démontrant mon expertise.",
+    "items": [
+      {
+        "name": "AWS Certified Cloud Practitioner",
+        "deliveredDate": "2025-05-9",
+        "image": "AWSCertifiedCloudPractitioner.png",
+        "credlyUrl": "https://www.credly.com/badges/aws-certified-cloud-practitioner"
+      }
+    ],
+    "viewAll": "Verifier sur Credly"
+  },
+  "assistant": {
+    "title": "Assistant",
+    "description": "",
+    "placeholder": "Tapez un message...",
+    "error": "Désolé, une erreur est survenue. Veuillez réessayer dans un instant.",
+    "empty": {
+      "title": "Commencer une conversation",
+      "description": "Tapez un message ci-dessous pour commencer à discuter"
+    },
+    "newChat": "Nouvelle conversation",
+    "suggestions": [
+      "Que peut-il faire au travail ?",
+      "Quels sont ses hobbies ?"
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "blurb": "Préférez LinkedIn ou envoyez-moi un e-mail à :",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "pro@pierrelapolla.com"
+  },
+  "copy": {
+    "label": "Copier",
+    "copied": "Copié",
+    "copyToClipboard": "Copier dans le presse-papiers"
+  },
+  "languageToggle": {
+    "label": "Changer la langue"
+  },
+  "site": {
+    "title": "Pierre Lapolla"
+  },
+  "footer": {
+    "madeBy": "Fait par Pierre Lapolla | v{version}"
+  },
+  "meta": {
+    "title": "Portfolio",
+    "description": "Mon site portfolio personnel."
+  }
+}

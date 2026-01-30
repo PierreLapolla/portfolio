@@ -1,33 +1,50 @@
-import type {Metadata} from "next";
-import {JetBrains_Mono} from "next/font/google";
-import "@aws-amplify/ui-react/styles.css";
-import "@/app/globals.css"
-import React from "react";
-import {AppShell} from "@/app/components/AppShell";
-import {Header} from "@/app/components/Header";
-import {Footer} from "@/app/components/Footer";
+// layout.tsx
 
-const font = JetBrains_Mono({
+import type {Metadata} from "next"
+import {Geist, Geist_Mono, Noto_Sans} from "next/font/google"
+import "./globals.css"
+import React from "react"
+import {getLocale} from "next-intl/server"
+import {Analytics} from '@vercel/analytics/next'
+
+import {cn} from "@/lib/utils"
+
+const notoSans = Noto_Sans({variable: "--font-sans", subsets: ["latin"]})
+
+const geistSans = Geist({
+    variable: "--font-geist-sans",
     subsets: ["latin"],
-});
+})
+
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
-    title: "Pierre Lapolla - Portfolio",
-    description: "Welcome to my professional portfolio website.",
-};
+    title: "Portfolio",
+    description: "My personal portfolio website.",
+}
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default async function RootLayout({
+                                            children,
+                                        }: Readonly<{
+    children: React.ReactNode
+}>) {
+    const locale = (await getLocale()) ?? "en"
+
     return (
-        <html lang="en">
-        <body className={font.className}>
-        <AppShell header={<Header/>} footer={<Footer/>}>
-            {children}
-        </AppShell>
+        <html lang={locale} className={notoSans.variable} suppressHydrationWarning>
+        <body
+            className={cn(
+                geistSans.variable,
+                geistMono.variable,
+                "min-h-screen bg-background font-sans text-foreground antialiased"
+            )}
+        >
+        {children}
+        <Analytics/>
         </body>
         </html>
-    );
+    )
 }

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: add certifications section, update localization files, and include Vercel analytics">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/pedro/WebstormProjects/portfolio" value="38ZscbMjshAfWOoFj8WZk5PNcme" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="80" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="switch-bun" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PierreLapolla&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PierreLapolla/portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;0333fe7a-b147-46b7-a6da-c4a29cd7dc02&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="38ZscbMjshAfWOoFj8WZk5PNcme" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shadcn&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/components/sections&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/pedro/WebstormProjects/portfolio/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecapSpentCounter">
+    <option name="endsOfQuotaMs" value="1770823818053" />
+    <option name="spentUsd" value="0.06678855" />
+  </component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/sections" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/components/sections" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="" />
+      <created>1769018509242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769018509242</updated>
+      <workItem from="1769018512450" duration="5183000" />
+      <workItem from="1769029500082" duration="6556000" />
+      <workItem from="1769166418722" duration="8796000" />
+      <workItem from="1769263793087" duration="4171000" />
+      <workItem from="1769287162334" duration="431000" />
+      <workItem from="1769287615427" duration="6956000" />
+      <workItem from="1769340277761" duration="2542000" />
+      <workItem from="1769362078191" duration="483000" />
+      <workItem from="1769425159748" duration="9895000" />
+      <workItem from="1769458518330" duration="6296000" />
+      <workItem from="1769510143083" duration="4276000" />
+      <workItem from="1769544203152" duration="1014000" />
+      <workItem from="1769545536282" duration="3427000" />
+      <workItem from="1769596417611" duration="6490000" />
+      <workItem from="1769619279594" duration="120000" />
+      <workItem from="1769619414161" duration="341000" />
+      <workItem from="1769681484131" duration="3647000" />
+      <workItem from="1769768292452" duration="11872000" />
+      <workItem from="1769783286574" duration="336000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
+      <option name="closed" value="true" />
+      <created>1769018909656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769018909656</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: re-initialized the project">
+      <option name="closed" value="true" />
+      <created>1769020567102</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769020567102</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: added chat page">
+      <option name="closed" value="true" />
+      <created>1769169029244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769169029245</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: added basic app shell">
+      <option name="closed" value="true" />
+      <created>1769181258927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769181258927</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: remove custom theme mode toggle to use animate ui's one">
+      <option name="closed" value="true" />
+      <created>1769266697216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1769266697216</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell">
+      <option name="closed" value="true" />
+      <created>1769287763556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1769287763556</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: remove package-lock.json for project cleanup and dependency reset">
+      <option name="closed" value="true" />
+      <created>1769288664634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1769288664634</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: refactor UI components and remove unused primitives for a cleaner structure">
+      <option name="closed" value="true" />
+      <created>1769290943667</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1769290943667</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: add portfolio sections with reusable components and layout enhancements">
+      <option name="closed" value="true" />
+      <created>1769292254237</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1769292254237</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting">
+      <option name="closed" value="true" />
+      <created>1769293604897</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769293604897</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: remove unused ai-elements components for cleaner code and optimized project structure">
+      <option name="closed" value="true" />
+      <created>1769434291734</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1769434291734</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: remove unused ui components for a cleaner and more maintainable codebase">
+      <option name="closed" value="true" />
+      <created>1769437298370</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1769437298370</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: update descriptions, add email copy button, and enhance contact section layout">
+      <option name="closed" value="true" />
+      <created>1769438727070</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1769438727070</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements">
+      <option name="closed" value="true" />
+      <created>1769459544760</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1769459544760</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: replace icons with react-icons for consistency, introduce certifications section, and enhance skills section with icons">
+      <option name="closed" value="true" />
+      <created>1769463774617</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1769463774617</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link">
+      <option name="closed" value="true" />
+      <created>1769545554526</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1769545554526</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: integrate next-intl for localization, add translations, and restructure app layout for locale-based routing">
+      <option name="closed" value="true" />
+      <created>1769548791763</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1769548791763</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: enhance AI assistant UI with suggestions, local storage support, and layout updates; remove unused components and adjust footer integration">
+      <option name="closed" value="true" />
+      <created>1769619361778</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1769619361778</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: add certifications section, update localization files, and include Vercel analytics">
+      <option name="closed" value="true" />
+      <created>1769781681737</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1769781681737</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files" />
+    <MESSAGE value="chore: re-initialized the project" />
+    <MESSAGE value="feat: added chat page" />
+    <MESSAGE value="feat: added basic app shell" />
+    <MESSAGE value="feat: remove custom theme mode toggle to use animate ui's one" />
+    <MESSAGE value="feat: update ThemeTogglerButton to support light and dark modes, clean up extra props in AppShell" />
+    <MESSAGE value="chore: remove package-lock.json for project cleanup and dependency reset" />
+    <MESSAGE value="feat: refactor UI components and remove unused primitives for a cleaner structure" />
+    <MESSAGE value="feat: add portfolio sections with reusable components and layout enhancements" />
+    <MESSAGE value="feat: add LanguageToggleButton, enhance error handling and refactor imports for consistent formatting" />
+    <MESSAGE value="feat: remove unused ai-elements components for cleaner code and optimized project structure" />
+    <MESSAGE value="feat: remove unused ui components for a cleaner and more maintainable codebase" />
+    <MESSAGE value="feat: update descriptions, add email copy button, and enhance contact section layout" />
+    <MESSAGE value="feat: remove unused ai-assistant props and refactor code for cleaner structure, update contact section with icons and email copy enhancements" />
+    <MESSAGE value="feat: replace icons with react-icons for consistency, introduce certifications section, and enhance skills section with icons" />
+    <MESSAGE value="feat: replace lucide-react icons with react-icons, update skills section with brand colors, and enhance navigation with certifications link" />
+    <MESSAGE value="feat: integrate next-intl for localization, add translations, and restructure app layout for locale-based routing" />
+    <MESSAGE value="feat: enhance AI assistant UI with suggestions, local storage support, and layout updates; remove unused components and adjust footer integration" />
+    <MESSAGE value="feat" />
+    <MESSAGE value="feat: add certifications section, update localization files, and include Vercel analytics" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add certifications section, update localization files, and include Vercel analytics" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

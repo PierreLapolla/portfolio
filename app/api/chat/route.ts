@@ -15,7 +15,6 @@ const pierreProfileText = fs.readFileSync(
     "utf8"
 );
 
-
 const finalSystemPrompt = systemPromptTemplate.replace(
     "{{PIERRE_PROFILE_TEXT}}",
     pierreProfileText
@@ -24,10 +23,12 @@ const finalSystemPrompt = systemPromptTemplate.replace(
 export async function POST(req: Request) {
     const {messages}: { messages: UIMessage[] } = await req.json();
 
+    const modelMessages = await convertToModelMessages(messages);
+
     const result = streamText({
         model: mistral("mistral-small-latest"),
         system: finalSystemPrompt,
-        messages: convertToModelMessages(messages),
+        messages: modelMessages,
     });
 
     return result.toUIMessageStreamResponse();
