@@ -35,10 +35,9 @@ type AiAssistantProps = {
     className?: string;
 };
 
-const suggestions = [
-    'What can he do for work?',
-    'What are his hobbies?',
-];
+// NOTE: suggestions are provided via translations (messages/...). On the client
+// `useTranslations` may not expose a typed `raw` helper, so we access it via `any`
+// and fall back to the original English suggestions if missing.
 
 const STORAGE_KEY = "ai-assistant-messages";
 
@@ -47,6 +46,16 @@ export default function AiAssistant({
                                         className = "max-w-4xl mx-auto p-6 relative size-full max-h-[50vh]",
                                     }: AiAssistantProps) {
     const t = useTranslations("assistant");
+    // Safely access an optional `raw` helper on the translations object without using `any`.
+    type RawGetter = { raw?: (k: string) => unknown };
+    const rawGetter = t as unknown as RawGetter;
+    const rawSuggestions = rawGetter.raw ? (rawGetter.raw("suggestions") as unknown) : null;
+    const suggestions = Array.isArray(rawSuggestions) && rawSuggestions.length > 0
+        ? (rawSuggestions as string[])
+        : [
+            'What can he do for work?',
+            'What are his hobbies?'
+        ];
     const [input, setInput] = useState("");
     const lastUserTextRef = useRef<string | null>(null);
 
@@ -145,8 +154,8 @@ export default function AiAssistant({
                         {messages.length === 0 ? (
                             <ConversationEmptyState
                                 icon={<LuMessageSquare className="size-12" />}
-                                title="Start a conversation"
-                                description="Type a message below to begin chatting"
+                                title={t("empty.title")}
+                                description={t("empty.description")}
                             />
                         ) : (
                             messages.map((message) => (
@@ -204,7 +213,7 @@ export default function AiAssistant({
                                 disabled={messages.length === 0 && !isBusy}
                             >
                                 <LuSquarePen className="size-4"/>
-                                New chat
+                                {t("newChat")}
                             </Button>
                         </PromptInputTools>
                         <PromptInputSubmit disabled={!input.trim() || isBusy} status={status}/>

@@ -1,19 +1,19 @@
 {
   "nav": {
     "projects": "Projets",
-    "education": "Formation",
+    "education": "Éducation",
     "skills": "Compétences",
     "certifications": "Certifications",
-    "chat": "Chat",
+    "chat": "Discussion",
     "contact": "Contact"
   },
   "hero": {
     "badgeRole": "Ingénieur",
-    "badgeFocus": "Cloud / Données / IA",
+    "badgeFocus": "Cloud / Data / IA",
     "title": "Pierre Lapolla",
-    "description": "Bienvenue sur mon portfolio personnel. Parcourez les sections ou interrogez l'assistant à mon sujet.",
+    "description": "Bienvenue sur mon portfolio personnel.",
     "ctaAssistant": "Demander à l'assistant",
-    "ctaProjects": "Voir les projets",
+    "ctaProjects": "Voir mes projets",
     "ctaContact": "Me contacter"
   },
   "projects": {
@@ -21,49 +21,52 @@
     "description": "Quelques projets sélectionnés, visitez mon GitHub pour en voir plus.",
     "items": [
       {
+        "title": "ARECE",
+        "description": "La première équipe française Formula Student dans la catégorie autonome. J'ai fait partie de l'équipe trajectoire où nous avons développé un réseau de neurones capable de prédire la trajectoire optimale du véhicule.",
+        "tags": ["Python", "Données", "IA"],
+        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
+      },
+      {
         "title": "Site portfolio personnel",
-        "description": "Le site que j'ai construit pour moi, moi-même et moi (et peut-être des recruteurs).",
+        "description": "Le site que j'ai construit.",
         "tags": ["Next.js", "TypeScript", "DevOps"],
         "href": "https://github.com/PierreLapolla/portfolio"
       },
       {
         "title": "Pedros",
-        "description": "Un petit package utilitaire pour Python, surtout pour mes projets personnels.",
+        "description": "Un petit paquet utilitaire pour Python, principalement pour mes projets personnels.",
         "tags": ["Python", "DevOps"],
         "href": "https://github.com/PierreLapolla/pedros"
-      },
-      {
-        "title": "ARECE",
-        "description": "La première équipe française de Formula Student dans la catégorie autonome. J'étais membre de l'équipe trajectoire où nous avons développé un réseau de neurones capable de prédire la trajectoire optimale de la voiture.",
-        "tags": ["Python", "Data", "AI"],
-        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
       }
     ]
   },
   "experience": {
-    "title": "Formation & Expérience",
-    "description": "L'essentiel. Utilisez l'assistant pour le reste.",
+    "title": "Expérience & Formation",
+    "description": "",
     "experienceHeading": "Expérience",
     "educationHeading": "Formation",
     "experienceItems": [
       {
-        "title": "Stage",
-        "subtitle": "Capgemini - 6 mois",
-        "bullets": [
-          "Ce que vous avez fait (impact d'abord).",
-          "Ce que vous avez construit / amélioré.",
-          "Technologies utilisées."
-        ]
+        "title": "Stagiaire Cloud & Backend Engineering",
+        "location": "Capgemini, Paris",
+        "href": "https://www.capgemini.com"
+      },
+      {
+        "title": "Contributeur Recherche IA",
+        "location": "Projet de recherche LyRIDS",
+        "href": "https://www.ece.fr/lecole-2/le-centre-de-recherche/"
+      },
+      {
+        "title": "Développeur Prototype Données Industrielles",
+        "location": "Projet industriel Arkema",
+        "href": "https://www.arkema.com"
       }
     ],
     "educationItems": [
       {
-        "title": "Diplôme / École",
-        "subtitle": "Domaine - Dates",
-        "bullets": [
-          "Focus principal : Data / IA.",
-          "Cours ou réalisations notables."
-        ]
+        "title": "Master en Cloud Engineering & Management",
+        "location": "ECE Paris – École d'ingénieurs, Paris, France",
+        "href": "https://www.ece.fr"
       }
     ]
   },
@@ -71,33 +74,75 @@
     "title": "Compétences",
     "description": "",
     "groups": {
-      "languages": "Langages",
-      "frameworks": "Frameworks / Bibliothèques",
-      "tools": "Outils",
-      "soft": "Soft skills"
+      "languages": "Langues",
+      "frameworks": "Frameworks & Bibliothèques",
+      "tools": "Outils & Plateformes",
+      "soft": "Compétences humaines"
     },
     "items": {
       "french": "Français",
       "english": "Anglais",
-      "teamwork": "Travail d'équipe"
+      "python": "Python",
+      "typescript": "TypeScript",
+      "c_cpp": "C/C++",
+      "java": "Java",
+      "fastapi": "FastAPI",
+      "nextjs": "Next.js",
+      "react": "React",
+      "pytorch": "PyTorch",
+      "aws": "AWS",
+      "docker": "Docker",
+      "terraform": "Terraform",
+      "git": "Git",
+      "devops": "DevOps",
+      "graphneural": "Graph Neural Networks",
+      "computervision": "Computer Vision",
+      "dataengineering": "Data Engineering",
+      "cloudarchitecture": "Cloud Architecture",
+      "problemsolving": "Résolution de problèmes",
+      "teamwork": "Travail en équipe",
+      "communication": "Communication",
+      "leadership": "Leadership",
+      "polars": "Polars",
+      "french_level": "Natif",
+      "english_level": "C1 (TOEIC)",
+      "soft_combined": "Compétences interpersonnelles"
     }
   },
   "certifications": {
     "title": "Certifications",
-    "blurb": "Voir et vérifier toutes mes certifications et badges sur Credly.",
-    "button": "Voir"
+    "description": "Certifications reconnues par l'industrie démontrant mon expertise.",
+    "items": [
+      {
+        "name": "AWS Certified Cloud Practitioner",
+        "deliveredDate": "2025-05-9",
+        "image": "AWSCertifiedCloudPractitioner.png",
+        "credlyUrl": "https://www.credly.com/badges/aws-certified-cloud-practitioner"
+      }
+    ],
+    "viewAll": "Verifier sur Credly"
   },
   "assistant": {
     "title": "Assistant",
     "description": "",
     "placeholder": "Tapez un message...",
-    "error": "Désolé, une erreur s'est produite. Veuillez réessayer dans un instant."
+    "error": "Désolé, une erreur est survenue. Veuillez réessayer dans un instant.",
+    "empty": {
+      "title": "Commencer une conversation",
+      "description": "Tapez un message ci-dessous pour commencer à discuter"
+    },
+    "newChat": "Nouvelle conversation",
+    "suggestions": [
+      "Que peut-il faire au travail ?",
+      "Quels sont ses hobbies ?"
+    ]
   },
   "contact": {
     "title": "Contact",
     "blurb": "Préférez LinkedIn ou envoyez-moi un e-mail à :",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "email": "pro@pierrelapolla.com"
   },
   "copy": {
     "label": "Copier",
@@ -105,6 +150,16 @@
     "copyToClipboard": "Copier dans le presse-papiers"
   },
   "languageToggle": {
-    "label": "Changer de langue"
+    "label": "Changer la langue"
+  },
+  "site": {
+    "title": "Pierre Lapolla"
+  },
+  "footer": {
+    "madeBy": "Fait par Pierre Lapolla | v{version}"
+  },
+  "meta": {
+    "title": "Portfolio",
+    "description": "Mon site portfolio personnel."
   }
 }

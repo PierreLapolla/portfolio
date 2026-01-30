@@ -5,6 +5,7 @@ import {Geist, Geist_Mono, Noto_Sans} from "next/font/google"
 import "./globals.css"
 import React from "react"
 import {getLocale} from "next-intl/server"
+import {Analytics} from '@vercel/analytics/next'
 
 import {cn} from "@/lib/utils"
 
@@ -42,6 +43,7 @@ export default async function RootLayout({
             )}
         >
         {children}
+        <Analytics/>
         </body>
         </html>
     )

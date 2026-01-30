@@ -1,11 +1,8 @@
 // components/sections/projects-section.tsx
 import * as React from "react";
-import Link from "next/link";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {LuExternalLink} from "react-icons/lu";
-import {SiGithub} from "react-icons/si";
+import {ExternalLinkButton} from "@/components/external-link-button";
 import {Section} from "@/components/section";
 import {useTranslations} from "next-intl";
 
@@ -32,24 +29,10 @@ export function ProjectsSection() {
                         <CardHeader className="flex flex-row items-start justify-between">
                             <CardTitle className="text-base">{p.title}</CardTitle>
                             {p.href ? (
-                                <Button
-                                    asChild
+                                <ExternalLinkButton
+                                    href={p.href}
                                     variant="outline"
-                                    size="sm"
-                                >
-                                    <Link
-                                        href={p.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="gap-2"
-                                    >
-                                        {p.href.includes("github.com") ? (
-                                            <SiGithub className="h-4 w-4"/>
-                                        ) : (
-                                            <LuExternalLink className="h-4 w-4"/>
-                                        )}
-                                    </Link>
-                                </Button>
+                                />
                             ) : null}
                         </CardHeader>
                         <CardContent className="space-y-3">

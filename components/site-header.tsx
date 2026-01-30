@@ -8,6 +8,7 @@ import {ButtonGroup} from "@/components/ui/button-group";
 import {PageContainer} from "@/components/page-container";
 import {SiGithub, SiLinkedin} from "react-icons/si";
 import {LanguageToggleButton} from "@/components/language-toggle-button";
+import {ExternalLinkButton} from "@/components/external-link-button";
 
 const NAV = [
     {href: "#projects", labelKey: "projects"},
@@ -19,13 +20,14 @@ const NAV = [
 
 export function SiteHeader() {
     const t = useTranslations("nav");
+    const ts = useTranslations("site");
 
     return (
         <header
             className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/60">
             <PageContainer className="py-3 flex items-center justify-between gap-4">
                 <IntlLink href="/" className="font-semibold">
-                    Pierre Lapolla
+                    {ts("title")}
                 </IntlLink>
 
                 <nav className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
@@ -42,35 +44,14 @@ export function SiteHeader() {
 
                 <ButtonGroup>
                     <ButtonGroup>
-                        <Button
-                            asChild
+                        <ExternalLinkButton
+                            href={"https://github.com/PierreLapolla"}
                             variant="outline"
-                            size="icon"
-                        >
-                            <Link
-                                href="https://github.com/PierreLapolla"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub"
-                            >
-                                <SiGithub className="h-4 w-4"/>
-                            </Link>
-                        </Button>
-
-                        <Button
-                            asChild
+                        />
+                        <ExternalLinkButton
+                            href={"https://fr.linkedin.com/in/pierrelapolla"}
                             variant="outline"
-                            size="icon"
-                        >
-                            <Link
-                                href="https://fr.linkedin.com/in/pierrelapolla"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="LinkedIn"
-                            >
-                                <SiLinkedin className="h-4 w-4"/>
-                            </Link>
-                        </Button>
+                        />
                     </ButtonGroup>
                     <ButtonGroup>
                         <LanguageToggleButton/>

@@ -1,4 +1,5 @@
 // components/sections/contact-section.tsx
+
 import * as React from "react";
 import Link from "next/link";
 import {Card, CardContent} from "@/components/ui/card";
@@ -8,6 +9,7 @@ import {Section} from "@/components/section";
 import {CopyToClipboardButton} from "@/components/copy-button";
 import {SiGithub, SiLinkedin} from "react-icons/si";
 import {useTranslations} from "next-intl";
+import {ExternalLinkButton} from "@/components/external-link-button";
 
 export function ContactSection() {
     const t = useTranslations("contact");
@@ -28,29 +30,23 @@ export function ContactSection() {
 
                     <ButtonGroup>
                         <Button asChild variant="outline">
-                            <a href="mailto:pro@pierrelapolla.com">pro@pierrelapolla.com</a>
+                            <a href={`mailto:${t("email")}`}>{t("email")}</a>
                         </Button>
-                        <CopyToClipboardButton value={"pro@pierrelapolla.com"}/>
+                        <CopyToClipboardButton value={t("email")}/>
                     </ButtonGroup>
                     <ButtonGroup>
-                        <Button asChild>
-                            <Link
-                                href="https://fr.linkedin.com/in/pierrelapolla"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <SiLinkedin className="h-4 w-4"/> {t("linkedin")}
-                            </Link>
-                        </Button>
-                        <Button asChild>
-                            <Link
-                                href="https://github.com/PierreLapolla"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <SiGithub className="h-4 w-4"/> {t("github")}
-                            </Link>
-                        </Button>
+                        <ExternalLinkButton
+                            href="https://fr.linkedin.com/in/pierrelapolla"
+                            showText
+                        >
+                            {t("linkedin")}
+                        </ExternalLinkButton>
+                        <ExternalLinkButton
+                            href="https://github.com/PierreLapolla"
+                            showText
+                        >
+                            {t("github")}
+                        </ExternalLinkButton>
                     </ButtonGroup>
                 </CardContent>
             </Card>

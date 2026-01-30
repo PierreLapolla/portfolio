@@ -11,7 +11,7 @@
     "badgeRole": "Engineer",
     "badgeFocus": "Cloud / Data / AI",
     "title": "Pierre Lapolla",
-    "description": "Welcome to my personal portfolio. Skim the sections or ask the assistant about me.",
+    "description": "Welcome to my personal portfolio.",
     "ctaAssistant": "Ask the assistant",
     "ctaProjects": "View projects",
     "ctaContact": "Contact me"
@@ -20,6 +20,12 @@
     "title": "Projects",
     "description": "A few selected projects, visit my GitHub for more.",
     "items": [
+      {
+        "title": "ARECE",
+        "description": "The first french formula student student team in the autonomous class. I was a member of the trajectory team where we developed a neural network that can predict the optimal trajectory for the car.",
+        "tags": ["Python", "Data", "AI"],
+        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
+      },
       {
         "title": "Personal portfolio website",
         "description": "The website I built for me, myself and I (and maybe recruiters).",
@@ -31,39 +37,36 @@
         "description": "A small utility package for Python, mostly for my personal projects.",
         "tags": ["Python", "DevOps"],
         "href": "https://github.com/PierreLapolla/pedros"
-      },
-      {
-        "title": "ARECE",
-        "description": "The first french formula student student team in the autonomous class. I was a member of the trajectory team where we developed a neural network that can predict the optimal trajectory for the car.",
-        "tags": ["Python", "Data", "AI"],
-        "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
       }
     ]
   },
   "experience": {
-    "title": "Education & Experience",
-    "description": "The highlights. Use the assistant for the full story.",
+    "title": "Experience & Education",
+    "description": "",
     "experienceHeading": "Experience",
     "educationHeading": "Education",
     "experienceItems": [
       {
-        "title": "Internship",
-        "subtitle": "Capgemini - 6 months",
-        "bullets": [
-          "What you did (impact-first).",
-          "What you built / improved.",
-          "Tech used."
-        ]
+        "title": "Cloud & Backend Engineering Intern",
+        "location": "Capgemini, Paris",
+        "href": "https://www.capgemini.com"
+      },
+      {
+        "title": "AI Research Contributor",
+        "location": "LyRIDS Research Project",
+        "href": "https://www.ece.fr/lecole-2/le-centre-de-recherche/"
+      },
+      {
+        "title": "Industrial Data Prototype Developer",
+        "location": "Arkema Industrial Project",
+        "href": "https://www.arkema.com"
       }
     ],
     "educationItems": [
       {
-        "title": "Degree / School",
-        "subtitle": "Field - Dates",
-        "bullets": [
-          "Key focus: Data / AI.",
-          "Notable coursework or achievements."
-        ]
+        "title": "Master's Degree in Cloud Engineering & Management",
+        "location": "ECE Paris – Engineering School, Paris, France",
+        "href": "https://www.ece.fr"
       }
     ]
   },
@@ -72,32 +75,74 @@
     "description": "",
     "groups": {
       "languages": "Languages",
-      "frameworks": "Frameworks / Libraries",
-      "tools": "Tools",
+      "frameworks": "Frameworks & Libraries",
+      "tools": "Tools & Platforms",
       "soft": "Soft skills"
     },
     "items": {
       "french": "French",
       "english": "English",
-      "teamwork": "Team work"
+      "python": "Python",
+      "typescript": "TypeScript",
+      "c_cpp": "C/C++",
+      "java": "Java",
+      "fastapi": "FastAPI",
+      "nextjs": "Next.js",
+      "react": "React",
+      "pytorch": "PyTorch",
+      "aws": "AWS",
+      "docker": "Docker",
+      "terraform": "Terraform",
+      "git": "Git",
+      "devops": "DevOps",
+      "graphneural": "Graph Neural Networks",
+      "computervision": "Computer Vision",
+      "dataengineering": "Data Engineering",
+      "cloudarchitecture": "Cloud Architecture",
+      "problemsolving": "Problem Solving",
+      "teamwork": "Team work",
+      "communication": "Communication",
+      "leadership": "Leadership",
+      "polars": "Polars",
+      "french_level": "Native",
+      "english_level": "C1 (TOEIC)",
+      "soft_combined": "Interpersonal skills"
     }
   },
   "certifications": {
     "title": "Certifications",
-    "blurb": "View and verify all my certifications and badges on Credly.",
-    "button": "View"
+    "description": "Industry-recognized certifications demonstrating my expertise.",
+    "items": [
+      {
+        "name": "AWS Certified Cloud Practitioner",
+        "deliveredDate": "2025-05-9",
+        "image": "AWSCertifiedCloudPractitioner.png",
+        "credlyUrl": "https://www.credly.com/badges/aws-certified-cloud-practitioner"
+      }
+    ],
+    "viewAll": "Verify on Credly"
   },
   "assistant": {
     "title": "Assistant",
     "description": "",
     "placeholder": "Type a message...",
-    "error": "Sorry, something went wrong. Please try again in a moment."
+    "error": "Sorry, something went wrong. Please try again in a moment.",
+    "empty": {
+      "title": "Start a conversation",
+      "description": "Type a message below to begin chatting"
+    },
+    "newChat": "New chat",
+    "suggestions": [
+      "What can he do for work?",
+      "What are his hobbies?"
+    ]
   },
   "contact": {
     "title": "Contact",
     "blurb": "Prefer LinkedIn or e-mail me at:",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "email": "pro@pierrelapolla.com"
   },
   "copy": {
     "label": "Copy",
@@ -106,5 +151,15 @@
   },
   "languageToggle": {
     "label": "Switch language"
+  },
+  "site": {
+    "title": "Pierre Lapolla"
+  },
+  "footer": {
+    "madeBy": "Made by Pierre Lapolla | v{version}"
+  },
+  "meta": {
+    "title": "Portfolio",
+    "description": "My personal portfolio website."
   }
 }
