@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="fix: updated README.md, converted .png image to .webp">
-      <change beforePath="$PROJECT_DIR$/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ai-elements/prompt-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app-shell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-shell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/page-container.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/section-stack.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/section.tsx" beforeDir="false" />
+    <list default="true" id="3c3bc78f-2df1-488b-b170-f7bfb274df47" name="Changes" comment="feat: updated section UI handling">
+      <change afterPath="$PROJECT_DIR$/components/section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ai-assistant-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/certifications-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/certifications-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/contact-section.tsx" afterDir="false" />
@@ -19,8 +13,6 @@
       <change beforePath="$PROJECT_DIR$/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/hero-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/projects-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/projects-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/skills-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/skills-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/site-footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +61,7 @@
     <urls />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -168,7 +160,7 @@
       <workItem from="1769965597279" duration="438000" />
       <workItem from="1770050368031" duration="1128000" />
       <workItem from="1770052328976" duration="189000" />
-      <workItem from="1770285238358" duration="2480000" />
+      <workItem from="1770285238358" duration="3660000" />
     </task>
     <task id="LOCAL-00001" summary="chore: remove Amplify, Mistral integrations, and unused components, cleanup project files">
       <option name="closed" value="true" />
@@ -330,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770286133138</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: updated section UI handling">
+      <option name="closed" value="true" />
+      <created>1770287773194</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770287773194</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +358,8 @@
     <MESSAGE value="feat" />
     <MESSAGE value="feat: add certifications section, update localization files, and include Vercel analytics" />
     <MESSAGE value="fix: updated README.md, converted .png image to .webp" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: updated README.md, converted .png image to .webp" />
+    <MESSAGE value="feat: updated section UI handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: updated section UI handling" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="github-copilot-workspace">

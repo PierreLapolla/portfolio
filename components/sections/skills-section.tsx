@@ -23,6 +23,7 @@ import type {Props as CountryFlagProps} from "country-flag-icons/react/3x2";
 import {FR, GB} from "country-flag-icons/react/3x2"
 import type {IconType} from "react-icons";
 import {useTranslations} from "next-intl";
+import {Section, SectionContent, SectionHeader} from "@/components/section";
 
 type SkillIcon = React.ComponentType<CountryFlagProps> | IconType;
 
@@ -167,32 +168,27 @@ export function SkillsSection() {
     });
 
     return (
-        <section id="skills" className="section">
-            <div className="page-container">
-                <header className="section-header">
-                    <h2 className="section-title">{title}</h2>
-                    <p className="section-description">{description}</p>
-                </header>
-                <div className="section-content">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                        {groups.map((g) => (
-                            <Card
-                                key={g.title}
-                                className="bg-background border"
-                            >
-                                <CardHeader className="pb-3">
-                                    <CardTitle className="text-base">{g.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent className="grid grid-cols-2 gap-2">
-                                    {g.items.map((skill) => (
-                                        <SkillTile key={skill.rawName} skill={skill}/>
-                                    ))}
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
+        <Section id="skills">
+            <SectionHeader title={title} description={description} />
+            <SectionContent>
+                <div className="grid gap-4 sm:grid-cols-2">
+                    {groups.map((g) => (
+                        <Card
+                            key={g.title}
+                            className="bg-background border"
+                        >
+                            <CardHeader className="pb-3">
+                                <CardTitle className="text-base">{g.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="grid grid-cols-2 gap-2">
+                                {g.items.map((skill) => (
+                                    <SkillTile key={skill.rawName} skill={skill}/>
+                                ))}
+                            </CardContent>
+                        </Card>
+                    ))}
                 </div>
-            </div>
-        </section>
+            </SectionContent>
+        </Section>
     );
 }
