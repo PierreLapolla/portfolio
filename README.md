@@ -1,40 +1,43 @@
 # Pierre Lapolla - AI Portfolio
 
-A modern portfolio website built with Next.js and TypeScript, featuring an interactive "AI Twin" chatbot powered by
+A modern portfolio website built with Next.js and TypeScript, featuring an interactive "AI Twin" assistant powered by
 Mistral AI.
 
 ## Features
 
-* **Live site:** [pierrelapolla.com](https://pierrelapolla.com) (Chatbot may output an error due to Mistral's free tier limits)
-* **AI chat interface:**
-    * A custom chatbot that answers questions based on Pierre's profile.
-    * Streaming responses (not working on a live site because of Amplify)
-* **Pages**:
-    * Home
-    * Chat
+* **Live site:** [pierrelapolla.com](https://pierrelapolla.com)
+* **AI assistant:**
+    * A custom assistant that answers questions based on Pierre's profile.
+    * Streaming responses powered by the Vercel AI SDK.
+* **Sections:**
+    * Hero
+    * Certifications
     * Projects
+    * Experience
+    * Skills
+    * AI Assistant
     * Contact
+* **Localization:**
+    * Language toggle between English and French
 * **Styling:**
-    * Custom UI Components from AWS Amplify UI Components
+    * shadcn/ui components
+    * Tailwind CSS
     * Light/dark mode toggle
-* **Future features:**
-    * Add more information about Pierre
-    * Implement a custom backend for the chatbot using FastAPI
 
 ## Tech stack
 
-* **Framework:** Next.js 14 (App router)
+* **Framework:** Next.js 16 (App Router)
 * **Language:** TypeScript
 * **AI provider:** Mistral AI via Vercel AI SDK
-* **Hosting/backend:** AWS Amplify
-* **Styling:** AWS Amplify UI Components
+* **Hosting:** Vercel
+* **Styling:** Tailwind CSS + shadcn/ui
+* **Package manager/runtime:** Bun
 
 ## Prerequisites
 
 Ensure you have the following installed on your local machine:
 
-* [**Node.js**](https://nodejs.org/en/download)
-* [**npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* [**Bun**](https://bun.sh/)
 
 ## Installation & setup
 
@@ -46,16 +49,11 @@ Ensure you have the following installed on your local machine:
 
 2. **Install dependencies:**
    ```bash
-   npm install
+   bun install
    ```
 
 3. **Environment variables:**
-   Create a `.env.local` file in the root directory based on `.env.template`.
-   ```bash
-   cp .env.template .env.local
-   ```
-
-   Open `.env.local` and add your specific API keys (e.g., Mistral AI API Key):
+   Create a `.env.local` file in the root directory and add your API keys (e.g., Mistral AI API Key):
    ```env
    MISTRAL_API_KEY=your_api_key_here
    ```
@@ -70,7 +68,7 @@ Ensure you have the following installed on your local machine:
 **Development server:**
 To start the application in development mode with hot-reloading:
 ```bash
-    npm run dev
+    bun run dev
 ```
 
 OR
@@ -78,7 +76,7 @@ OR
 **Production build:**
 To start the application:
 ```bash
-    npm run build && npm run start
+    bun run build && bun run start
 ```
 
 

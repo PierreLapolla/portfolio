@@ -1,11 +1,17 @@
 // app-shell.tsx
-
-import * as React from "react"
-import {ThemeProvider} from "@/components/theme-provider"
+import React, {ReactNode} from "react"
 import {SiteHeader} from "@/components/site-header"
 import {SiteFooter} from "@/components/site-footer"
 
-export function AppShell({children}: { children: React.ReactNode }) {
+import {ThemeProvider as NextThemesProvider} from "next-themes"
+
+type ThemeProviderProps = React.ComponentProps<typeof NextThemesProvider>
+
+function ThemeProvider({children, ...props}: ThemeProviderProps) {
+    return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}
+
+export function AppShell({children}: { children: ReactNode }) {
     return (
         <ThemeProvider
             attribute="class"

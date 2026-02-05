@@ -1,9 +1,9 @@
+import type {ReactNode} from "react";
 import * as React from "react";
 import Link from "next/link";
 import {Button, buttonVariants} from "@/components/ui/button";
 import {LuExternalLink} from "react-icons/lu";
 import {SiGithub, SiLinkedin} from "react-icons/si";
-import type {ReactNode} from "react";
 import type {VariantProps} from "class-variance-authority";
 
 type IconConfig = {
