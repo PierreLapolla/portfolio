@@ -3,10 +3,8 @@ import Link from "next/link";
 import {useTranslations} from "next-intl";
 import {Link as IntlLink} from "@/i18n/navigation";
 import {ThemeToggleButton} from "@/components/theme-toggle-button";
-import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {PageContainer} from "@/components/page-container";
-import {SiGithub, SiLinkedin} from "react-icons/si";
 import {LanguageToggleButton} from "@/components/language-toggle-button";
 import {ExternalLinkButton} from "@/components/external-link-button";
 
