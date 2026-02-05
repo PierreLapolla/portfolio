@@ -3,9 +3,9 @@
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
-import {CopyToClipboardButton} from "@/components/copy-button";
+import {CopyToClipboardButton} from "@/components/buttons/copy-button";
 import {useTranslations} from "next-intl";
-import {ExternalLinkButton} from "@/components/external-link-button";
+import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 import {Section, SectionContent, SectionHeader} from "@/components/section";
 
 export function ContactSection() {

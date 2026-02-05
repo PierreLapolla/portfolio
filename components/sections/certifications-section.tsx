@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {ExternalLinkButton} from "@/components/external-link-button";
+import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import {useTranslations} from "next-intl";
 import {Section, SectionContent, SectionHeader} from "@/components/section";

@@ -1,6 +1,6 @@
 // components/sections/experience-section.tsx
 import {Card, CardHeader, CardTitle} from "@/components/ui/card";
-import {ExternalLinkButton} from "@/components/external-link-button";
+import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 import {useTranslations} from "next-intl";
 import {Section, SectionContent, SectionHeader} from "@/components/section";
 

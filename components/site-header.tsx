@@ -2,10 +2,10 @@
 import Link from "next/link";
 import {useTranslations} from "next-intl";
 import {Link as IntlLink} from "@/i18n/navigation";
-import {ThemeToggleButton} from "@/components/theme-toggle-button";
+import {ThemeToggleButton} from "@/components/buttons/theme-toggle-button";
 import {ButtonGroup} from "@/components/ui/button-group";
-import {LanguageToggleButton} from "@/components/language-toggle-button";
-import {ExternalLinkButton} from "@/components/external-link-button";
+import {LanguageToggleButton} from "@/components/buttons/language-toggle-button";
+import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 
 const NAV = [
     {href: "#projects", labelKey: "projects"},
