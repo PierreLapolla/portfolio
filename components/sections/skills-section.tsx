@@ -2,10 +2,10 @@
 import * as React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Section} from "@/components/section";
 import * as simpleIcons from "simple-icons";
 import {
     SiAmazonwebservices,
+    SiCplusplus,
     SiDocker,
     SiFastapi,
     SiGit,
@@ -13,12 +13,11 @@ import {
     SiPolars,
     SiPython,
     SiPytorch,
-    SiTypescript,
     SiReact,
-    SiCplusplus,
     SiTerraform,
+    SiTypescript,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import {FaJava} from "react-icons/fa";
 import {LuUsers} from "react-icons/lu";
 import type {Props as CountryFlagProps} from "country-flag-icons/react/3x2";
 import {FR, GB} from "country-flag-icons/react/3x2"
@@ -123,6 +122,8 @@ function SkillTile({skill}: { skill: Skill }) {
 
 export function SkillsSection() {
     const t = useTranslations("skills");
+    const title = t("title");
+    const description = t("description");
     const groups = SKILL_GROUPS.map((group) => {
         const items = group.items.map((item) => {
             const displayName = item.nameKey ? t(item.nameKey) : item.name;
@@ -166,28 +167,32 @@ export function SkillsSection() {
     });
 
     return (
-        <Section
-            id="skills"
-            title={t("title")}
-            description={t("description")}
-        >
-            <div className="grid gap-4 sm:grid-cols-2">
-                {groups.map((g) => (
-                    <Card
-                        key={g.title}
-                        className="bg-background border"
-                    >
-                        <CardHeader className="pb-3">
-                            <CardTitle className="text-base">{g.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="grid grid-cols-2 gap-2">
-                            {g.items.map((skill) => (
-                                <SkillTile key={skill.rawName} skill={skill}/>
-                            ))}
-                        </CardContent>
-                    </Card>
-                ))}
+        <section id="skills" className="section">
+            <div className="page-container">
+                <header className="section-header">
+                    <h2 className="section-title">{title}</h2>
+                    <p className="section-description">{description}</p>
+                </header>
+                <div className="section-content">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                        {groups.map((g) => (
+                            <Card
+                                key={g.title}
+                                className="bg-background border"
+                            >
+                                <CardHeader className="pb-3">
+                                    <CardTitle className="text-base">{g.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent className="grid grid-cols-2 gap-2">
+                                    {g.items.map((skill) => (
+                                        <SkillTile key={skill.rawName} skill={skill}/>
+                                    ))}
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </Section>
+        </section>
     );
 }

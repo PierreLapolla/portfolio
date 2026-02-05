@@ -1,8 +1,6 @@
 // components/sections/experience-section.tsx
-import * as React from "react";
 import {Card, CardHeader, CardTitle} from "@/components/ui/card";
 import {ExternalLinkButton} from "@/components/external-link-button";
-import {Section} from "@/components/section";
 import {useTranslations} from "next-intl";
 
 type ExperienceItem = {
@@ -15,6 +13,8 @@ export function ExperienceSection() {
     const t = useTranslations("experience");
     const experienceItems = t.raw("experienceItems") as ExperienceItem[];
     const educationItems = t.raw("educationItems") as ExperienceItem[];
+    const title = t("title");
+    const description = t("description");
 
     const renderItemCard = (item: ExperienceItem) => (
         <Card key={item.title} className="flex flex-col">
@@ -34,28 +34,30 @@ export function ExperienceSection() {
     );
 
     return (
-        <Section
-            id="education"
-            title={t("title")}
-            description={t("description")}
-        >
-            <div className="space-y-6">
-                {/* Experience Section */}
-                <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("experienceHeading")}</h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                        {experienceItems.map(renderItemCard)}
+        <section id="education" className="section">
+            <div className="page-container">
+                <header className="section-header">
+                    <h2 className="section-title">{title}</h2>
+                    <p className="section-description">{description}</p>
+                </header>
+                <div className="section-content">
+                    {/* Experience Section */}
+                    <div>
+                        <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("experienceHeading")}</h3>
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            {experienceItems.map(renderItemCard)}
+                        </div>
                     </div>
-                </div>
 
-                {/* Education Section */}
-                <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("educationHeading")}</h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                        {educationItems.map(renderItemCard)}
+                    {/* Education Section */}
+                    <div>
+                        <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("educationHeading")}</h3>
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            {educationItems.map(renderItemCard)}
+                        </div>
                     </div>
                 </div>
             </div>
-        </Section>
+        </section>
     );
 }

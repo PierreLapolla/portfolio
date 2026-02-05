@@ -4,7 +4,6 @@ import {useTranslations} from "next-intl";
 import {Link as IntlLink} from "@/i18n/navigation";
 import {ThemeToggleButton} from "@/components/theme-toggle-button";
 import {ButtonGroup} from "@/components/ui/button-group";
-import {PageContainer} from "@/components/page-container";
 import {LanguageToggleButton} from "@/components/language-toggle-button";
 import {ExternalLinkButton} from "@/components/external-link-button";
 
@@ -23,7 +22,7 @@ export function SiteHeader() {
     return (
         <header
             className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-backdrop-filter:bg-background/60">
-            <PageContainer className="py-3 flex items-center justify-between gap-4">
+            <div className="page-container py-3 flex items-center justify-between gap-4">
                 <IntlLink href="/" className="font-semibold">
                     {ts("title")}
                 </IntlLink>
@@ -56,7 +55,7 @@ export function SiteHeader() {
                         <ThemeToggleButton/>
                     </ButtonGroup>
                 </ButtonGroup>
-            </PageContainer>
+            </div>
         </header>
     );
 }

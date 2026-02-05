@@ -1,4 +1,5 @@
-import {SectionStack} from "@/components/section-stack";
+import * as React from "react";
+import {Separator} from "@/components/ui/separator";
 
 import {HeroSection} from "@/components/sections/hero-section";
 import {ProjectsSection} from "@/components/sections/projects-section";
@@ -9,15 +10,24 @@ import {ContactSection} from "@/components/sections/contact-section";
 import {CertificationsSection} from "@/components/sections/certifications-section";
 
 export default function HomePage() {
+    const sections = [
+        {key: "hero", node: <HeroSection/>},
+        {key: "certifications", node: <CertificationsSection/>},
+        {key: "projects", node: <ProjectsSection/>},
+        {key: "experience", node: <ExperienceSection/>},
+        {key: "skills", node: <SkillsSection/>},
+        {key: "assistant", node: <AiAssistantSection/>},
+        {key: "contact", node: <ContactSection/>},
+    ];
+
     return (
-        <SectionStack>
-            <HeroSection/>
-            <CertificationsSection/>
-            <ProjectsSection/>
-            <ExperienceSection/>
-            <SkillsSection/>
-            <AiAssistantSection/>
-            <ContactSection/>
-        </SectionStack>
+        <div className="section-stack">
+            {sections.map((section, index) => (
+                <React.Fragment key={section.key}>
+                    {index > 0 ? <Separator className="section-stack-separator"/> : null}
+                    {section.node}
+                </React.Fragment>
+            ))}
+        </div>
     );
 }

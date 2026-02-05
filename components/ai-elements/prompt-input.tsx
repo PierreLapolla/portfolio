@@ -179,6 +179,7 @@ export function PromptInputProvider({
 
     // Keep a ref to attachments for cleanup on unmount (avoids stale closure)
     const attachmentsRef = useRef(attachmentFiles);
+    // eslint-disable-next-line react-hooks/refs
     attachmentsRef.current = attachmentFiles;
 
     // Cleanup blob URLs on unmount to prevent memory leaks
@@ -1041,13 +1042,13 @@ interface SpeechRecognition extends EventTarget {
     continuous: boolean;
     interimResults: boolean;
     lang: string;
-    onstart: ((this: SpeechRecognition, ev: Event) => any) | null;
-    onend: ((this: SpeechRecognition, ev: Event) => any) | null;
+    onstart: ((this: SpeechRecognition, ev: Event) => unknown) | null;
+    onend: ((this: SpeechRecognition, ev: Event) => unknown) | null;
     onresult:
-        | ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any)
+        | ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => unknown)
         | null;
     onerror:
-        | ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => any)
+        | ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => unknown)
         | null;
 
     start(): void;
@@ -1161,6 +1162,7 @@ export const PromptInputSpeechButton = ({
             };
 
             recognitionRef.current = speechRecognition;
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setRecognition(speechRecognition);
         }
 
