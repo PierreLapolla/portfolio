@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Separator} from "@/components/ui/separator";
+import type {Metadata} from "next";
 
 import {HeroSection} from "@/components/sections/hero-section";
 import {ProjectsSection} from "@/components/sections/projects-section";
@@ -8,6 +9,11 @@ import {SkillsSection} from "@/components/sections/skills-section";
 import {AiAssistantSection} from "@/components/sections/ai-assistant-section";
 import {ContactSection} from "@/components/sections/contact-section";
 import {CertificationsSection} from "@/components/sections/certifications-section";
+
+export const metadata: Metadata = {
+    title: "Portfolio",
+    description: "Projects, experience, skills, certifications, and contact information.",
+};
 
 export default function HomePage() {
     const sections = [

@@ -25,7 +25,7 @@ import {
     PromptInputTextarea,
     PromptInputTools,
 } from "@/components/ai-elements/prompt-input";
-import { Suggestion, Suggestions } from '@/components/ai-elements/suggestion';
+import {Suggestion, Suggestions} from '@/components/ai-elements/suggestion';
 import {Loader} from "@/components/ai-elements/loader";
 import {LuMessageSquare, LuSquarePen} from "react-icons/lu";
 
@@ -201,6 +201,7 @@ export default function AiAssistant({
                             value={input}
                             onChange={handleInputChange}
                             placeholder={t("placeholder")}
+                            aria-label={t("placeholder")}
                         />
                     </PromptInputBody>
 

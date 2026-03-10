@@ -21,7 +21,7 @@ export function HeroSection() {
                             </div>
 
                             <div className="space-y-2">
-                                <h1 className="text-2xl sm:text-4xl font-semibold tracking-tight">
+                                <h1 className="text-balance text-2xl sm:text-4xl font-semibold tracking-tight">
                                     {t("title")}
                                 </h1>
                                 <p className="text-sm sm:text-base text-muted-foreground">

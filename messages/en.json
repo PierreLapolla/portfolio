@@ -125,7 +125,7 @@
   "assistant": {
     "title": "Assistant",
     "description": "",
-    "placeholder": "Type a message...",
+    "placeholder": "Type a message…",
     "error": "Sorry, something went wrong. Please try again in a moment.",
     "empty": {
       "title": "Start a conversation",
@@ -151,6 +151,12 @@
   },
   "languageToggle": {
     "label": "Switch language"
+  },
+  "themeToggle": {
+    "label": "Toggle theme"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content"
   },
   "site": {
     "title": "Pierre Lapolla"

@@ -108,8 +108,8 @@ function SkillTile({skill}: { skill: Skill }) {
                 <div className="text-sm font-medium leading-none text-center">{name}</div>
                 {badges && (
                     <div className="flex flex-wrap items-center gap-1 mt-1">
-                        {badges.map((b, i) => (
-                            <Badge key={`${skill.rawName}-badge-${i}`} variant="secondary" className="text-xs">
+                        {badges.map((b) => (
+                            <Badge key={`${skill.rawName}-badge-${b}`} variant="secondary" className="text-xs">
                                 {b}
                             </Badge>
                         ))}

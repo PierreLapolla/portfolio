@@ -48,6 +48,7 @@
 }
 
 :root {
+    color-scheme: light;
     --background: oklch(1 0 0);
     --foreground: oklch(0.147 0.004 49.25);
     --card: oklch(1 0 0);
@@ -83,6 +84,7 @@
 }
 
 .dark {
+    color-scheme: dark;
     --background: oklch(0.147 0.004 49.25);
     --foreground: oklch(0.985 0.001 106.423);
     --card: oklch(0.216 0.006 56.043);
@@ -127,6 +129,10 @@
 }
 
 @layer components {
+    .skip-link {
+        @apply absolute left-4 top-4 z-[60] rounded-md bg-primary px-3 py-2 text-sm text-primary-foreground -translate-y-20 focus-visible:translate-y-0 transition-transform;
+    }
+
     .page-container {
         @apply mx-auto w-full max-w-5xl px-4;
     }
@@ -140,7 +146,7 @@
     }
 
     .section-title {
-        @apply text-xl sm:text-2xl font-semibold tracking-tight;
+        @apply text-balance text-xl sm:text-2xl font-semibold tracking-tight;
     }
 
     .section-description {

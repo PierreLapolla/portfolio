@@ -9,6 +9,7 @@ import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 
 const NAV = [
     {href: "#projects", labelKey: "projects"},
+    {href: "#certifications", labelKey: "certifications"},
     {href: "#education", labelKey: "education"},
     {href: "#skills", labelKey: "skills"},
     {href: "#chat", labelKey: "chat"},

@@ -5,8 +5,6 @@ import {Geist, Geist_Mono, Noto_Sans} from "next/font/google"
 import "./globals.css"
 import React from "react"
 import {getLocale} from "next-intl/server"
-import {Analytics} from '@vercel/analytics/next'
-
 import {cn} from "@/lib/utils"
 
 const notoSans = Noto_Sans({variable: "--font-sans", subsets: ["latin"]})
@@ -43,7 +41,6 @@ export default async function RootLayout({
             )}
         >
         {children}
-        <Analytics/>
         </body>
         </html>
     )

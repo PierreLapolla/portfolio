@@ -125,7 +125,7 @@
   "assistant": {
     "title": "Assistant",
     "description": "",
-    "placeholder": "Tapez un message...",
+    "placeholder": "Tapez un message…",
     "error": "Désolé, une erreur est survenue. Veuillez réessayer dans un instant.",
     "empty": {
       "title": "Commencer une conversation",
@@ -151,6 +151,12 @@
   },
   "languageToggle": {
     "label": "Changer la langue"
+  },
+  "themeToggle": {
+    "label": "Changer le thème"
+  },
+  "a11y": {
+    "skipToMain": "Aller au contenu principal"
   },
   "site": {
     "title": "Pierre Lapolla"

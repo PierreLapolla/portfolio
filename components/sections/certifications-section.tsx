@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import {Section, SectionContent, SectionHeader} from "@/components/section";
 
 type Certification = {
@@ -12,16 +12,17 @@ type Certification = {
 };
 
 export function CertificationsSection() {
+    const locale = useLocale();
     const t = useTranslations("certifications");
     const certifications = t.raw("items") as Certification[];
     const title = t("title");
     const description = t("description");
 
     const formatDate = (dateString: string) => {
-        return new Date(dateString).toLocaleDateString("en-US", {
+        return new Intl.DateTimeFormat(locale, {
             year: "numeric",
             month: "long",
-        });
+        }).format(new Date(dateString));
     };
 
     return (
@@ -41,6 +42,7 @@ export function CertificationsSection() {
                                                 src={`/${cert.image}`}
                                                 alt={cert.name}
                                                 fill
+                                                sizes="128px"
                                                 className="object-cover"
                                             />
                                         </div>
