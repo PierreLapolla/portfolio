@@ -1,51 +1,36 @@
 // components/sections/contact-section.tsx
 
-import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {CopyToClipboardButton} from "@/components/buttons/copy-button";
 import {useTranslations} from "next-intl";
 import {ExternalLinkButton} from "@/components/buttons/external-link-button";
 import {Section, SectionContent, SectionHeader} from "@/components/section";
+import {LuMail} from "react-icons/lu";
 
 export function ContactSection() {
     const t = useTranslations("contact");
-    const title = t("title");
+    const email = t("email");
 
     return (
         <Section id="contact">
-            <SectionHeader title={title} />
-            <SectionContent>
-                <Card>
-                    <CardContent className="p-6 sm:p-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <div className="space-y-1">
-                            <p className="text-sm text-muted-foreground">
-                                {t("blurb")}
-                            </p>
-                        </div>
-
-                        <ButtonGroup>
-                            <Button asChild variant="outline">
-                                <a href={`mailto:${t("email")}`}>{t("email")}</a>
-                            </Button>
-                            <CopyToClipboardButton value={t("email")}/>
-                        </ButtonGroup>
-                        <ButtonGroup>
-                            <ExternalLinkButton
-                                href="https://fr.linkedin.com/in/pierrelapolla"
-                                showText
-                            >
-                                {t("linkedin")}
-                            </ExternalLinkButton>
-                            <ExternalLinkButton
-                                href="https://github.com/PierreLapolla"
-                                showText
-                            >
-                                {t("github")}
-                            </ExternalLinkButton>
-                        </ButtonGroup>
-                    </CardContent>
-                </Card>
+            <SectionHeader title={t("title")} description={t("blurb")}/>
+            <SectionContent className="flex flex-wrap items-center gap-3 space-y-0">
+                <ButtonGroup>
+                    <Button asChild size="lg" className="px-4">
+                        <a href={`mailto:${email}`}>
+                            <LuMail aria-hidden data-icon="inline-start"/>
+                            {email}
+                        </a>
+                    </Button>
+                    <CopyToClipboardButton value={email} className="size-9"/>
+                </ButtonGroup>
+                <ExternalLinkButton href="https://github.com/PierreLapolla" variant="outline" size="lg" className="px-4" showText>
+                    {t("github")}
+                </ExternalLinkButton>
+                <ExternalLinkButton href="https://fr.linkedin.com/in/pierrelapolla" variant="outline" size="lg" className="px-4" showText>
+                    {t("linkedin")}
+                </ExternalLinkButton>
             </SectionContent>
         </Section>
     );

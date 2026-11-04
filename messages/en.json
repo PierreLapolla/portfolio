@@ -1,7 +1,7 @@
 {
   "nav": {
     "projects": "Projects",
-    "education": "Education",
+    "education": "Experience",
     "skills": "Skills",
     "certifications": "Certifications",
     "chat": "Chat",
@@ -11,38 +11,50 @@
     "badgeRole": "Engineer",
     "badgeFocus": "Cloud / Data / AI",
     "title": "Pierre Lapolla",
-    "description": "Welcome to my personal portfolio.",
+    "description": "I build end-to-end systems, from devices and data pipelines to cloud services and the applications on top. Master’s in Cloud Engineering & Management from ECE Paris, AWS Certified Cloud Practitioner.",
     "ctaAssistant": "Ask the assistant",
     "ctaProjects": "View projects",
-    "ctaContact": "Contact me"
+    "ctaContact": "Contact me",
+    "role": "Cloud & software engineer · Paris"
   },
   "projects": {
     "title": "Projects",
-    "description": "A few selected projects, visit my GitHub for more.",
+    "description": "Selected work. More on GitHub.",
     "items": [
       {
         "title": "ARECE",
-        "description": "The first french formula student student team in the autonomous class. I was a member of the trajectory team where we developed a neural network that can predict the optimal trajectory for the car.",
-        "tags": ["Python", "Data", "AI"],
+        "description": "France’s first Formula Student team in the autonomous class. On the trajectory team, I helped develop a neural network that predicts the car’s optimal racing line.",
+        "tags": [
+          "Python",
+          "Data",
+          "AI"
+        ],
         "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
       },
       {
         "title": "Personal portfolio website",
-        "description": "The website I built for me, myself and I (and maybe recruiters).",
-        "tags": ["Next.js", "TypeScript", "DevOps"],
+        "description": "This site. Next.js and TypeScript, bilingual, with an AI assistant that answers questions about my work.",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "DevOps"
+        ],
         "href": "https://github.com/PierreLapolla/portfolio"
       },
       {
         "title": "Pedros",
-        "description": "A small utility package for Python, mostly for my personal projects.",
-        "tags": ["Python", "DevOps"],
+        "description": "A small Python utility package I maintain and reuse across my personal projects.",
+        "tags": [
+          "Python",
+          "DevOps"
+        ],
         "href": "https://github.com/PierreLapolla/pedros"
       }
     ]
   },
   "experience": {
     "title": "Experience & Education",
-    "description": "",
+    "description": "Internships and research across cloud, backend and applied AI.",
     "experienceHeading": "Experience",
     "educationHeading": "Education",
     "experienceItems": [
@@ -72,7 +84,7 @@
   },
   "skills": {
     "title": "Skills",
-    "description": "",
+    "description": "Languages, frameworks and platforms I work with day to day.",
     "groups": {
       "languages": "Languages",
       "frameworks": "Frameworks & Libraries",
@@ -111,7 +123,7 @@
   },
   "certifications": {
     "title": "Certifications",
-    "description": "Industry-recognized certifications demonstrating my expertise.",
+    "description": "Industry-recognized credentials.",
     "items": [
       {
         "name": "AWS Certified Cloud Practitioner",
@@ -124,8 +136,8 @@
   },
   "assistant": {
     "title": "Assistant",
-    "description": "",
-    "placeholder": "Type a message...",
+    "description": "Ask an AI assistant about my background, projects and skills.",
+    "placeholder": "Type a message…",
     "error": "Sorry, something went wrong. Please try again in a moment.",
     "empty": {
       "title": "Start a conversation",
@@ -138,8 +150,8 @@
     ]
   },
   "contact": {
-    "title": "Contact",
-    "blurb": "Prefer LinkedIn or e-mail me at:",
+    "title": "Get in touch",
+    "blurb": "Open to engineering roles and collaborations. Email is the fastest way to reach me; LinkedIn works too.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "email": "pro@pierrelapolla.com"
@@ -152,14 +164,20 @@
   "languageToggle": {
     "label": "Switch language"
   },
+  "themeToggle": {
+    "label": "Toggle theme"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content"
+  },
   "site": {
     "title": "Pierre Lapolla"
   },
   "footer": {
-    "madeBy": "Made by Pierre Lapolla | v{version}"
+    "madeBy": "© Pierre Lapolla · v{version}"
   },
   "meta": {
-    "title": "Portfolio",
-    "description": "My personal portfolio website."
+    "title": "Pierre Lapolla — Cloud, Data & AI Engineer",
+    "description": "Portfolio of Pierre Lapolla, cloud and software engineer based in Paris: projects, experience, skills and certifications."
   }
 }
