@@ -1,7 +1,7 @@
 {
   "nav": {
     "projects": "Projets",
-    "education": "Éducation",
+    "education": "Expérience",
     "skills": "Compétences",
     "certifications": "Certifications",
     "chat": "Discussion",
@@ -11,38 +11,50 @@
     "badgeRole": "Ingénieur",
     "badgeFocus": "Cloud / Data / IA",
     "title": "Pierre Lapolla",
-    "description": "Bienvenue sur mon portfolio personnel.",
+    "description": "Je conçois des systèmes de bout en bout, des objets connectés et pipelines de données jusqu’aux services cloud et aux applications. Diplômé d’un Master en Cloud Engineering & Management à l’ECE Paris, certifié AWS Cloud Practitioner.",
     "ctaAssistant": "Demander à l'assistant",
     "ctaProjects": "Voir mes projets",
-    "ctaContact": "Me contacter"
+    "ctaContact": "Me contacter",
+    "role": "Ingénieur cloud & logiciel · Paris"
   },
   "projects": {
     "title": "Projets",
-    "description": "Quelques projets sélectionnés, visitez mon GitHub pour en voir plus.",
+    "description": "Une sélection de projets. Plus sur GitHub.",
     "items": [
       {
         "title": "ARECE",
-        "description": "La première équipe française Formula Student dans la catégorie autonome. J'ai fait partie de l'équipe trajectoire où nous avons développé un réseau de neurones capable de prédire la trajectoire optimale du véhicule.",
-        "tags": ["Python", "Données", "IA"],
+        "description": "La première équipe française Formula Student en catégorie autonome. Au sein de l’équipe trajectoire, j’ai contribué à un réseau de neurones qui prédit la trajectoire optimale du véhicule.",
+        "tags": [
+          "Python",
+          "Données",
+          "IA"
+        ],
         "href": "https://fr.linkedin.com/company/autonomous-racing-ece"
       },
       {
         "title": "Site portfolio personnel",
-        "description": "Le site que j'ai construit.",
-        "tags": ["Next.js", "TypeScript", "DevOps"],
+        "description": "Ce site. Next.js et TypeScript, bilingue, avec un assistant IA qui répond aux questions sur mon travail.",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "DevOps"
+        ],
         "href": "https://github.com/PierreLapolla/portfolio"
       },
       {
         "title": "Pedros",
-        "description": "Un petit paquet utilitaire pour Python, principalement pour mes projets personnels.",
-        "tags": ["Python", "DevOps"],
+        "description": "Un petit paquet utilitaire Python que je maintiens et réutilise dans mes projets personnels.",
+        "tags": [
+          "Python",
+          "DevOps"
+        ],
         "href": "https://github.com/PierreLapolla/pedros"
       }
     ]
   },
   "experience": {
     "title": "Expérience & Formation",
-    "description": "",
+    "description": "Stages et recherche en cloud, backend et IA appliquée.",
     "experienceHeading": "Expérience",
     "educationHeading": "Formation",
     "experienceItems": [
@@ -72,7 +84,7 @@
   },
   "skills": {
     "title": "Compétences",
-    "description": "",
+    "description": "Les langages, frameworks et plateformes que j’utilise au quotidien.",
     "groups": {
       "languages": "Langues",
       "frameworks": "Frameworks & Bibliothèques",
@@ -111,7 +123,7 @@
   },
   "certifications": {
     "title": "Certifications",
-    "description": "Certifications reconnues par l'industrie démontrant mon expertise.",
+    "description": "Certifications reconnues par l’industrie.",
     "items": [
       {
         "name": "AWS Certified Cloud Practitioner",
@@ -120,11 +132,11 @@
         "credlyUrl": "https://www.credly.com/badges/aws-certified-cloud-practitioner"
       }
     ],
-    "viewAll": "Verifier sur Credly"
+    "viewAll": "Vérifier sur Credly"
   },
   "assistant": {
     "title": "Assistant",
-    "description": "",
+    "description": "Posez vos questions à un assistant IA sur mon parcours, mes projets et mes compétences.",
     "placeholder": "Tapez un message…",
     "error": "Désolé, une erreur est survenue. Veuillez réessayer dans un instant.",
     "empty": {
@@ -138,8 +150,8 @@
     ]
   },
   "contact": {
-    "title": "Contact",
-    "blurb": "Préférez LinkedIn ou envoyez-moi un e-mail à :",
+    "title": "Me contacter",
+    "blurb": "Ouvert aux postes d’ingénieur et aux collaborations. L’e-mail est le moyen le plus rapide de me joindre ; LinkedIn fonctionne aussi.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "email": "pro@pierrelapolla.com"
@@ -162,10 +174,10 @@
     "title": "Pierre Lapolla"
   },
   "footer": {
-    "madeBy": "Fait par Pierre Lapolla | v{version}"
+    "madeBy": "© Pierre Lapolla · v{version}"
   },
   "meta": {
-    "title": "Portfolio",
-    "description": "Mon site portfolio personnel."
+    "title": "Pierre Lapolla — Ingénieur Cloud, Data & IA",
+    "description": "Portfolio de Pierre Lapolla, ingénieur cloud et logiciel basé à Paris : projets, expérience, compétences et certifications."
   }
 }

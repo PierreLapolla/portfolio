@@ -1,6 +1,5 @@
 // components/sections/experience-section.tsx
-import {Card, CardHeader, CardTitle} from "@/components/ui/card";
-import {ExternalLinkButton} from "@/components/buttons/external-link-button";
+import {LuArrowUpRight} from "react-icons/lu";
 import {useTranslations} from "next-intl";
 import {Section, SectionContent, SectionHeader} from "@/components/section";
 
@@ -10,49 +9,47 @@ type ExperienceItem = {
     href?: string;
 };
 
+function Timeline({heading, items}: { heading: string; items: ExperienceItem[] }) {
+    return (
+        <div>
+            <h3 className="text-sm font-medium text-muted-foreground">{heading}</h3>
+            <ol className="mt-5 border-l">
+                {items.map((item) => (
+                    <li key={item.title} className="relative pb-7 pl-6 last:pb-0">
+                        <span
+                            aria-hidden
+                            className="absolute -left-[5px] top-1.5 size-[9px] rounded-full border-2 border-primary bg-background"
+                        />
+                        <p className="font-semibold leading-snug">{item.title}</p>
+                        {item.href ? (
+                            <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-1 inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                            >
+                                {item.location}
+                                <LuArrowUpRight aria-hidden className="size-3.5"/>
+                            </a>
+                        ) : (
+                            <p className="mt-1 text-sm text-muted-foreground">{item.location}</p>
+                        )}
+                    </li>
+                ))}
+            </ol>
+        </div>
+    );
+}
+
 export function ExperienceSection() {
     const t = useTranslations("experience");
-    const experienceItems = t.raw("experienceItems") as ExperienceItem[];
-    const educationItems = t.raw("educationItems") as ExperienceItem[];
-    const title = t("title");
-    const description = t("description");
-
-    const renderItemCard = (item: ExperienceItem) => (
-        <Card key={item.title} className="flex flex-col">
-            <CardHeader className="flex flex-row items-start justify-between">
-                <div className="flex-1">
-                    <CardTitle className="text-base">{item.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground mt-1">{item.location}</p>
-                </div>
-                {item.href ? (
-                    <ExternalLinkButton
-                        href={item.href}
-                        variant="outline"
-                    />
-                ) : null}
-            </CardHeader>
-        </Card>
-    );
 
     return (
         <Section id="education">
-            <SectionHeader title={title} description={description} />
-            <SectionContent>
-                {/* Experience Section */}
-                <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("experienceHeading")}</h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                        {experienceItems.map(renderItemCard)}
-                    </div>
-                </div>
-
-                {/* Education Section */}
-                <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-3">{t("educationHeading")}</h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                        {educationItems.map(renderItemCard)}
-                    </div>
-                </div>
+            <SectionHeader title={t("title")} description={t("description")}/>
+            <SectionContent className="grid gap-12 space-y-0 md:grid-cols-2">
+                <Timeline heading={t("experienceHeading")} items={t.raw("experienceItems") as ExperienceItem[]}/>
+                <Timeline heading={t("educationHeading")} items={t.raw("educationItems") as ExperienceItem[]}/>
             </SectionContent>
         </Section>
     );
